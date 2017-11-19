@@ -4,7 +4,7 @@ This guide lays out the nuts and bolts of License Zero and its approach to susta
 
 1. Explain how License Zero works.
 
-2. Explain the choices that developers using License Zero need to make.
+2. Explain the choices you need to make when using License Zero.
 
 3. Stay up-to-date.
 
