@@ -20,7 +20,7 @@ License Zero is made of five pieces:
 
 4. Legal terms define the relationship between developers and Artless Devices LLC, the company behind License Zero.
 
-5. Forms for waivers and relicense agreements help developers make their work usable in other ways.
+5. Forms for waivers and relicense agreements help developers make other deals about their work.
 
 ## Overview
 
