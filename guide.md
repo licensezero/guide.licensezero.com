@@ -1,6 +1,6 @@
 # Developer's Guide
 
-This guide lays out the nuts and bolts of License Zero and its approach to sustaining software development.  The guide aims to:
+This guide lays out the nuts and bolts of License Zero and its approach to sustaining your work in software development.  The guide aims to:
 
 1. Explain how License Zero works.
 
@@ -21,3 +21,7 @@ License Zero is made of three pieces:
 4. Legal terms define the relationship between developers and Artless Devices LLC, the company behind License Zero.
 
 5. Forms for waivers and relicense agreements help developers make their work usable in other ways.
+
+## Overview
+
+I want to use a piece of software I've found online.
