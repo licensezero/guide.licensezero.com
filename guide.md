@@ -1,4 +1,4 @@
-# Developer's Guide
+# Developers' Guide
 
 This guide lays out the nuts and bolts of License Zero and its approach to sustaining your work in software development.  The guide aims to:
 
@@ -12,9 +12,9 @@ This guide lays out the nuts and bolts of License Zero and its approach to susta
 
 License Zero is made of five pieces:
 
-1. Public licenses give everyone permission to use software, under specific conditions.
+1. Public licenses give everyone permission to use software, as long as they meet certain conditions.
 
-2. A web service sells sells specific buyers permission to use software under different conditions.
+2. A web service sells sells specific buyers permission to use software under _different_ conditions.
 
 3. A command-line interface reads and writes metadata about license terms.
 
@@ -24,4 +24,8 @@ License Zero is made of five pieces:
 
 ## Overview
 
-I want to use a piece of software I've found online.
+I want to use software I've found online. If the software has a public license---permission, under intellectual property law, that applies to _everyone_---and I can follow its conditions in my work, then I can use the software. If I can't follow the public license's conditions, I need to contact the owner of intellectual property rights in the software---probably the developers or their employers---and get a private license with conditions that I _can_ follow.
+
+I am a hobbyist building a website about electronic music. I find a content management system with a public license with conditions that require noncommerical use. Since I'm not building my website for any reason related to making money, I can meet the conditions of the public license and use the software.
+
+I am a record label building a website to promote my releases. I find the same content management system. Since I want to use it to promote my business and make money, I can't meet the conditions of the public license, I can't use the software under the public license. I need a different license, with different conditions, to do so.
