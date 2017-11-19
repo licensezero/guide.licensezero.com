@@ -14,7 +14,7 @@ License Zero is made of five pieces:
 
 1. Public licenses give everyone permission to use software, under specific conditions.
 
-2. A web service sells licenses to use software under different conditions.
+2. A web service sells sells specific buyers permission to use software under different conditions.
 
 3. A command-line interface that reads and writes metadata about license terms.
 
