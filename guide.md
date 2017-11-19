@@ -10,7 +10,7 @@ This guide lays out the nuts and bolts of License Zero and its approach to susta
 
 ## How License Zero Works
 
-License Zero is made of three pieces:
+License Zero is made of five pieces:
 
 1. Public licenses give everyone permission to use software, under specific conditions.
 
