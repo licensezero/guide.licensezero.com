@@ -16,7 +16,7 @@ License Zero is made of five pieces:
 
 2. A web service sells sells specific buyers permission to use software under different conditions.
 
-3. A command-line interface that reads and writes metadata about license terms.
+3. A command-line interface reads and writes metadata about license terms.
 
 4. Legal terms define the relationship between developers and Artless Devices LLC, the company behind License Zero.
 
