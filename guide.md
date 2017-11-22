@@ -24,6 +24,15 @@ License Zero is made of five pieces:
 
 ## Overview
 
+
+I am a hobbyist building a website about electronic music. I find a content management system with a public license. The public license's conditions require noncommerical use. Since I'm not building my website for any commercial purpose, I can meet the conditions of the public license and use the software.
+
+I am a record label building a website to promote new releases. I find the same content management system. Since I want to use it to promote my business and make money, I can't meet the conditions of the public license. That means I can't use the software under the public license. I need a different license, with different conditions, from everybody who owns intellectual property in the software.
+
+## <a id="choices">Choices to Make</a>
+
+### Public License
+
 I want to use software I've found online. If the software has a public license---written permission, under intellectual property laws, that applies to _everyone_---and I can follow its conditions, then I can go ahead and use the software. If I can't follow the public license's conditions, I need to contact the owner of intellectual property rights in the software, probably the developers or their employers, and get a private license, specific to me, with conditions that I _can_ follow.
 
 ```javascript
@@ -43,13 +52,9 @@ if (project.publicLicense) {
 }
 ```
 
-I am a hobbyist building a website about electronic music. I find a content management system with a public license. The public license's conditions require noncommerical use. Since I'm not building my website for any commercial purpose, I can meet the conditions of the public license and use the software.
+License Zero offers your choice of two public licenses:
 
-I am a record label building a website to promote new releases. I find the same content management system. Since I want to use it to promote my business and make money, I can't meet the conditions of the public license. That means I can't use the software under the public license. I need a different license, with different conditions, from everybody who owns intellectual property in the software.
-
-## <a id="choices">Choices to Make</a>
-
-### Public License
+The _reciprocal_ license requires users to share back source code they build using your software.
 
 ### Private License Pricing
 
