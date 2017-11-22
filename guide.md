@@ -12,7 +12,7 @@ This guide lays out the nuts and bolts of License Zero and its approach to susta
 
 License Zero is made of five pieces:
 
-1. Public licenses give everyone permission to use software, as long as they meet certain conditions.
+1. Public licenses give everyone permission to use software, under certain conditions.
 
 2. A web service sells sells specific buyers permission to use software, under different conditions.
 
