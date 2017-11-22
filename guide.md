@@ -38,7 +38,7 @@ if (project.publicLicense) {
   if (canFollow) {
     i.canUse(project)
   } else {
-    i.needADifferentLicense(project)
+    i.needAPrivateLicenseFor(project)
   }
 }
 ```
