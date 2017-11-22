@@ -31,3 +31,11 @@ I am a hobbyist building a website about electronic music. I find a content mana
 I am a record label building a website to promote new releases. I find the same content management system. Since I want to use it to promote my business and make money, I can't meet the conditions of the public license. That means I can't use the software under the public license. I need a different license, with different conditions, from everybody who owns intellectual property in the software.
 
 ## <a id="choices">Choices to Make</a>
+
+### Public License
+
+### Private License Pricing
+
+### Relicensing Offer
+
+### Handling Contributions
