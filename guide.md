@@ -1,12 +1,6 @@
 # Developers' Guide
 
-This guide lays out the nuts and bolts of License Zero and its approach to sustaining your work in software development.  The guide aims to:
-
-1. [Explain how License Zero works.](#how)
-
-2. [Explain the choices you need to make when using License Zero.](#choices)
-
-3. Stay up-to-date.
+This guide lays out the nuts and bolts of License Zero and its approach to sustaining your work in software development.  The guide aims to explain how License Zero works, and the choices you can make while using it.
 
 ## <a id="how">How License Zero Works</a>
 
@@ -20,14 +14,13 @@ License Zero is made of five pieces:
 
 4. Legal terms define the relationship between developers and Artless Devices LLC, the company behind License Zero.
 
-5. Forms agreements and quotes for other deals developers might like to make about their work.
+5. Form agreements and quotes for other deals developers might like to make about their work.
 
 ## Overview
 
+I am a hobbyist building a website about electronic music.  I find a content management system with a public license. The public license's conditions require noncommerical use.  Since I'm not building my website for any commercial purpose, I can meet the conditions of the public license and use the software.
 
-I am a hobbyist building a website about electronic music. I find a content management system with a public license. The public license's conditions require noncommerical use. Since I'm not building my website for any commercial purpose, I can meet the conditions of the public license and use the software.
-
-I am a record label building a website to promote new releases. I find the same content management system. Since I want to use it to promote my business and make money, I can't meet the conditions of the public license. That means I can't use the software under the public license. I need a different license, with different conditions, from everybody who owns intellectual property in the software.
+I am a record label building a website to promote new releases.  I find the same content management system. Since I want to use it to promote my business and make money, I can't meet the conditions of the public license.  That means I can't use the software under the public license.  I need a different license, with different conditions, from everybody who owns intellectual property in the software.
 
 ## <a id="choices">Choices to Make</a>
 
