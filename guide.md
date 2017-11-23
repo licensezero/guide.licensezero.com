@@ -40,7 +40,7 @@ I'm building an open source library to convert between two map data formats. I f
 
 ### Sponsored Relicensing of a L0-R Project
 
-I'm building a mobile app that teaches users to play famous guitar solos.  I find a library that renders guitar tablature online.  It's licensed under the [License Zero Reciprocal Public License][L0-R].  My company wants to keep its app proprietary.  Since not just my company, but all the users our app will need to use the library as part of the app, the company sponsors relicensing the project onto the [License Zero Permissive Public License][L0-P].  License Zero pays the developer, and the developer relicenses the project under the terms of a standard [relicensing agreement].
+I'm building a mobile app that teaches users to play famous guitar solos.  I find a library that renders guitar tablature online.  It's licensed under the [License Zero Reciprocal Public License][L0-R].  My company wants to keep its app proprietary.  Since not just my company, but all the users our app will need to use the library as part of the app, the company sponsors relicensing the project onto the [License Zero Permissive Public License][L0-P].  License Zero pays the developer, and the developer relicenses the project under the terms of a standard [relicensing agreement].  Now everyone, including my company, is free to use the library to build and use proprietary software.
 
 [L0-R]: https://licensezero.com/licenses/reciprocal
 
