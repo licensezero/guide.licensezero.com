@@ -44,6 +44,8 @@ I'm building a mobile app that teaches users to play famous guitar solos.  I fin
 
 [L0-R]: https://licensezero.com/licenses/reciprocal
 
+[L0-P]: https://licensezero.com/licenses/permissive
+
 [relicensing agreement]: https://licensezero.com/licenses/relicense
 
 ## <a id="choices">Choices to Make</a>
