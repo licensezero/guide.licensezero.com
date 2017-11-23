@@ -30,7 +30,7 @@ I am a hobbyist building a website about electronic music.  I find a content man
 
 ### Commercial Use of an L0-NC Project
 
-I am a record label building a website to promote new releases.  I find the same content management system online. Since I want to use the software to promote my business and make money for more than 30 days, I can't meet the conditions of the public license.  But I can purchase a [private license] through License Zero.  When I do so, License Zero sends me a cryptographically signed private license that allows my company to use the software for commercial purposes, and pays the developer.
+I work for a record label building a website to promote new releases.  I find the same content management system online.  Since I want to use the software to promote my business and make money for more than a few days, I can't meet the conditions of the public license.  But I can purchase a [private license] through License Zero.  License Zero sends me a cryptographically signed private license that allows my company to use the software for commercial purposes, and pays the developer.
 
 [private license]: https://licensezero.com/licenses/private
 
