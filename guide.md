@@ -48,6 +48,14 @@ I'm building a mobile app that teaches users to play famous guitar solos.  I fin
 
 [relicensing agreement]: https://licensezero.com/licenses/relicense
 
+### Review
+
+Users who can follow the conditions of the public license you choose can use your software freely.
+
+You can use License Zero to sell private licenses to users who can't meet the conditions of your public license.
+
+You can also use License Zero to offer to relicense your project onto permissive terms for a one-time fee.
+
 ## <a id="choices">Choices to Make</a>
 
 ### Public License
