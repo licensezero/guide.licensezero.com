@@ -68,6 +68,8 @@ The [reciprocal license][L0-R] requires users to release source code for softwar
 
 The [noncommercial license][L0-NC] limits commercial users of your project to a trial period.  Commercial users who need more than the trial period need to buy a private license.
 
+Both licenses were written to be short, plain, and easy for developers to read.  You should read them.
+
 ### Private License Pricing
 
 ### Relicensing Offer
