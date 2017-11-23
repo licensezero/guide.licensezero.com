@@ -14,7 +14,7 @@ License Zero is made of five pieces:
 
 4. Legal terms define the relationship between developers and Artless Devices LLC, the company behind License Zero.
 
-5. Form agreements and quotes for other deals developers might like to make about their work.
+5. Form agreements and quotes help developers make other deals about their software.
 
 ## Overview
 
