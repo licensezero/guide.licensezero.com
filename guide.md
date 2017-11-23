@@ -18,7 +18,7 @@ License Zero is made of five pieces:
 
 5. Form agreements and quotes help developers make other deals about their software.
 
-## Overview
+## The User Point of View
 
 Before diving into the choices you'll make as a developer using License Zero, let's take a look at the system from the user point of view:
 
