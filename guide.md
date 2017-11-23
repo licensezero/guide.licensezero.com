@@ -8,7 +8,7 @@ This guide lays out the nuts and bolts of [License Zero] and its approach to fin
 
 License Zero is made of five pieces:
 
-1. Public licenses give everyone permission to use software under certain conditions.
+1. Public licenses, the kind of thing you see in `LICENSE` files, give everyone permission to use software under certain conditions.
 
 2. A web service sells specific buyers permission to use software under different conditions.
 
