@@ -48,13 +48,15 @@ I'm building a mobile app that teaches users to play famous guitar solos.  I fin
 
 [relicensing agreement]: https://licensezero.com/licenses/relicense
 
-### Review
+### Takeaways
 
-Users who can follow the conditions of the public license you choose can use your software freely.
+1.  License Zero gives you, the developer, a choice of two public licenses: one limits commercial use to 30 days, the other requires users to release code they build with your work as open source.
 
-You can use License Zero to sell private licenses to users who can't meet the conditions of your public license.
+2.  Users who can follow the conditions of the public license you choose can use your software freely.
 
-You can also use License Zero to offer to relicense your project onto permissive terms for a one-time fee.
+3.  You can use License Zero to sell private licenses to users who can't meet the conditions of your public license.
+
+4.  You can also use License Zero to offer to relicense your project onto permissive terms for a one-time fee.
 
 ## <a id="choices">Choices to Make</a>
 
