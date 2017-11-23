@@ -24,7 +24,7 @@ Before diving into the choices you'll make as a developer using License Zero, le
 
 ### Noncommercial Use of a L0-NC Project
 
-I am a hobbyist building a website about electronic music.  I find a content management system online.  It's licensed under the [License Zero Noncommercial Public License][L0-NC].  That license's conditions limit commercial use to a trial period.  Since I'm not building my website for any commercial purpose, I can use the software for my project as long as I like.
+I am a hobbyist building a website about electronic music.  I find a content management system online.  It's licensed under the [License Zero Noncommercial Public License][L0-NC].  That license's conditions limit commercial use to a set number of days.  Since I'm not building my website for any commercial purpose, I can use the software for my project as long as I like.
 
 [L0-NC]: https://licensezero.com/licenses/noncommercial
 
