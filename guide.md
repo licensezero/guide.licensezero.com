@@ -62,28 +62,11 @@ I'm building a mobile app that teaches users to play famous guitar solos.  I fin
 
 ### Public License
 
-I want to use software I've found online. If the software has a public license---written permission, under intellectual property laws, that applies to _everyone_---and I can follow its conditions, then I can go ahead and use the software. If I can't follow the public license's conditions, I need to contact the owner of intellectual property rights in the software, probably the developers or their employers, and get a private license, specific to me, with conditions that I _can_ follow.
+You can use License Zero for projects that use either of two public licenses:
 
-```javascript
+The [reciprocal license][L0-R] requires users to release source code for software they build with your work as open source.  Users who can't or don't want to release their own work as open source need to buy a private license.
 
-if (project.publicLicense) {
-  var canFollow = project
-    .publicLicense
-    .conditions
-    .every(function (condition) {
-      return i.canFollow(condition)
-    })
-  if (canFollow) {
-    i.canUse(project)
-  } else {
-    i.needAPrivateLicenseFor(project)
-  }
-}
-```
-
-License Zero offers your choice of two public licenses:
-
-The _reciprocal_ license requires users to share back source code they build using your software.
+The [noncommercial license][L0-NC] limits commercial users of your project to a trial period.  Commercial users who need more than the trial period need to buy a private license.
 
 ### Private License Pricing
 
