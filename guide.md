@@ -36,7 +36,7 @@ I am a record label building a website to promote new releases.  I find the same
 
 ### Free Use of a L0-R Project
 
-I'm building an open source library to convert between two map data formats. I find a library that parses the first format online.  It's licensed under the [License Zero Reciprocal Public License][L0-R].  That license's conditions require sharing back software built with the code as open source.  I'm free to use the parser library, as long as I release my own work as open source.
+I'm building an open source library to convert between two map data formats. I find a library that parses the first format online.  It's licensed under the [License Zero Reciprocal Public License][L0-R].  That license's conditions require releasing software built with the code as open source.  I'm free to use the parser library, as long as I release my own work as open source.
 
 ### Sponsored Relicensing of a L0-R Project
 
