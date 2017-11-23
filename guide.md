@@ -38,9 +38,13 @@ I work for a record label building a website to promote new releases.  I find th
 
 I'm building an open source library to convert between two map data formats. I find a library that parses the first format online.  It's licensed under the [License Zero Reciprocal Public License][L0-R].  That license's conditions require releasing software built with the code as open source.  As long as I release my conversion library as open source, I'm free to use the parser library in it.
 
-### Sponsored Relicensing of a L0-R Project
+### Proprietary Use of a L0-R Project
 
-I'm building a mobile app that teaches users to play famous guitar solos.  I find a library that renders guitar tablature online.  It's licensed under the [License Zero Reciprocal Public License][L0-R].  My company wants to keep its app proprietary.  Since not just my company, but all the users our app will need to use the library as part of the app, the company sponsors relicensing the project onto the [License Zero Permissive Public License][L0-P].  License Zero pays the developer, and the developer relicenses the project under the terms of a standard [relicensing agreement].  Now everyone, including my company, is free to use the library to build and use proprietary software.
+I'm building a mobile app that teaches users to play famous guitar solos.  I find a library that renders guitar tablature online.  It's licensed under the [License Zero Reciprocal Public License][L0-R].  My company wants to keep its app proprietary.  But my company can buy a [private license] through License Zero.
+
+### Sponsored Relicensing
+
+I work at a company selling digital voice recorders.  I find a library online that parses our voice recorders' data format in a language the company itself doesn't support.  It's licensed under the [License Zero Reciprocal Public License][L0-R].  My company wants to encourage others to build as many apps that work with our voice recorders as possible.  The company decides to sponsor relicensing of the project onto the [License Zero Permissive Public License][L0-P], so that everyone can use it for both proprietary and open source programs.  License Zero pays the developer, and the developer relicenses the project under the terms of a standard [relicensing agreement].  Now everyone, including my company, is free to use the library to build and use proprietary software.
 
 [L0-R]: https://licensezero.com/licenses/reciprocal
 
