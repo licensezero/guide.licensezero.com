@@ -1,6 +1,6 @@
 # Developers' Guide
 
-This guide lays out the nuts and bolts of [License Zero] and its approach to sustaining your work in software development.  The guide aims to explain how License Zero works, and the choices you can make while using it.
+This guide lays out the nuts and bolts of [License Zero] and its approach to financially sustaining your work on open software.  The guide aims to explain how License Zero works, and the choices you can make while using it.
 
 [License Zero]: https://licensezero.com
 
