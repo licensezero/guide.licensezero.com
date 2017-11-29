@@ -1,77 +1,83 @@
-# Developers' Guide
+# License Zero Developer's Guide
 
-This guide lays out the nuts and bolts of [License Zero] and its approach to financially sustaining your work on open software.  The guide aims to explain how License Zero works, and the choices you can make while using it.
+License Zero is a game plan for financially sustaining your independent work on open software.  License Zero lets you make new kinds of deals with users of the software you make online:  Use my software freely for open source or noncommercial work, but otherwise buy a license online, to support me.  It's the model of GitHub, Travis CI, and other leading developer services, adapted for library, framework, and tools developers.
 
-[License Zero]: https://licensezero.com
+This is a guide to License Zero, the project's primary documentation for developers.  If you're interested in using License Zero to sustain your work, you should read this guide.
 
-## <a id="how">How License Zero Works</a>
+## In Brief
 
-License Zero is made of five pieces:
+As an independent software developer, you control who can use your software, and under what terms.  License Zero licenses give everyone broad permission to use and build with your software, as long as they either limit commercial use or share work they build on yours back as open source.  Users who can't meet those conditions need different license terms to use your software.  [licensezero.com](https://licensezero.com) sells those users separate, private licenses for commercial and proprietary use, on your behalf.  [Stripe](https://stripe.com) processes payments directly to an account in your name.  A [command line interface](https://www.npmjs.com/packages/licensezero) makes it easy for users to buy all the private licenses they need for a Node.js project at once, with a single credit card transaction.  The same tool makes it easy for you to sign up, start offering new projects, and set pricing.
 
-1. Two _public licenses_, the kind of thing you see in `LICENSE` files, give everyone permission to use software under certain conditions.
+```python
+def license_zero(user, project):
+  if user.can_follow(project.public_license):
+    project.public_license.permit(user)
+  else:
+    private_license = user.private_license_for(project)
+    if private_license && user.can_follow(private_license):
+      private_license.permit(user)
+    else:
+      user.needs_private_license()
+```
 
-2. A web service sells specific buyers _private licenses_, like the license you get for a paid program, to use software under different conditions.
+## Public Licenses
 
-3. A command-line interface reads and writes metadata about License Zero software.
+As an independent software developer, writing software on your own time and dime, without assigning intellectual property to anyone else, you have awesome legal power to decide how others can use your work.  License Zero starts where you exercise this power, in `LICENSE`.  You probably use [The MIT License](https://spdx.org/licenses/MIT), [a BSD license](https://spdx.org/licenses/BSD-2-Clause), or a similar open source license to give the community permission to use your work today.  License Zero offers you a choice of two alternatives:
 
-4. Legal terms define the relationship between developers and Artless Devices LLC, the company behind License Zero.
+1.  [The License Zero Noncommercial Public License (L0-NC)](https://licensezero.com/licenses/noncommercial) gives everyone broad permission to use your software, but limits commercial use to a short trial period of seven days.  When a commercial user's trial runs out, they need to buy a different license or stop using your software.
 
-5. Form agreements and quotes help developers make other deals about their software.
+     L0-NC works a lot like a Creative Commons NonCommercial license, but for software.  If you post a photo online under [CC-BY-NC-4.0](https://creativecommons.org/licenses/by-nc/4.0/), students can use your photo in class presentations, and hobbyists can use your photo in projects, but a company that wants to create an ad featuring your photo needs to ask you for a license under different terms.
 
-## The User Point of View
+2.  [The License Zero Reciprocal Public License (L0-R)](https://licensezero.com/licenses/reciprocal) requires users who change, build on, or use your work to create software to release their work as open source, too.  If users can't or won't share their work as open source, they need to buy a different license that allows proprietary use of the software.
 
-Before diving into the choices you'll make as a developer using License Zero, let's take a look at the system from the user point of view:
+    L0-R works a lot like a _copyleft_ license, like [AGPL](https://www.gnu.org/licenses/agpl-3.0.html), but much simpler and easier to read.  It is also far more demanding, requiring release as open source of even more code, in even more cases, than AGPL.
 
-### Noncommercial Use of a L0-NC Project
+Think of the licenses as filters.  L0-NC lets noncommercial users through for seven days.  L0-R lets users through if they share work they build on top of yours as open source.  As a user, if the public license doesn't let you through, you need a private license to use the software.
 
-I am a hobbyist building a website about electronic music.  I find a content management system online.  It's licensed under the [License Zero Noncommercial Public License][L0-NC].  That license's conditions limit commercial use to a set number of days.  Since I'm not building my website for any commercial purpose, I can use the software for my project as long as I like.
+### Comparing Public Licenses
 
-[L0-NC]: https://licensezero.com/licenses/noncommercial
+Both L0 public licenses are short and readable.  You should read them.  But abstracting them just a bit, we see the difference in their approaches:
 
-### Commercial Use of an L0-NC Project
+```python
+def noncommercial_license:
+  if commercial_user:
+    if within_trial_period:
+      return 'free to use'
+    else:
+      return 'need to buy a different license'
+  else:
+    return 'free to use'
 
-I work for a record label building a website to promote new releases.  I find the same content management system online.  Since I want to use the software to promote my business and make money for more than a few days, I can't meet the conditions of the public license.  But I can purchase a [private license] through License Zero.  License Zero sends me a cryptographically signed private license that allows my company to use the software for commercial purposes, and pays the developer.
+def reciprocal_license:
+  if building_other_software:
+    if release_as_open_source:
+      return 'free to use'
+    else:
+      return 'need to buy a different license'
+  else:
+    return 'free to use'
+```
 
-[private license]: https://licensezero.com/licenses/private
+The public licenses aren't just worded differently.  They achieve different results.  Consider:
 
-### Free Use of a L0-R Project
+A for-profit company wants to use a License Zero library in their proprietary web app.  If the library is licensed under L0-NC, the company can only use the library for a few days.  Then they have to buy a different license that permits commercial use beyond the trial period.  If the library is licensed under L0-R, the company needs to buy a private license for any use of the library.  Because they won't release their web app as open source, they can't meet L0-R conditions.
 
-I'm building an open source library to convert between two map data formats. I find a library that parses the first format online.  It's licensed under the [License Zero Reciprocal Public License][L0-R].  That license's conditions require releasing software built with the code as open source.  As long as I release my conversion library as open source, I'm free to use the parser library in it.
+A for-profit company wants to use a License Zero library in the sync software they ship with their voice recorders.  They plan to release the sync software as open source.  If the library is licensed under L0-NC, the company can only use the library for a few days.  Moreover, the company's customers will be limited to trial periods for their commercial use, too.  If the library is licensed under L0-R, the company can use the library in their sync software, as long as they actually release the sync software as open source.  The company's customers can use the sync software, with the library, for any purpose, as long as they share any new work of their own using the library as open source.
 
-### Sponsored Relicensing of a L0-R Project
+### Open Source and Free Software
 
-I'm building a mobile app that teaches users to play famous guitar solos.  I find a library that renders guitar tablature online.  It's licensed under the [License Zero Reciprocal Public License][L0-R].  My company wants to keep its app proprietary.  Since not just my company, but all the users our app will need to use the library as part of the app, the company sponsors relicensing the project onto the [License Zero Permissive Public License][L0-P].  License Zero pays the developer, and the developer relicenses the project under the terms of a standard [relicensing agreement].  Now everyone, including my company, is free to use the library to build and use proprietary software.
+The public licenses also differ in some meaningful politic ways you should be aware of.
 
-[L0-R]: https://licensezero.com/licenses/reciprocal
+L0-NC is not an "open source" or "free software" license as many community members define "open source", because it discriminates against business use.  Source for L0-NC can still be published and developed online, using many popular services like GitHub and npm.  But many in those communities will not accept it.
 
-[L0-P]: https://licensezero.com/licenses/permissive
+L0-R was written to conform to the [Open Source Definition](https://opensource.org/osd), and License Zero proposed L0-R to the Open Source Initiative for approval.  Approval has been controversial, in part because L0-R goes further than existing licenses in when and what code it requires be released as open source.
 
-[relicensing agreement]: https://licensezero.com/licenses/relicense
+L0-R is probably not a "free software" license [as defined by the Free Software Foundation](https://www.gnu.org/philosophy/free-sw.html).  FSF's definition of free software requires granting four freedoms, and anticipates that conditions on exercise of those freedoms can enhance software freedom overall, but anticipates only conditions on the freedom to share modified versions with others.  That partially explains why the Open Source Initiative [approved RPL-1.5 as open source](https://opensource.licenses/RPL-1.5) while FSF [considers RPL non-free](https://www.gnu.org/licenses/license-list.en.html#RPL).
 
-### Takeaways
+## Private Licenses
 
-1.  License Zero gives you, the developer, a choice of two public licenses: one limits commercial use to 30 days, the other requires users to release code they build with your work as open source.
+## Waivers
 
-2.  Users who can follow the conditions of the public license you choose can use your software freely.
+## Relicensing
 
-3.  You can use License Zero to sell private licenses to users who can't meet the conditions of your public license.
-
-4.  You can also use License Zero to offer to relicense your project onto permissive terms for a one-time fee.
-
-## <a id="choices">Choices to Make</a>
-
-### Public License
-
-You can use License Zero for projects that use either of two public licenses:
-
-The [reciprocal license][L0-R] requires users to release source code for software they build with your work as open source.  Users who can't or don't want to release their own work as open source need to buy a private license.
-
-The [noncommercial license][L0-NC] limits commercial users of your project to a trial period.  Commercial users who need more than the trial period need to buy a private license.
-
-Both licenses were written to be short, plain, and easy for developers to read.  You should read them.
-
-### Private License Pricing
-
-### Relicensing Offer
-
-### Handling Contributions
+## Outside Contributions
