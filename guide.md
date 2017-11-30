@@ -142,7 +142,7 @@ L0&#x2011;P is a highly permissive open source software license, much like [The 
 
 Relicensing your project under L0&#x2011;P removes any reason for users to purchase private licenses for your project.  Under the [agency terms](https://licensezero.com/terms/agency) you must agree to in order to offer private licenses for a project through License Zero, you must retract your project for sale through the API if you relicense it.
 
-You're free to use L0&#x2011;P for projects that you don't license through License Zero, as well.
+L0&#x2011;P's only role in the License Zero system is as the license terms onto which L0&#x2011;NC and L0&#x2011;R projects get relicensed.  However, you're free to use L0&#x2011;P for projects for which  you don't sell private licenses through License Zero, as well.  The [command line interface](#cli) is licensed under L0&#x2011;P, for example.
 
 ### <a id="relicense-agreement">Relicense Agreement</a>
 
@@ -153,6 +153,8 @@ As the developer, your obligations are set out in the "Relicensing" section of t
 ## <a id="licensezero.com">licensezero.com</a>
 
 <img src="vending-machine.svg" class="vending-machine">
+
+## <a id="cli">Command Line Interface</a>
 
 ## <a id="contributions">Contributions</a>
 
