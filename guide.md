@@ -1,30 +1,42 @@
 # License Zero Developer's Guide
 
-License Zero is a game plan for financially sustaining your independent work on open software.  License Zero lets you make new kinds of deals with users of the software you make online:  Use my software freely for open source or noncommercial work, but otherwise buy a license online, to support me.  It's the model of GitHub, Travis CI, and other leading developer services, adapted for library, framework, and tools developers.  Finally.
+License Zero is a game plan for financially sustaining your independent work on open software.  License Zero lets you make two new kinds of deals with users of the software you make online:
+
+> Use my software freely for open source or noncommercial work, but otherwise buy a license online, to support me.
+
+It's the model of GitHub, Travis CI, and other leading developer services, adapted for library, framework, and tools developers.  Finally.
 
 This is a guide to License Zero, the project's primary documentation for developers looking to sustain their work with that system.  If you're interested in using License Zero to license your work, you should read this guide.
 
-## In Brief
+## <a id="overview">Overview</a>
 
 ```python
 def system(user, project):
+  # See "Public Licenses" below.
   if user.meets_conditions_of(project.public_license):
     project.public_license.permit(user)
   else:
+    # See "Private Licenses" below.
     private_license = user.private_license_for(project)
     if private_license && user.meets_conditions_of(private_license):
       private_license.permit(user)
+    # See "Waivers" below.
     else:
-      license_zero.buy_private_license(user, project)
+      waiver = user.waiver_for(project)
+      if waiver:
+        waiver.permit(user)
+      # See "licensezero.com" below.
+      else:
+        license_zero.buy_private_license(user, project)
 ```
 
 As an independent software developer, you control who can use your software, and under what terms.  License Zero licenses give everyone broad permission to use and build with your software, as long as they limit commercial use or share work they build on yours back as open source, depending on the license terms you choose.  Users who can't meet those conditions need different license terms to use your software.
 
 [licensezero.com](https://licensezero.com) sells those users separate, private licenses for commercial and proprietary use, on your behalf.  [Stripe](https://stripe.com) processes payments directly to an account in your name.  A [command line interface](https://www.npmjs.com/packages/licensezero) makes it easy for users to buy all the private licenses they need for a Node.js project at once, with a single credit card transaction.  The same tool makes it easy for you to sign up, start offering new projects, and set pricing.
 
-## Public Licenses
+## <a id="public-licenses">Public Licenses</a>
 
-As an independent software developer, writing software on your own time and dime, without assigning intellectual property to anyone else, you have awesome legal power to decide how others can use your work.  License Zero starts where you exercise this power, in `LICENSE`.  You might use [The MIT License](https://spdx.org/licenses/MIT), [a BSD license](https://spdx.org/licenses/BSD-2-Clause), or a similar open source license to give the community the right to use your work today.  License Zero offers you a choice of two alternatives:
+License Zero starts where you exercise your power as the owner of intellectual property in your work: in your project's `LICENSE` file.  You might currently use [The MIT License](https://spdx.org/licenses/MIT), [a BSD license](https://spdx.org/licenses/BSD-2-Clause), or a similar open source license in that file now, to give the community permission to use your work.  License Zero offers you two alternatives:
 
 1.  [The License Zero Noncommercial Public License (L0&#x2011;NC)](https://licensezero.com/licenses/noncommercial) gives everyone broad permission to use your software, but limits commercial use to a short trial period of seven days.  When a commercial user's trial runs out, they need to buy a different license or stop using your software.  In that way, L0&#x2011;NC works a bit like a [Creative Commons NonCommercial license](https://creativecommons.org/licenses/by-nc/4.0/), but for software.
 
@@ -32,7 +44,7 @@ As an independent software developer, writing software on your own time and dime
 
 Both L0 public licenses are short and readable.  You should [read](https://licensezero.com/licenses/noncommercial) [them](https://licensezero.com/licenses/reciprocal).
 
-### Comparing the Public Licenses
+### <a id="comparing-public-licenses">Comparing the Public Licenses</a>
 
 The two License Zero public licenses aren't just worded differently.  They achieve different results.  Abstracting them a bit:
 
@@ -80,33 +92,44 @@ L0&#x2011;NC allows users to build and use closed and proprietary software with 
 
 License Zero was inspired by imbalances in the relationship between open source developers and users.  Both License Zero public licenses represent new deals between developers and users, designed to redress that imbalance.  It isn't clear yet which public license approach is "best", overall, for any particular kind of software, or in any particular kind of situation.
 
-### Open Source and Free Software
+### <a id="open-source-and-free-software">Open Source and Free Software</a>
 
 The public licenses also differ in some meaningful political ways you should be aware of.
 
-L0&#x2011;NC is not an "open source" or "free software" license as many community members define those terms, because it discriminates against business use.  Source for L0&#x2011;NC can still be published and developed online, using many popular services like GitHub and npm.  But many in those communities will not accept it.
+L0&#x2011;NC is not an "open source" or "free software" license as many community members define those terms, because it discriminates against business use.  Source for L0&#x2011;NC can still be published and developed online, using many popular services like GitHub and npm.  But many in those communities will not accept it as part of their movements.
 
-L0&#x2011;R, on the other hand, was written to conform to the [Open Source Definition](https://opensource.org/osd), and License Zero proposed L0&#x2011;R to the Open Source Initiative for approval.  Approval has been controversial, in part because L0&#x2011;R goes further than existing licenses in when and what code it requires be released as open source.
+L0&#x2011;R, on the other hand, was written to conform to the [Open Source Definition](https://opensource.org/osd), and proposed to the Open Source Initiative for approval.  Approval has been controversial, in part because L0&#x2011;R goes further than existing licenses in when and what code it requires be released as open source.
 
-L0&#x2011;R is probably not a "free software" license [as defined by the Free Software Foundation](https://www.gnu.org/philosophy/free-sw.html).  FSF's definition of free software requires granting four freedoms, and anticipates that conditions on exercise of those freedoms can enhance software freedom overall, but admits only conditions on the freedom to share modified versions with others.  That partially explains why the Open Source Initiative [approved RPL&#x2011;1.5](https://opensource.org/licenses/RPL-1.5), a thematic predecessor of L0&#x2011;R, as open source while FSF [considers RPL non-free](https://www.gnu.org/licenses/license-list.en.html#RPL).
+L0&#x2011;R is probably not a "free software" license [as defined by the Free Software Foundation](https://www.gnu.org/philosophy/free-sw.html).  FSF's definition of free software requires granting freedoms to run, copy, distribute, study, change and improve software.  But it also recognizes that some conditions on those freedoms can enhance software freedom overall by ensuring that others also receive source code and freedom to work with it.  However, FSF's definition of free software admits only conditions on the freedom to share modified versions with others.  That partially explains why the Open Source Initiative [approved RPL&#x2011;1.5](https://opensource.org/licenses/RPL-1.5), a thematic predecessor of L0&#x2011;R, as open source while FSF [considers RPL non-free](https://www.gnu.org/licenses/license-list.en.html#RPL).
 
-## Private Licenses
+## <a id="private-licenses">Private Licenses</a>
 
-## Waivers
+Users who can't meet the terms of the License Zero public license you choose for your project can buy a private license that allows them, and only them, to use your work.
 
-## Relicensing
+License Zero publishes a [standard form private license](https://licensezero.com/licenses/private).  It comes in four variants:
 
-## Outside Contributions
+1.  a "solo tier" private license for a single person
+2.  a "team tier" private license for up to 10 people
+2.  a "company tier" private license for up to 100 people
+3.  an "enterprise tier" private license for an unlimited number of people
 
-## Other Approaches
+## <a id="waivers">Waivers</a>
+
+## <a id="relicensing">Relicensing</a>
+
+## <a id="licensezero.com">licensezero.com</a>
+
+## <a id="contributions">Contributions</a>
+
+## <a id="complimentary-approaches">Complimentary Approaches</a>
 
 License Zero isn't the only way to financially support your work on open software, and it tries its best to remain compatible with other opportunities.
 
-### Donations
+### <a id="donations">Donations</a>
 
 Ask people and companies for money, and hope they give it to you.
 
-### Merchandise
+### <a id="merchandise">Merchandise</a>
 
 Sell books, stickers, shirts, and other physical goods with your project's name or logo.
 
@@ -114,38 +137,38 @@ Sell books, stickers, shirts, and other physical goods with your project's name 
 
 Sell or exchange the right to put company advertising, branding, or support acknowledgments in your project's documentation, on your project's website or social media accounts, or even in your software itself.
 
-### Delayed Release
+### <a id="delayed-release">Delayed Release</a>
 
 Give paying customers early access to your work ahead of its release as open source, some time later.
 
-### Trademark Licensing
+### <a id="trademark-licensing">Trademark Licensing</a>
 
 Require others to support you financially in order to use a trademark to identify themselves as providers of related products or services.  Trademark licensing for service providers is often coupled with [advertising](#advertising), in the form of a listing among service providers on the project's website.
 
-### Training
+### <a id="training">Training</a>
 
 Charge companies, conferences, or other venues to train others in the use of your project, in person or remotely.
 
-### Support
+### <a id="support">Support</a>
 
 Charge for access to and use of your time to assist users in using your work.
 
-### Grant Funding
+### <a id="grants">Grants</a>
 
 Apply to grant-making institutions and government entities for financial support in support your work, if it aligns with their objectives.
 
-### Hosting
+### <a id="hosting">Hosting</a>
 
 Charge others to install, configure, and run your project on their behalf.
 
-### Integration
+### <a id="integration">Integration</a>
 
 Charge others to integrate your work into their applications or services.
 
-### Paid Development
+### <a id="paid-development">Paid Development</a>
 
 Charge others for work they would like to do, such as bug fixes, feature adds, and other changes.
 
-### Related Proprietary Software
+### <a id="proprietary-software">Proprietary Software</a>
 
 Sell proprietary software relating to or enhancing your open project.  For example, many open source database companies license proprietary optimizations, monitoring tools, and replication features.
