@@ -1,4 +1,4 @@
-<img src="logo.svg" class="logo">
+<img src="https://licensezero.com/logo.svg" class="logo">
 
 # License Zero Developer's Guide
 
