@@ -68,7 +68,7 @@ A for-profit company wants to use a License Zero library in the sync software th
 
 The public licenses also differ in some meaningful political ways you should be aware of.
 
-L0-NC is not an "open source" or "free software" license as many community members define "open source", because it discriminates against business use.  Source for L0-NC can still be published and developed online, using many popular services like GitHub and npm.  But many in those communities will not accept it.
+L0-NC is not an "open source" or "free software" license as many community members define those terms, because it discriminates against business use.  Source for L0-NC can still be published and developed online, using many popular services like GitHub and npm.  But many in those communities will not accept it.
 
 L0-R was written to conform to the [Open Source Definition](https://opensource.org/osd), and License Zero proposed L0-R to the Open Source Initiative for approval.  Approval has been controversial, in part because L0-R goes further than existing licenses in when and what code it requires be released as open source.
 
