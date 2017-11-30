@@ -1,4 +1,9 @@
-guide.html: guide.md head.html foot.html
+COMMONMARK=node_modules/.bin/commonmark
+
+guide.html: guide.md head.html foot.html | $(COMMONMARK)
 	cat head.html > $@
-	commonmark --smart $< >> $@
+	$(COMMONMARK) --smart $< >> $@
 	cat foot.html >> $@
+
+$(COMMONMARK):
+	npm install
