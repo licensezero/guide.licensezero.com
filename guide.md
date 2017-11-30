@@ -60,23 +60,25 @@ Consider a few user scenarios, and how they play out under different License Zer
 
 1.  A for-profit company wants to use a License Zero library in their proprietary web app.
 
-    - If the library is licensed under L0&#x2011;NC, the company can only use the library for seven days.
+    - If the library is licensed under L0&#x2011;NC, the company can only use the library for seven days under its public license.  Then they need to buy a private license.
 
-    - If the library is licensed under L0&#x2011;R, the company can't use the library in their web app, because they won't it as open source.
+    - If the library is licensed under L0&#x2011;R, the company needs to buy a private license to use it in their web app at all.  They can't use the library under its public license, because they won't meet its conditions by releasing their web app as open source.
 
-2.  A for-profit company wants to use a License Zero library in the data synchronization software they ship with their voice recorders.  They plan to release the sync software as open source.
+2.  A for-profit company wants to use a License Zero library in the data synchronization software they ship with voice recorders they make.  They plan to release the sync software as open source.
 
-    - If the library is licensed under L0&#x2011;NC, the company can only use the library for seven days.  Moreover, the company's customers will be limited to trial periods for commercial use, too.
+    - If the library is licensed under L0&#x2011;NC, the company can only use the library for seven days under the public license.  Then they need to buy a private license.  Moreover, any company customer can only use the library for commercial commercial purposes under the public license for seven days.  Then they need to buy a private license, too.
 
-    - If the library is licensed under L0&#x2011;R, the company can use the library in their sync software, as long as they actually release the sync software as open source.  The company's customers can use the sync software, with the library, for any purpose, as long as they share any new work of their own using the library as open source.
+    - If the library is licensed under L0&#x2011;R, the company can use the library in their sync software under the public license, as long as they actually release the sync software as open source.  The company's customers can use the sync software, with the library, for any purpose, as long as they share any new work of their own using the library as open source.
 
 3.  A for-profit company wants to use a License Zero video player application to show commercials in their office lobby.
 
-    - If the application is licensed under L0&#x2011;NC, the company can only use the application for seven days.
+    - If the application is licensed under L0&#x2011;NC, the company can only use the application for seven days under the public license.  Then they need to buy a private license.
 
-    - If the application is licensed under L0&#x2011;R, the company is free to use the application for as long as they like.
+    - If the application is licensed under L0&#x2011;R, the company is free to use the application for as long as they like under the public license.
 
-Many noncommercial software users are happy to make their work open source, but many do not.  Many for-profit companies make proprietary software, but many also make and release open source software.  L0&#x2011;NC allows users to build and use closed software on top of your open work, as long it's used for noncommercial reasons.  L0&#x2011;R allows users to build and use open source on top of your work, even for very profit-driven reasons.
+L0&#x2011;NC allows users to build and use closed and proprietary software with your work, as long they use it for noncommercial purposes.  L0&#x2011;R allows users to build and use only open source software with your work, even for very profit-driven purposes.  Many noncommercial software users are happy to make their work open source, but many make closed software, too.  Many for-profit companies make proprietary software, but many also make and release open source software, too.
+
+License Zero was inspired by imbalances in the relationship between open source developers and users.  Both License Zero public licenses represent new deals between developers and users, designed to redress that imbalance.  It isn't clear yet which public license approach is "best", overall, for any particular kind of software, or in any particular kind of situation.
 
 ### Open Source and Free Software
 
