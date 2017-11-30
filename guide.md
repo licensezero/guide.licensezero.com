@@ -106,12 +106,16 @@ L0&#x2011;R is probably not a "free software" license [as defined by the Free So
 
 Users who can't meet the terms of the License Zero public license you choose for your project can buy a private license that allows them, and only them, to use your work.
 
-License Zero publishes a [standard form private license](https://licensezero.com/licenses/private).  It comes in four variants:
+License Zero publishes a [standard form private license](https://licensezero.com/licenses/private).  The private license is based on [The Apache License, Version 2.0](https://apache.org/licenses/LICENSE-2.0), with changes that transform it from a permissive open source license into a proprietary license.  It comes in four variants:
 
 1.  a "solo tier" private license for a single person
 2.  a "team tier" private license for up to 10 people
 2.  a "company tier" private license for up to 100 people
 3.  an "enterprise tier" private license for an unlimited number of people
+
+Each private license grants the buyer broad permission under copyright and patent law to use the software.  Team-, company-, and enterprise-tier private licenses also allow the buyer to extend, or sublicense, that permission to employees and independent contractors.  (Independent contractors must be individuals, not companies.)  Team- and company-tier private licenses limit the number of people the buyer can sublicense in any rolling one-year period.
+
+Note that the private license terms do _not_ allow buyers to sublicense their customers, or others who want to use software they build on top of your project.  Those users will need to abide by the terms of your public license, or purchase private licenses for themselves.  [Relicensing](#relicensing), covered below, allows you to offer to make your project broadly usable on that kind of basis for a price.
 
 ## <a id="waivers">Waivers</a>
 
