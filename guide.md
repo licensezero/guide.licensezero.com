@@ -121,6 +121,20 @@ Note that the private license terms do _not_ allow buyers to sublicense their cu
 
 ## <a id="relicensing">Relicensing</a>
 
+License Zero allows, but does not require, setting a price at which you agree to change the public license terms of your project to those of [The License Zero Permissive Public License (L0&#x2011;P)](https://licensezero.com/licenses/permissive).
+
+### <a id="permissive-license">Permissive License</a>
+
+L0&#x2011;P is a highly permissive open source software license, much like [The MIT License](https://spdx.org/licenses/MIT) and [the two-clause BSD license](https://spdx.org/licenses/BSD-2-Clause), but easier to read and more legally complete.  It gives everyone who receives a copy of your software permission under copyright and patent law to work with and built on it in any way they like, as long as they preserve your license information in copies they give to others and refrain from suing users of your project for violating patents on it.
+
+Relicensing your project under L0&#x2011;P removes any reason for users to purchase private licenses for your project.  Under the [agency terms](https://licensezero.com/terms/agency) you must agree to in order to license a project through License Zero, you must retract your project for sale through the API if you relicense it.
+
+You're free to use L0&#x2011;P for projects that you don't license through License Zero, as well.
+
+### <a id="relicense-agreement">Relicense Agreement</a>
+
+The [relicense agreement](https://licensezero.com/licenses/relicense) sets out the terms of agreement between you and the sponsor who pays your set price.  As the developer, your obligations are set out in the "Relicensing" section of the agreement.
+
 ## <a id="licensezero.com">licensezero.com</a>
 
 ## <a id="contributions">Contributions</a>
