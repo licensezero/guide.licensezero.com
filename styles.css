@@ -1,4 +1,11 @@
 html {
-  font-family: sans-serif;
+  font-family: "Droid Sans", sans-serif;
+  hyphens: auto;
   line-height: 140%;
+  text-align: justify;
+}
+
+body {
+  max-width: 600px;
+  padding: 1rem 2rem;
 }
