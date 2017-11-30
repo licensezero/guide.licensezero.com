@@ -72,7 +72,7 @@ L0-NC is not an "open source" or "free software" license as many community membe
 
 L0-R was written to conform to the [Open Source Definition](https://opensource.org/osd), and License Zero proposed L0-R to the Open Source Initiative for approval.  Approval has been controversial, in part because L0-R goes further than existing licenses in when and what code it requires be released as open source.
 
-L0-R is probably not a "free software" license [as defined by the Free Software Foundation](https://www.gnu.org/philosophy/free-sw.html).  FSF's definition of free software requires granting four freedoms, and anticipates that conditions on exercise of those freedoms can enhance software freedom overall, but admits only conditions on the freedom to share modified versions with others.  That partially explains why the Open Source Initiative [approved RPL-1.5 as open source](https://opensource.licenses/RPL-1.5) while FSF [considers RPL non-free](https://www.gnu.org/licenses/license-list.en.html#RPL).
+L0-R is probably not a "free software" license [as defined by the Free Software Foundation](https://www.gnu.org/philosophy/free-sw.html).  FSF's definition of free software requires granting four freedoms, and anticipates that conditions on exercise of those freedoms can enhance software freedom overall, but admits only conditions on the freedom to share modified versions with others.  That partially explains why the Open Source Initiative [approved RPL-1.5](https://opensource.org/licenses/RPL-1.5), a thematic predecessor of L0-R, as open source while FSF [considers RPL non-free](https://www.gnu.org/licenses/license-list.en.html#RPL).
 
 ## Private Licenses
 
