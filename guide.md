@@ -1,3 +1,5 @@
+<img src="logo.svg" class="logo">
+
 # License Zero Developer's Guide
 
 License Zero is a game plan for financially sustaining your independent work on open software.  License Zero lets you make two new kinds of deals with users of the software you make online:
@@ -7,6 +9,17 @@ License Zero is a game plan for financially sustaining your independent work on 
 It's the model of GitHub, Travis CI, and other leading developer services, adapted for library, framework, and tools developers.  Finally.
 
 This is a guide to License Zero, the project's primary documentation for developers looking to sustain their work with that system.  If you're interested in using License Zero to license your work, you should read this guide.
+
+## Contents
+
+1.  [Overview](#overview)
+2.  [Public Licenses](#public-licenses)
+3.  [Private Licenses](#private-licenses)
+4.  [Waivers](#waivers)
+5.  [Relicensing](#relicensing)
+6.  [licensezero.com](#licensezero.com)
+7.  [Contributions](#contributions)
+8.  [Complimentary Approaches](#complimentary-approaches)
 
 ## <a id="overview">Overview</a>
 
@@ -138,6 +151,8 @@ The [relicense agreement](https://licensezero.com/licenses/relicense) sets out t
 As the developer, your obligations are set out in the "Relicensing" section of the agreement.
 
 ## <a id="licensezero.com">licensezero.com</a>
+
+<img src="vending-machine.svg" class="vending-machine">
 
 ## <a id="contributions">Contributions</a>
 

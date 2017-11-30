@@ -9,3 +9,7 @@ body {
   max-width: 600px;
   padding: 1rem 2rem;
 }
+
+.logo {
+  width: 100px;
+}
