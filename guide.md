@@ -152,8 +152,6 @@ As the developer, your obligations are set out in the "Relicensing" section of t
 
 ## <a id="licensezero.com">licensezero.com</a>
 
-<img src="vending-machine.svg" class="vending-machine">
-
 ## <a id="cli">Command Line Interface</a>
 
 ## <a id="contributions">Contributions</a>
