@@ -4,7 +4,7 @@
 
 License Zero is a game plan for financially sustaining your independent work on open software.  License Zero lets you make two new kinds of deals with users of the software you make online:
 
-> Use my software freely for open source or noncommercial work, but otherwise buy a license online, to support me.
+> Use my software freely for open source or noncommercial work, but otherwise buy a license online to support me.
 
 It's the model of GitHub, Travis CI, and other leading developer services, adapted for library, framework, and tools developers.  Finally.
 
