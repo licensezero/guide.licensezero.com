@@ -24,10 +24,10 @@ This is a guide to License Zero, the project's primary documentation for develop
   - [Cryptography](#cryptography)
   - [Project Pages](#project-pages)
   - [Pricing Graphics](#pricing-graphics)
+- [Artless Devices](#artless-devices)
 - [Command Line Interface](#command-line-interface)
   - [Licensor Commands](#licensor-commands)
   - [Licensee Commands](#licensee-commands)
-- [Artless Devices](#artless-devices)
 - [Contributions](#contributions)
   - [Parallel Licensing](#parallel-licensing)
   - [Stacked Licensing](#stacked-licensing)
@@ -248,6 +248,13 @@ The Markdown syntax is:
 ```
 
 
+## <a id="artless-devices">Artless Devices</a>
+
+Artless Devices LLC is a California limited liability company.  Artless Devices runs licensezero.com and the API, and licenses the command line interface and related software.  It serves as the legal counterpart to those technical systems.
+
+Users of licensezero.com agree to its [terms of service](https://licensezero.com/terms/service) with Artless Devices, and developers offering private licenses through licensezero.com agree to the [agency terms](https://licensezero.com/terms/agency) with Artless Devices.
+
+
 ## <a id="command-line-interface">Command Line Interface</a>
 
 
@@ -255,13 +262,6 @@ The Markdown syntax is:
 
 
 ### <a id="licensee-commands">Licensee Commands</a>
-
-
-## <a id="artless-devices">Artless Devices</a>
-
-Artless Devices LLC is a California limited liability company.  Artless Devices runs licensezero.com and the API, and licenses the command line interface and related software.  It serves as the legal counterpart to those technical systems.
-
-Users of licensezero.com agree to its [terms of service](https://licensezero.com/terms/service) with Artless Devices, and developers offering private licenses through licensezero.com agree to the [agency terms](https://licensezero.com/terms/agency) with Artless Devices.
 
 
 ## <a id="contributions">Contributions</a>
