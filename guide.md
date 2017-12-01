@@ -13,19 +13,25 @@ This is a guide to License Zero, the project's primary documentation for develop
 
 ## Contents
 
-1.  [Overview](#overview)
-2.  [Public Licenses](#public-licenses)
-3.  [Private Licenses](#private-licenses)
-4.  [Waivers](#waivers)
-5.  [Relicensing](#relicensing)
-6.  [licensezero.com](#licensezero.com)
-    1.  [Stripe Connect](#stripe-connect)
-    2.  [Identifiers](#identifiers)
-    3.  [Cryptography](#cryptography)
-    4.  [Project Pages](#project-pages)
-    5.  [Pricing Graphics](#pricing-graphics)
-7.  [Contributions](#contributions)
-8.  [Complimentary Approaches](#complimentary-approaches)
+- [Overview](#overview)
+- [Public Licenses](#public-licenses)
+- [Private Licenses](#private-licenses)
+- [Waivers](#waivers)
+- [Relicensing](#relicensing) 
+- [licensezero.com](#licensezero.com)
+  - [Stripe Connect](#stripe-connect)
+  - [Identifiers](#identifiers)
+  - [Cryptography](#cryptography)
+  - [Project Pages](#project-pages)
+  - [Pricing Graphics](#pricing-graphics)
+- [Command Line Interface](#command-line-interface)
+  - [Licensor Commands](#licensor-commands)
+  - [Licensee Commands](#licensee-commands)
+- [Artless Devices](#artless-devices)
+- [Contributions](#contributions)
+  - [Parallel Licensing](#parallel-licensing)
+  - [Stacked Licensing](#stacked-licensing)
+- [Complimentary Approaches](#complimentary-approaches)
 
 
 ## <a id="overview">Overview</a>
@@ -159,7 +165,7 @@ L0&#x2011;P is a highly permissive open source software license, much like [The 
 
 Relicensing your project under L0&#x2011;P removes any reason for users to purchase private licenses for your project.  Under the [agency terms](https://licensezero.com/terms/agency) you must agree to in order to offer private licenses for a project through License Zero, you must retract your project for sale through the API if you relicense it.
 
-L0&#x2011;P's only role in the License Zero system is as the license terms onto which L0&#x2011;NC and L0&#x2011;R projects get relicensed.  However, you're free to use L0&#x2011;P for projects for which  you don't sell private licenses through License Zero, as well.  The [command line interface](#cli) is licensed under L0&#x2011;P, for example.
+L0&#x2011;P's only role in the License Zero system is as the license terms onto which L0&#x2011;NC and L0&#x2011;R projects get relicensed.  However, you're free to use L0&#x2011;P for projects for which  you don't sell private licenses through License Zero, as well.  The [command line interface](#command-line-interface) is licensed under L0&#x2011;P, for example.
 
 
 ### <a id="relicense-agreement">Relicense Agreement</a>
@@ -194,7 +200,7 @@ licensezero.com generates unique identifiers for each developer and each project
 
 When you connect a Stripe account to licensezero.com, the site creates a unique UUID for you, as well as a [NaCl](https://nacl.cr.yp.to/)/[libsodium](https://download.libsodium.org/doc/) style [Ed25519](https://ed25519.cr.yp.to/software.html) cryptographic signing keypair.  licensezero.com signs most kind of licensing information, from package metadata to `LICENSE` files, private licenses, and relicensing agreements, with your keypair.
 
-licensezero.com publishes the public signing key generated for you on your project pages, and via the API.  Buyers, using the [command line interface](#cli) can then verify signatures on private licenses and other documents against the public key.
+licensezero.com publishes the public signing key generated for you on your project pages, and via the API.  Buyers, using the [command line interface](#command-line-interface) can then verify signatures on private licenses and other documents against the public key.
 
 licensezero.com will not share the secret signing generated for you with anyone, even with you.  But using the API, through the command line interface, you can have licensezero.com sign [waivers](#waivers) on your behalf.
 
@@ -235,13 +241,13 @@ The Markdown syntax is:
 ```
 
 
-## <a id="cli">Command Line Interface</a>
+## <a id="command-line-interface">Command Line Interface</a>
 
 
-### Licensor Commands
+### <a id="licensor-commands">Licensor Commands</a>
 
 
-### Licensee Commands
+### <a id="licensee-commands">Licensee Commands</a>
 
 
 ## <a id="artless-devices">Artless Devices</a>
@@ -252,6 +258,12 @@ Users of licensezero.com agree to its [terms of service](https://licensezero.com
 
 
 ## <a id="contributions">Contributions</a>
+
+
+### <a id="permissive-contributions">Permissive Contributions</a>
+
+
+### <a id="stacked-licensing">Stacked Licensing</a>
 
 
 ## <a id="complimentary-approaches">Complimentary Approaches</a>
