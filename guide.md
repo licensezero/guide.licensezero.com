@@ -238,6 +238,12 @@ The Markdown syntax is:
 ## <a id="cli">Command Line Interface</a>
 
 
+### Licensor Commands
+
+
+### Licensee Commands
+
+
 ## <a id="artless-devices">Artless Devices</a>
 
 Artless Devices LLC is a California limited liability company.  Artless Devices runs licensezero.com and the API, and licenses the command line interface and related software.  It serves as the legal counterpart to those technical systems.
