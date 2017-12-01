@@ -27,3 +27,11 @@ h2 {
 h3 {
   margin-top: 3rem;
 }
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
