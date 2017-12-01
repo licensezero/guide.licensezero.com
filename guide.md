@@ -153,7 +153,7 @@ Note that the private license terms do _not_ allow buyers to sublicense their cu
 
 ## <a id="waivers">Waivers</a>
 
-Waivers work a bit like freebie private licenses.  As a licensor, you can use the [command line interface](#cli) to generate signed waivers for specific people and companies that you want to let out of your public license's conditions that limit commercial use of require releasing open source, for a set amount of time or forever.
+Waivers work a bit like freebie private licenses.  As a licensor, you can use the [command line interface](#command-line-interface) to generate signed waivers for specific people and companies that you want to let out of your public license's conditions that limit commercial use of require releasing open source, for a set amount of time or forever.
 
 License Zero publishes a [form waiver](https://licensezero.com/licenses/waiver) that works for both L0&#x2011;NC and L0&#x2011;R projects.
 
