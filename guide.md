@@ -156,6 +156,8 @@ licensezero.com is a website and API for selling [private licenses](#private-lic
 
 You can think of licensezero.com as a kind of vending machine in cyberspace.  As a developer, you can agree with the vending machine's operator to put private licenses and relicense deals for sale.  The vending machine then handles taking payment and issuing licenses on your behalf.  In exchange for the service, the vending machine's operator takes commission on sales.
 
+You could also think of licensezero.com as offering the back-office services needed to run a dual licensing business---negotiation, communication, payment processing, records management---as a service. Rather than start a company and hire employees or outside professionals to help you sell private licenses, you can use licensezero.com to do so at low cost, selling even relatively inexpensive private licenses.
+
 ## <a id="cli">Command Line Interface</a>
 
 ## <a id="artless-devices">Artless Devices</a>
