@@ -17,3 +17,13 @@ body {
 .logo {
   width: 100px;
 }
+
+h2 {
+  border-bottom: 1px solid black;
+  margin-top: 3rem;
+  padding-bottom: 0.5ex;
+}
+
+h3 {
+  margin-top: 3rem;
+}

@@ -18,6 +18,11 @@ This is a guide to License Zero, the project's primary documentation for develop
 4.  [Waivers](#waivers)
 5.  [Relicensing](#relicensing)
 6.  [licensezero.com](#licensezero.com)
+    1.  [Stripe Connect](#stripe-connect)
+    2.  [Identifiers](#identifiers)
+    3.  [Cryptography](#cryptography)
+    4.  [Project Pages](#project-pages)
+    5.  [Pricing Graphics](#pricing-graphics)
 7.  [Contributions](#contributions)
 8.  [Complimentary Approaches](#complimentary-approaches)
 
@@ -31,7 +36,10 @@ def system(user, project):
   else:
     # See "Private Licenses" below.
     private_license = user.private_license_for(project)
-    if private_license && user.meets_conditions_of(private_license):
+    if (
+      private_license and
+      user.meets_conditions_of(private_license
+    ):
       private_license.permit(user)
     # See "Waivers" below.
     else:
@@ -121,10 +129,10 @@ Users who can't meet the terms of the License Zero public license you choose for
 
 License Zero publishes a [standard form private license](https://licensezero.com/licenses/private).  The private license is based on [The Apache License, Version 2.0](https://apache.org/licenses/LICENSE-2.0), with changes that transform it from a permissive open source license into a proprietary license.  It comes in four variants:
 
-1.  a "solo tier" private license for a single person
-2.  a "team tier" private license for up to 10 people
-2.  a "company tier" private license for up to 100 people
-3.  an "enterprise tier" private license for an unlimited number of people
+1.  "solo tier" for a single person
+2.  "team tier" for up to 10 people
+2.  "company tier" for up to 100 people
+3.  "enterprise tier" for an unlimited number of people
 
 Each private license grants the buyer broad permission under copyright and patent law to use the software.  Team-, company-, and enterprise-tier private licenses also allow the buyer to extend, or sublicense, that permission to employees and independent contractors.  (Independent contractors must be individuals, not companies.)  Team- and company-tier private licenses limit the number of people the buyer can sublicense in any rolling one-year period.
 
@@ -158,7 +166,57 @@ You can think of licensezero.com as a kind of vending machine in cyberspace.  As
 
 You could also think of licensezero.com as offering the back-office services needed to run a dual licensing business---negotiation, communication, payment processing, records management---as a service. Rather than start a company and hire employees or outside professionals to help you sell private licenses, you can use licensezero.com to do so at low cost, selling even relatively inexpensive private licenses.
 
-### <a id="readme-graphics">`README` Graphics</a>
+### <a id="stripe-connect">Stripe Connect</a>
+
+You can create an account to sell private licenses through License Zero by linking a standard [Stripe](https://stripe.com) payment processing account, via the [Stripe Connect](https://stripe.com/connect).  Stripe Connect enables License Zero to initiate payment processing requests directly on your stripe account.
+
+### <a id="identifiers">Identifiers</a>
+
+licensezero.com generates unique identifiers for each developer and each project.  The identifiers are version 4 UUIDs like:
+
+    daf5a8b1-23e0-4a9f-a6c1-69c40c71816b
+
+### <a id="cryptography">Cryptography</a>
+
+When you connect a Stripe account to licensezero.com, the site creates a unique UUID for you, as well as a [NaCl](https://nacl.cr.yp.to/)/[libsodium](https://download.libsodium.org/doc/) style [Ed25519](https://ed25519.cr.yp.to/software.html) cryptographic signing keypair.  licensezero.com signs most kind of licensing information, from package metadata to `LICENSE` files, private licenses, and relicensing agreements, with your keypair.
+
+licensezero.com publishes the public signing key generated for you on your project pages, and via the API.  Buyers, using the [command line interface](#cli) can then verify signatures on private licenses and other documents against the public key.
+
+licensezero.com will not share the secret signing generated for you with anyone, even with you.  But using the API, through the command line interface, you can have licensezero.com sign [waivers](#waivers) on your behalf.
+
+### <a id="project-pages">Project Pages</a>
+
+licensezero.com serves a page with project information and a private license purchase form for each project.  For example:
+
+<https://licensezero.com/projects/daf5a8b1-23e0-4a9f-a6c1-69c40c71816b>
+
+The URL pattern is:
+
+```text
+https://licensezero.com/projects/{UUID}
+```
+
+Where `{UUID}` is the UUIDv4 for your project.
+
+### <a id="pricing-graphics">Pricing Graphics</a>
+
+licensezero.com serves SVG graphics with private-license pricing information that you can include in your project's `README` file or other documentation.  For example:
+
+![License Zero badge](https://licensezero.com/projects/daf5a8b1-23e0-4a9f-a6c1-69c40c71816b/badge.svg)
+
+The URL pattern is:
+
+```text
+https://licensezero.com/projects/{UUID}.svg
+```
+
+Where `{UUID}` is the UUIDv4 for your project.
+
+The Markdown syntax is:
+
+```markdown
+![L0](https://licensezero.com/projects/{UUID}.svg)
+```
 
 ## <a id="cli">Command Line Interface</a>
 
