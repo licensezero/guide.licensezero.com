@@ -146,7 +146,7 @@ L0&#x2011;P's only role in the License Zero system is as the license terms onto 
 
 ### <a id="relicense-agreement">Relicense Agreement</a>
 
-The [relicense agreement](https://licensezero.com/licenses/relicense) sets out the terms of agreement between you and the sponsor who pays your set price.  When a customer pays the price you set to relicense your project, Artless Devices LLC, the company behind License Zero, signs the relicense agreement on your behalf.  (You give Artless Devices permission to do this, as your legal "agent", under the [agency terms](https://licensezero.com/terms/agency) you must agree to in order to set a relicense price.)
+The [relicense agreement](https://licensezero.com/licenses/relicense) sets out the terms of agreement between you and the sponsor who pays the relicense price you set.  When a customer pays the price, Artless Devices LLC, the company behind License Zero, signs the relicense agreement with the sponsor on your behalf, as your agent.
 
 As the developer, your obligations are set out in the "Relicensing" section of the agreement.
 
