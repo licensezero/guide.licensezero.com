@@ -159,8 +159,7 @@ License Zero publishes a [form waiver](https://licensezero.com/licenses/waiver) 
 
 The [command line interface](#command-line-interface) treats waivers just like private licenses for purposes of calculating what additional licenses someone needs for a project.
 
-You might like to issue waivers to reward contributors to your project who make their work available under a permissive license, for [parallel licensing](#parallel-licensing).  You may also like to issue waivers for projects under L&#x2011;NC terms, to resolve a question about whether a particular use will trigger the commercial-use time limit.
-
+You might like to issue waivers to reward contributors to your project who make their work available under a permissive license, for [parallel licensing](#parallel-licensing).  You may also like to issue waivers for projects under L&#x2011;NC terms, to resolve a question about whether a particular use will trigger the commercial-use time limit. 
 
 ## <a id="relicensing">Relicensing</a>
 
