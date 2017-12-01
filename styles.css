@@ -9,6 +9,10 @@ code, pre {
   font-family: "Droid Sans Mono", monospace;
 }
 
+pre {
+  font-size: 90%;
+}
+
 body {
   max-width: 600px;
   padding: 1rem 2rem;

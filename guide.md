@@ -159,7 +159,7 @@ License Zero publishes a [form waiver](https://licensezero.com/licenses/waiver) 
 
 The [command line interface](#command-line-interface) treats waivers just like private licenses for purposes of calculating what additional licenses someone needs for a project.
 
-You might like to issue waivers to reward contributors to your project who make their work available under a permissive license, for [parallel licensing](#parallel-licensing).  You may also like to issue waivers for projects under L&#x2011;NC terms, to resolve a question about whether a particular use will trigger the commercial-use time limit. 
+You might like to issue waivers to reward contributors to your project who make their work available under a permissive license, for [parallel licensing](#parallel-licensing), extend the free trial period for projects under L&#x2011;NC terms, or to resolve a question about whether a particular use will trigger the commercial-use time limit. 
 
 ## <a id="relicensing">Relicensing</a>
 
@@ -257,8 +257,96 @@ Users of licensezero.com agree to its [terms of service](https://licensezero.com
 
 ## <a id="command-line-interface">Command Line Interface</a>
 
+The [command line interface](https://www.npmjs.com/packages/licensezero) is the primary way those offering and buying licenses through License Zero interact with licensezero.com.  With [Node.js](https://nodejs.org) and [npm](https://npmjs.com) installed, you can install the CLI with:
+
+```bash
+npm install --global licensezero
+```
+
 
 ### <a id="licensor-commands">Licensor Commands</a>
+
+
+#### <a id="licensor-registration">Licensor Registration</a>
+
+The first to offering private licenses for sale through licensezero.com is connecting a Stripe account:
+
+```bash
+licensezero register-licensor "$EMAIL" "$NAME" "$JURISDICTION"
+```
+
+The first item is a valid e-mail address.  The second is your legal name.  The third is the [ISO 3166-2](https://en.wikipedia.org/wiki/ISO_3166-2) code for your legal jurisdiction, like `US-CA` for California, United States.
+
+The command will open a page in your browser where you can log into Stripe or create an account, then link that account to licensezero.com.  Once you've successfully linked your account, you'll receive a licensor identifier and an access token that you can save with:
+
+```bash
+licensezero create-licensor $UUID
+```
+
+
+#### <a id="offering-licenses">Offering Licenses</a>
+
+To offer private licenses for an npm package:
+
+```bash
+cd your-npm-package
+licensezero offer \
+  --solo 500 \
+  --team 10000 \
+  --company 20000 \
+  --enterprise 75000
+```
+
+Each flag corresponds to a tier of [private license](#private-licenses), with a price in United States cents.
+
+If you want to set a [relicense](#relicensing) price:
+
+```bash
+licensezero offer -s 500 -t 10000 -c 20000 -e 75000 --relicense  500000
+```
+
+You can run the `offer` subcommand at any time to update pricing.
+
+Once you've registered the project, use the CLI to set licensing metadata and `LICENSE`:
+
+```bash
+licensezero license $PROJECT --noncommercial
+# or
+licensezero license $PROJECT --reciprocal
+```
+
+
+#### <a id="generating-waivers">Generating Waivers</a>
+
+To generate a waiver for a project you've offered with `licensezero offer`:
+
+```bash
+licensezero waiver e91fcaa8-1d80-4d3f-97aa-5b58b93e4662 \
+  --beneficiary "SomeCo, Inc." \
+  --jurisdiction US-DE \
+  --days 30 > waiver.txt
+```
+
+`$PROJECT` is the identifier for the project.  `$NAME` is the legal name of the person or company the waiver is for.  `$CODE` is the [ISO 3166-2](https://en.wikipedia.org/wiki/ISO_3166-2) code for their legal jurisdiction.
+
+You can also issue waivers that don't expire:
+
+```bash
+licensezero waiver e91fcaa8-1d80-4d3f-97aa-5b58b93e4662 \
+  -b "SomeCo, Inc." \
+  -j US-DE \
+  --days forever > waiver.txt
+```
+
+#### <a id="retracting-projects">Retracting Projects</a>
+
+You can stop offering private licenses through licensezero.com at any time:
+
+```bash
+licensezero retract e91fcaa8-1d80-4d3f-97aa-5b58b93e4662
+```
+
+Please note that under the [agency terms](https://licensezero.com/terms/agency), Artless Devices can complete private license and relicensing transactions that began before you retracted the project, but can't start new transactions.
 
 
 ### <a id="licensee-commands">Licensee Commands</a>
