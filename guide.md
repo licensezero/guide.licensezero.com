@@ -152,7 +152,17 @@ As the developer, your obligations are set out in the "Relicensing" section of t
 
 ## <a id="licensezero.com">licensezero.com</a>
 
+licensezero.com is a website and API for selling [private licenses](#private-licenses), closing [relicense deals](#relicensing), and generating [waivers](#waivers).
+
+You can think of licensezero.com as a kind of vending machine in cyberspace.  As a developer, you can agree with the vending machine's operator to put private licenses and relicense deals for sale.  The vending machine then handles taking payment and issuing licenses on your behalf.  In exchange for the service, the vending machine's operator takes commission on sales.
+
 ## <a id="cli">Command Line Interface</a>
+
+## <a id="artless-devices">Artless Devices</a>
+
+Artless Devices LLC is a California limited liability company.  Artless Devices runs licensezero.com and the API, and licenses the command line interface and related software.  It serves as the legal counterpart to those technical systems.
+
+Users of licensezero.com agree to its [terms of service](https://licensezero.com/terms/service) with Artless Devices, and developers offering private licenses through licensezero.com agree to the [agency terms](https://licensezero.com/terms/agency) with Artless Devices.
 
 ## <a id="contributions">Contributions</a>
 
