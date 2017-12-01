@@ -10,6 +10,7 @@ It's the model of [GitHub](https://github.com/pricing), [Travis CI](https://trav
 
 This is a guide to License Zero, the project's primary documentation for developers looking to sustain their work with that system.  If you're interested in using License Zero to license your work, you should read this guide.
 
+
 ## Contents
 
 1.  [Overview](#overview)
@@ -25,6 +26,7 @@ This is a guide to License Zero, the project's primary documentation for develop
     5.  [Pricing Graphics](#pricing-graphics)
 7.  [Contributions](#contributions)
 8.  [Complimentary Approaches](#complimentary-approaches)
+
 
 ## <a id="overview">Overview</a>
 
@@ -55,6 +57,7 @@ As an independent software developer, you control who can use your software, and
 
 [licensezero.com](https://licensezero.com) sells those users separate, private licenses for commercial and proprietary use, on your behalf.  [Stripe](https://stripe.com) processes payments directly to an account in your name.  A [command line interface](https://www.npmjs.com/packages/licensezero) makes it easy for users to buy all the private licenses they need for a Node.js project at once, with a single credit card transaction.  The same tool makes it easy for you to sign up, start offering new projects, and set pricing.
 
+
 ## <a id="public-licenses">Public Licenses</a>
 
 License Zero starts where you exercise your power as the owner of intellectual property in your work: in your project's `LICENSE` file.  You might currently use [The MIT License](https://spdx.org/licenses/MIT), [a BSD license](https://spdx.org/licenses/BSD-2-Clause), or a similar open source license in that file now, to give the community permission to use your work.  License Zero offers you two alternatives:
@@ -64,6 +67,7 @@ License Zero starts where you exercise your power as the owner of intellectual p
 2.  [The License Zero Reciprocal Public License (L0&#x2011;R)](https://licensezero.com/licenses/reciprocal) requires users who change, build on, or use your work to create software to release their work as open source, too.  If users can't or won't share their work as open source, they need to buy a different license that allows proprietary use of the software.  In that way, L0&#x2011;R works a bit like a _copyleft_ license such as [AGPL](https://www.gnu.org/licenses/agpl-3.0.html), but requires users to release more of their own code, in more situations.
 
 Both L0 public licenses are short and readable.  You should [read](https://licensezero.com/licenses/noncommercial) [them](https://licensezero.com/licenses/reciprocal).
+
 
 ### <a id="comparing-public-licenses">Comparing the Public Licenses</a>
 
@@ -113,6 +117,7 @@ L0&#x2011;NC allows users to build and use closed and proprietary software with 
 
 License Zero was inspired by imbalances in the relationship between open source developers and users.  Both License Zero public licenses represent new deals between developers and users, designed to redress that imbalance.  It isn't clear yet which public license approach is "best", overall, for any particular kind of software, or in any particular kind of situation.
 
+
 ### <a id="open-source-and-free-software">Open Source and Free Software</a>
 
 The public licenses also differ in some meaningful political ways you should be aware of.
@@ -122,6 +127,7 @@ L0&#x2011;NC is not an "open source" or "free software" license as many communit
 L0&#x2011;R, on the other hand, was written to conform to the [Open Source Definition](https://opensource.org/osd), and proposed to the Open Source Initiative for approval.  Approval has been controversial, in part because L0&#x2011;R goes further than existing licenses in when and what code it requires be released as open source.
 
 L0&#x2011;R is probably not a "free software" license [as defined by the Free Software Foundation](https://www.gnu.org/philosophy/free-sw.html).  FSF's definition of free software requires granting freedoms to run, copy, distribute, study, change and improve software.  But it also recognizes that some conditions on those freedoms can enhance software freedom overall by ensuring that others also receive source code and freedom to work with it.  However, FSF's definition of free software admits only conditions on the freedom to share modified versions with others.  That partially explains why the Open Source Initiative [approved RPL&#x2011;1.5](https://opensource.org/licenses/RPL-1.5), a thematic predecessor of L0&#x2011;R, as open source while FSF [considers RPL non-free](https://www.gnu.org/licenses/license-list.en.html#RPL).
+
 
 ## <a id="private-licenses">Private Licenses</a>
 
@@ -138,11 +144,14 @@ Each private license grants the buyer broad permission under copyright and paten
 
 Note that the private license terms do _not_ allow buyers to sublicense their customers, or others who want to use software they build on top of your project.  Those users will need to abide by the terms of your public license, or purchase private licenses for themselves.  [Relicensing](#relicensing), covered below, allows you to offer to make your project broadly usable on that kind of basis for a price.
 
+
 ## <a id="waivers">Waivers</a>
+
 
 ## <a id="relicensing">Relicensing</a>
 
 License Zero allows, but does not require, setting a price at which you agree to change the public license terms of your contributions to a project to those of [The License Zero Permissive Public License (L0&#x2011;P)](https://licensezero.com/licenses/permissive).  This is called "relicensing".
+
 
 ### <a id="permissive-license">Permissive License</a>
 
@@ -152,11 +161,13 @@ Relicensing your project under L0&#x2011;P removes any reason for users to purch
 
 L0&#x2011;P's only role in the License Zero system is as the license terms onto which L0&#x2011;NC and L0&#x2011;R projects get relicensed.  However, you're free to use L0&#x2011;P for projects for which  you don't sell private licenses through License Zero, as well.  The [command line interface](#cli) is licensed under L0&#x2011;P, for example.
 
+
 ### <a id="relicense-agreement">Relicense Agreement</a>
 
 The [relicense agreement](https://licensezero.com/licenses/relicense) sets out the terms of agreement between you and the sponsor who pays the relicense price you set.  When a customer pays the price, Artless Devices LLC, the company behind License Zero, signs the relicense agreement with the sponsor on your behalf, as your agent.
 
 As the developer, your obligations are set out in the "Relicensing" section of the agreement.  Once you receive payment for the relicense price, you're obligated to meet those obligations.  They boil down to updating license information in the source code repository for your project, and keeping it freely and publicly available for a year.
+
 
 ## <a id="licensezero.com">licensezero.com</a>
 
@@ -166,15 +177,18 @@ You can think of licensezero.com as a kind of vending machine in cyberspace.  As
 
 You could also think of licensezero.com as offering the back-office services needed to run a dual licensing business---negotiation, communication, payment processing, records management---as a service. Rather than start a company and hire employees or outside professionals to help you sell private licenses, you can use licensezero.com to do so at low cost, selling even relatively inexpensive private licenses.
 
+
 ### <a id="stripe-connect">Stripe Connect</a>
 
 You can create an account to sell private licenses through License Zero by linking a standard [Stripe](https://stripe.com) payment processing account, via the [Stripe Connect](https://stripe.com/connect).  Stripe Connect enables License Zero to initiate payment processing requests directly on your stripe account.
+
 
 ### <a id="identifiers">Identifiers</a>
 
 licensezero.com generates unique identifiers for each developer and each project.  The identifiers are version 4 UUIDs like:
 
     daf5a8b1-23e0-4a9f-a6c1-69c40c71816b
+
 
 ### <a id="cryptography">Cryptography</a>
 
@@ -183,6 +197,7 @@ When you connect a Stripe account to licensezero.com, the site creates a unique 
 licensezero.com publishes the public signing key generated for you on your project pages, and via the API.  Buyers, using the [command line interface](#cli) can then verify signatures on private licenses and other documents against the public key.
 
 licensezero.com will not share the secret signing generated for you with anyone, even with you.  But using the API, through the command line interface, you can have licensezero.com sign [waivers](#waivers) on your behalf.
+
 
 ### <a id="project-pages">Project Pages</a>
 
@@ -197,6 +212,7 @@ https://licensezero.com/projects/{UUID}
 ```
 
 Where `{UUID}` is the UUIDv4 for your project.
+
 
 ### <a id="pricing-graphics">Pricing Graphics</a>
 
@@ -218,7 +234,9 @@ The Markdown syntax is:
 ![L0](https://licensezero.com/projects/{UUID}.svg)
 ```
 
+
 ## <a id="cli">Command Line Interface</a>
+
 
 ## <a id="artless-devices">Artless Devices</a>
 
@@ -226,55 +244,69 @@ Artless Devices LLC is a California limited liability company.  Artless Devices 
 
 Users of licensezero.com agree to its [terms of service](https://licensezero.com/terms/service) with Artless Devices, and developers offering private licenses through licensezero.com agree to the [agency terms](https://licensezero.com/terms/agency) with Artless Devices.
 
+
 ## <a id="contributions">Contributions</a>
+
 
 ## <a id="complimentary-approaches">Complimentary Approaches</a>
 
 License Zero isn't the only way to financially support your work on open software, and it tries its best to remain compatible with other opportunities.
 
+
 ### <a id="donations">Donations</a>
 
 Ask people and companies for money, and hope they give it to you.
+
 
 ### <a id="merchandise">Merchandise</a>
 
 Sell books, stickers, shirts, and other physical goods with your project's name or logo.
 
+
 ### <a id="advertising">Advertising</a>
 
 Sell or exchange the right to put company advertising, branding, or support acknowledgments in your project's documentation, on your project's website or social media accounts, or even in your software itself.
+
 
 ### <a id="delayed-release">Delayed Release</a>
 
 Give paying customers early access to your work ahead of its release as open source, some time later.
 
+
 ### <a id="trademark-licensing">Trademark Licensing</a>
 
 Require others to support you financially in order to use a trademark to identify themselves as providers of related products or services.  Trademark licensing for service providers is often coupled with [advertising](#advertising), in the form of a listing among service providers on the project's website.
+
 
 ### <a id="training">Training</a>
 
 Charge companies, conferences, or other venues to train others in the use of your project, in person or remotely.
 
+
 ### <a id="support">Support</a>
 
 Charge for access to and use of your time to assist users in using your work.
+
 
 ### <a id="grants">Grants</a>
 
 Apply to grant-making institutions and government entities for financial support in support your work, if it aligns with their objectives.
 
+
 ### <a id="hosting">Hosting</a>
 
 Charge others to install, configure, and run your project on their behalf.
+
 
 ### <a id="integration">Integration</a>
 
 Charge others to integrate your work into their applications or services.
 
+
 ### <a id="paid-development">Paid Development</a>
 
 Charge others for work they would like to do, such as bug fixes, feature adds, and other changes.
+
 
 ### <a id="proprietary-software">Proprietary Software</a>
 
