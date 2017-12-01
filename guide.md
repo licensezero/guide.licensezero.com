@@ -158,6 +158,8 @@ You can think of licensezero.com as a kind of vending machine in cyberspace.  As
 
 You could also think of licensezero.com as offering the back-office services needed to run a dual licensing business---negotiation, communication, payment processing, records management---as a service. Rather than start a company and hire employees or outside professionals to help you sell private licenses, you can use licensezero.com to do so at low cost, selling even relatively inexpensive private licenses.
 
+### <a id="readme-graphics">`README` Graphics</a>
+
 ## <a id="cli">Command Line Interface</a>
 
 ## <a id="artless-devices">Artless Devices</a>

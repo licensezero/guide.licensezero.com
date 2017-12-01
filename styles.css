@@ -5,6 +5,10 @@ html {
   text-align: justify;
 }
 
+code, pre {
+  font-family: "Droid Sans Mono", monospace;
+}
+
 body {
   max-width: 600px;
   padding: 1rem 2rem;
