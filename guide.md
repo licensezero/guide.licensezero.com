@@ -148,7 +148,7 @@ License Zero publishes a [standard form private license](https://licensezero.com
 
 Each private license grants the buyer broad permission under copyright and patent law to use the software.  Team-, company-, and enterprise-tier private licenses also allow the buyer to extend, or sublicense, that permission to employees and independent contractors.  (Independent contractors must be individuals, not companies.)  Team- and company-tier private licenses limit the number of people the buyer can sublicense in any rolling one-year period.
 
-Note that the private license terms do _not_ allow buyers to sublicense their customers, or others who want to use software they build on top of your project.  Those users will need to abide by the terms of your public license, or purchase private licenses for themselves.  [Relicensing](#relicensing), covered below, allows you to offer to make your project broadly usable on that kind of basis for a price.
+Note that the private license terms do _not_ allow buyers to sublicense their customers, or others who want to use software they build on top of your project.  Those users will need to abide by the terms of your public license, or purchase private licenses for themselves.  [Relicensing](#relicensing), covered below, might be an attractive option for those who want to build on your software as if it were permissively licensed.
 
 
 ## <a id="waivers">Waivers</a>
