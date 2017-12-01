@@ -32,6 +32,7 @@ This is a guide to License Zero, the project's primary documentation for develop
   - [Parallel Licensing](#parallel-licensing)
   - [Stacked Licensing](#stacked-licensing)
 - [Complimentary Approaches](#complimentary-approaches)
+- [Words and Phrases](#words-and-phrases)
 
 
 ## <a id="overview">Overview</a>
@@ -424,3 +425,16 @@ Charge others for work they would like to do, such as bug fixes, feature adds, a
 ### <a id="proprietary-software">Proprietary Software</a>
 
 Sell proprietary software relating to or enhancing your open project.  For example, many open source database companies license proprietary optimizations, monitoring tools, and replication features.
+
+
+## <a id="words-and-phrases">Words & Phrases</a>
+
+<dfn>Licensee</dfn> receive licenses from licensors.
+
+<dfn>Licensors</dfn> give licenses to licensees.
+
+<dfn>Private Licenses</dfn> give a specific person or company permission for software.
+
+<dfn>Public Licenses</dfn> are licenses that give everyone permission for software.
+
+<dfn>Waivers</dfn> give up, or make an exception to, conditions of a license.
