@@ -175,7 +175,7 @@ Private licenses last forever, and cover all work that you release under the sam
 
 ## <a id="waivers">Waivers</a>
 
-Waivers work a bit like freebie private licenses.  As a licensor, you can use the [command line interface](#command-line-interface) to generate signed [waivers](https://licensezero.com/licenses/waiver) for specific people and companies that you want to let out of your public license's conditions limiting commercial use or require release as open source.  You can generate waivers that last only a set number of days, or that last forever.  The [command line interface](#command-line-interface) treats waivers just like private licenses for purposes of calculating what additional licenses a users needs for their project.
+Waivers work a bit like freebie private licenses.  As a maintainer, you can use the [command line interface](#command-line-interface) to generate signed [waivers](https://licensezero.com/licenses/waiver) for specific people and companies that you want to let out of your public license's conditions limiting commercial use or require release as open source.  You can generate waivers that last only a set number of days, or that last forever.  The [command line interface](#command-line-interface) treats waivers just like private licenses for purposes of calculating what additional licenses a users needs for their project.
 
 You might like to issue waivers to reward contributors to your project who make their work available under a permissive license, for [parallel licensing](#parallel-licensing), extend the free trial period for projects under L&#x2011;NC terms, or to resolve a question about whether a particular use will trigger the commercial-use time limit. 
 
@@ -313,7 +313,7 @@ licensezero register-licensor $EMAIL $NAME $JURISDICTION
 
 The first item is a valid e-mail address.  The second is your legal name.  The third is the [ISO 3166-2](https://en.wikipedia.org/wiki/ISO_3166-2) code for your legal jurisdiction, like `US-CA` for California, United States.
 
-The command will open a page in your browser where you can log into Stripe or create an account, then link that account to licensezero.com.  Once you've successfully linked your account, you'll receive a licensor identifier and an access token that you can save with:
+The command will open a page in your browser where you can log into Stripe or create an account, then link that account to licensezero.com.  Once you've successfully linked your account, you'll receive an identifier and an access token that you can save with:
 
 ```bash
 licensezero create-licensor $UUID
