@@ -2,22 +2,26 @@
 
 # License Zero Maintainer's Guide
 
-License Zero is a game plan for financially sustaining independent, open software.  License Zero lets you make a new deal with users of software you make online:
+License Zero is a game plan for financially sustaining independent, open software.  License Zero lets you make a new deal with users of software you maintain:
 
 > Use my software freely for open source or noncommercial work, but otherwise buy a license online to support me.
 
 It's the model of [GitHub](https://github.com/pricing), [Travis CI](https://travis-ci.com/plans), and other leading developer services, adapted for independent library, framework, and tools developers.  Finally.
 
-This is a guide to License Zero, the project's primary documentation for software maintainers.  If you're interested in using License Zero to license your work, read this guide.
+This is a guide to License Zero, the project's primary documentation for maintainers.  If you're interested in using License Zero for your work, read this guide.
 
 
 ## Contents
 
 - [Read This First](#read-this-first)
 - [Public Licenses](#public-licenses)
+  - [Comparing Public Licenses](#comparing-public-licenses)
+  - [License Politics](#license-politics)
 - [Private Licenses](#private-licenses)
 - [Waivers](#waivers)
 - [Relicensing](#relicensing) 
+  - [Permissive License](#permissive-license)
+  - [Relicense Agreement](#relicense-agreement)
 - [licensezero.com](#licensezero.com)
   - [Stripe Connect](#stripe-connect)
   - [Identifiers](#identifiers)
@@ -82,7 +86,7 @@ License Zero starts where you exercise your power as the owner of intellectual p
 Both L0 public licenses are short and readable.  You should [read](https://licensezero.com/licenses/noncommercial) [them](https://licensezero.com/licenses/reciprocal).
 
 
-### <a id="comparing-public-licenses">Comparing the Public Licenses</a>
+### <a id="comparing-public-licenses">Comparing Public Licenses</a>
 
 The two License Zero public licenses aren't just worded differently.  They achieve different results.  Abstracting them a bit:
 
@@ -131,7 +135,7 @@ L0&#x2011;NC allows users to build and use closed and proprietary software with 
 License Zero was inspired by imbalances in the relationship between open source developers and users.  Both License Zero public licenses represent new deals between developers and users, designed to redress that imbalance.  It isn't clear yet which public license approach is "best", overall, for any particular kind of software, or in any particular kind of situation.
 
 
-### <a id="open-source-and-free-software">Open Source and Free Software</a>
+### <a id="license-politics">License Politics</a>
 
 The public licenses also differ in some meaningful political ways you should be aware of.
 
@@ -238,7 +242,7 @@ Where `{UUID}` is the UUIDv4 for your project.
 
 licensezero.com serves SVG graphics with private-license pricing information that you can include in your project's `README` file or other documentation.  For example:
 
-![License Zero badge](https://licensezero.com/projects/daf5a8b1-23e0-4a9f-a6c1-69c40c71816b/badge.svg)
+<figure><img alt="a pricing graphic" src="https://licensezero.com/projects/daf5a8b1-23e0-4a9f-a6c1-69c40c71816b/badge.svg"></figure>
 
 The URL pattern is:
 

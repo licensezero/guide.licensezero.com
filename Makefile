@@ -1,6 +1,6 @@
 COMMONMARK=node_modules/.bin/commonmark
 
-guide.html: guide.md head.html foot.html | $(COMMONMARK)
+index.html: index.md head.html foot.html | $(COMMONMARK)
 	cat head.html > $@
 	$(COMMONMARK) --smart $< >> $@
 	cat foot.html >> $@
