@@ -45,26 +45,25 @@ This is a guide to License Zero, the project's primary documentation for maintai
 
 ```python
 def licensing(user, project):
-
   # See "Public Licenses" below.
   if user.meets_conditions_of(project.public_license):
     project.public_license.permit(user)
   else:
-
     # See "Private Licenses" below.
     private_license = user.private_license_for(project)
     if (
-      private_license and
+      private_license is not None and
       user.meets_conditions_of(private_license)
     ):
       private_license.permit(user)
-
     # See "Waivers" below.
     else:
       waiver = user.waiver_for(project)
-      if waiver:
+      if (
+        waiver is not None and
+        not waiver.expired
+      ):
         waiver.permit(user)
-
       # See "licensezero.com" below.
       else:
         license_zero.buy_private_license(user, project)
@@ -77,11 +76,11 @@ As an independent software developer, you control who can use your software, and
 
 ## <a id="public-licenses">Public Licenses</a>
 
-License Zero starts where you exercise your power as the owner of intellectual property in your work: in your project's `LICENSE` file.  You might currently use [The MIT License](https://spdx.org/licenses/MIT), [a BSD license](https://spdx.org/licenses/BSD-2-Clause), or a similar open source license in that file now, to give others permission to use your work.  License Zero offers you two alternatives:
+License Zero starts where you exercise your power as the owner of intellectual property in your work: in your project's `LICENSE` file.  You might currently use [The MIT License](https://spdx.org/licenses/MIT), [a BSD license](https://spdx.org/licenses/BSD-2-Clause), or a similar open source license in that file now.  License Zero offers you two alternatives:
 
 1.  [The License Zero Noncommercial Public License (L0&#x2011;NC)](https://licensezero.com/licenses/noncommercial) gives everyone broad permission to use your software, but limits commercial use to a short trial period of seven days.  When a commercial user's trial runs out, they need to buy a different license or stop using your software.  In that way, L0&#x2011;NC works a bit like a [Creative Commons NonCommercial license](https://creativecommons.org/licenses/by-nc/4.0/), but for software.
 
-2.  [The License Zero Reciprocal Public License (L0&#x2011;R)](https://licensezero.com/licenses/reciprocal) requires users who change, build on, or use your work to create software to release their work as open source, too.  If users can't or won't share their work as open source, they need to buy a different license that allows proprietary use of the software.  In that way, L0&#x2011;R works a bit like a _copyleft_ license such as [AGPL](https://www.gnu.org/licenses/agpl-3.0.html), but requires users to release more of their own code, in more situations.
+2.  [The License Zero Reciprocal Public License (L0&#x2011;R)](https://licensezero.com/licenses/reciprocal) requires users who change, build on, or use your work to create software to release that software as open source, too.  If users can't or won't share their work as open source, they need to buy a different license that allows proprietary use of the software.  In that way, L0&#x2011;R works a bit like a _copyleft_ license such as [AGPL](https://www.gnu.org/licenses/agpl-3.0.html), but requires users to release more of their own code, in more situations.
 
 Both L0 public licenses are short and readable.  You should [read](https://licensezero.com/licenses/noncommercial) [them](https://licensezero.com/licenses/reciprocal).
 
