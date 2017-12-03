@@ -67,7 +67,7 @@ As an independent software developer, you control who can use your software, and
 
 ## <a id="public-licenses">Public Licenses</a>
 
-License Zero starts where you exercise your power as the owner of intellectual property in your work: in your project's `LICENSE` file.  You might currently use [The MIT License](https://spdx.org/licenses/MIT), [a BSD license](https://spdx.org/licenses/BSD-2-Clause), or a similar open source license in that file now, to give the community permission to use your work.  License Zero offers you two alternatives:
+License Zero starts where you exercise your power as the owner of intellectual property in your work: in your project's `LICENSE` file.  You might currently use [The MIT License](https://spdx.org/licenses/MIT), [a BSD license](https://spdx.org/licenses/BSD-2-Clause), or a similar open source license in that file now, to give others permission to use your work.  License Zero offers you two alternatives:
 
 1.  [The License Zero Noncommercial Public License (L0&#x2011;NC)](https://licensezero.com/licenses/noncommercial) gives everyone broad permission to use your software, but limits commercial use to a short trial period of seven days.  When a commercial user's trial runs out, they need to buy a different license or stop using your software.  In that way, L0&#x2011;NC works a bit like a [Creative Commons NonCommercial license](https://creativecommons.org/licenses/by-nc/4.0/), but for software.
 
