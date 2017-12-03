@@ -41,10 +41,12 @@ This is a guide to License Zero, the project's primary documentation for softwar
 
 ```python
 def licensing(user, project):
+
   # See "Public Licenses" below.
   if user.meets_conditions_of(project.public_license):
     project.public_license.permit(user)
   else:
+
     # See "Private Licenses" below.
     private_license = user.private_license_for(project)
     if (
@@ -52,6 +54,7 @@ def licensing(user, project):
       user.meets_conditions_of(private_license)
     ):
       private_license.permit(user)
+
     # See "Waivers" below.
     else:
       waiver = user.waiver_for(project)
