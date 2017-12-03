@@ -49,7 +49,7 @@ def licensing(user, project):
     private_license = user.private_license_for(project)
     if (
       private_license and
-      user.meets_conditions_of(private_license
+      user.meets_conditions_of(private_license)
     ):
       private_license.permit(user)
     # See "Waivers" below.
