@@ -60,6 +60,7 @@ def licensing(user, project):
       waiver = user.waiver_for(project)
       if waiver:
         waiver.permit(user)
+
       # See "licensezero.com" below.
       else:
         license_zero.buy_private_license(user, project)
