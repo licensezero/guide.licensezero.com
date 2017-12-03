@@ -1,0 +1,49 @@
+html {
+  font-family: "Droid Sans", sans-serif;
+  hyphens: auto;
+  line-height: 140%;
+  text-align: justify;
+}
+
+code, pre {
+  font-family: "Droid Sans Mono", monospace;
+  text-align: left;
+  white-space: pre-wrap;
+}
+
+pre {
+  font-size: 90%;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  width: 100px;
+}
+
+h2 {
+  border-bottom: 1px solid black;
+  margin-top: 3rem;
+  padding-bottom: 0.5ex;
+}
+
+h3 {
+  margin-top: 3rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+a[html]:hover {
+  text-decoration: underline;
+}
+
+blockquote {
+  margin-right: 0;
+  padding-right: 0;
+}
