@@ -33,7 +33,7 @@ This guide describes what License Zero is, and how it works.  It is _not_ a subs
 - [Artless Devices](#artless-devices)
   - [Service Provider](#service-provider)
   - [Licensing Agent](#licensing-agent)
-  - [Tools Provider](#tools-provider)
+  - [Toolmaker](#toolmaker)
 - [Command Line Interface](#command-line-interface)
   - [Registering](#registering)
   - [Offering Private Licenses](#offering-private-licenses)
@@ -289,7 +289,7 @@ Fourth, the relationship isn't exclusive, and either side can end it at any time
 Finally, neither the terms of service nor the agency terms change ownership of any intellectual property in your projects.  You own your rights, and you keep them.  Artless Devices doesn't receive a license from you and license users.  You license users and agree to relicense projects directly.  Artless Devices merely acts as your agent, signing on your behalf, as you've directed.
 
 
-### <a id="tools-provider">Tools Provider</a>
+### <a id="toolmaker">Toolmaker</a>
 
 Artless Devices owns and licenses the intellectual property in the [command line interface](#command-line-interface) that you will use to register and offer licenses for sale, as well as [forms and other software tools published online](https://github.com/licensezero).
 
