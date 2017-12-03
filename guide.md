@@ -8,7 +8,7 @@ License Zero is a game plan for financially sustaining independent, open softwar
 
 It's the model of [GitHub](https://github.com/pricing), [Travis CI](https://travis-ci.com/plans), and other leading developer services, adapted for independent library, framework, and tools developers.  Finally.
 
-This is a guide to License Zero, the project's primary documentation for software maintainers.  If you're interested in using License Zero to license your work, you should read this guide.
+This is a guide to License Zero, the project's primary documentation for software maintainers.  If you're interested in using License Zero to license your work, read this guide.
 
 
 ## Contents
