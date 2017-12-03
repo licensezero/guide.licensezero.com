@@ -409,7 +409,7 @@ License Zero isn't the only way to financially support your work on open softwar
 
 ### <a id="donations">Donations</a>
 
-Ask people and companies for money, and hope they give it to you.
+Ask people and companies for money, and hope they give it to you.  Set up a payment link through [PayPal](https://paypal.com) or another payment processor.  Try a service like [Open Collective](https://opencollective.com/).  Set yourself up on [Patreon](https://patreon).
 
 
 ### <a id="merchandise">Merchandise</a>
