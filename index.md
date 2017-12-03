@@ -8,7 +8,7 @@ License Zero is a game plan for financially sustaining independent work on open 
 
 It's the model of [GitHub](https://github.com/pricing), [Travis CI](https://travis-ci.com/plans), and other leading developer services, adapted for independent library, framework, and tools developers.  Finally.
 
-This is a guide to License Zero, the project's primary documentation for maintainers.  If you're interested in using License Zero for your work, read this guide.  If you find errors or ways to improve, we'd appreciate a [pull request](https://github.com/licensezero/licensezero-guide).
+This is a guide to License Zero, the project's primary documentation for maintainers.  If you're interested in using License Zero for your work, read this guide.  If you find errors or ways to improve it, send a [pull request](https://github.com/licensezero/licensezero-guide).
 
 This guide describes what License Zero is, and how it works.  It is _not_ a substitute for legal advice about whether that system is right for your or your work.  licensezero.com's [terms of service](https://licensezero.com/terms/service) apply to this guide, too.  You should read them.
 
