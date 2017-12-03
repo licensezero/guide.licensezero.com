@@ -16,6 +16,7 @@ pre {
 }
 
 body {
+  margin: 0 auto;
   max-width: 600px;
   padding: 1rem 2rem;
 }
