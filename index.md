@@ -409,7 +409,7 @@ License Zero isn't the only way to financially support your work on open softwar
 
 ### <a id="donations">Donations</a>
 
-Ask people and companies for money, and hope they give it to you.  Set up a payment link in your `README` file.  Set yourself up on [Patreon](https://patreon).
+Ask people and companies for money, and hope they give it to you.  Set up a payment link in your `README` file.  Set yourself up on [Patreon](https://patreon).  Form a foundation and solicit donations.
 
 
 ### <a id="merchandise">Merchandise</a>
