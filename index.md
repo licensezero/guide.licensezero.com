@@ -46,7 +46,6 @@ This guide describes what License Zero is, and how it works.  It is _not_ a subs
   - [Tax](#tax)
   - [Ownership](#ownership)
 - [Complimentary Approaches](#complimentary-approaches)
-- [Words and Phrases](#words-and-phrases)
 
 
 ## <a id="read-this-first">Read This First</a>
@@ -193,8 +192,6 @@ License Zero allows, but does not require, setting a price at which you agree to
 [L0&#x2011;P](https://licensezero.com/licenses/permissive) is a highly permissive open source software license, much like [The MIT License](https://spdx.org/licenses/MIT) and [the two-clause BSD license](https://spdx.org/licenses/BSD-2-Clause), but easier to read and more legally complete.  It gives everyone who receives a copy of your software permission under copyright and patent law to work with and built on it in any way they like, as long as they preserve your license information in copies they give to others and refrain from suing users of your project for violating patents on it.
 
 Relicensing your project under L0&#x2011;P removes any reason for users to purchase private licenses for your project.  Under the [agency terms](https://licensezero.com/terms/agency) you must agree to in order to offer private licenses for a project through License Zero, you must retract your project for sale through the API if you relicense it.
-
-L0&#x2011;P's only role in the License Zero system is as terms onto which L0&#x2011;NC and L0&#x2011;R projects get relicensed.  However, you're free to use L0&#x2011;P for projects for which  you don't sell private licenses through License Zero, as well.  For example, the [command line interface](#command-line-interface) is licensed under L0&#x2011;P.
 
 
 ### <a id="relicense-agreement">Relicense Agreement</a>
@@ -387,11 +384,25 @@ Please note that under the [agency terms](https://licensezero.com/terms/agency),
 
 ## <a id="contributions">Contributions</a>
 
+As a independent software maintainer, you can license your work under both a [public license](#public-license) and [private licenses](#private-licenses) at the same time because you own the intellectual property in your work that others needs licenses for.  In other words, you can dual license your work because you own it.
 
-### <a id="permissive-contributions">Permissive Contributions</a>
+When others contribute to your work, they will own the intellectual property in their contributions, not you.  As a result, users of your combined work will need licenses both from you and other contributors.  There are two straightforward ways to achieve that.
+
+
+### <a id="parallel-licensing">Parallel Licensing</a>
+
+You can choose to take contributions to your project only from those who license their contributions under permissive open source terms.  For example, you might license your work on a project under L0&#x2011;R, but ask contributors to license their work under [L0&#x2011;P](#permissive-license), and append the text of that license to your project's `LICENSE` file with a note that others' contributions come under that license.
+
+Users of the combined project would then receive a license from you on the terms of L0&#x2011;R, for your contributions, and licenses from other contributors on the terms of L0&#x2011;P, for their contributions.  Would-be users who won't abide by the open source release conditions of your license can still buy a private license from you, for your contributions.  The private license for your work, plus the permissive license for others' contributions, cover all contributions.
+
+In that kind of situation, you can sell private licenses for your contributions to the project, but others cannot.  Perhaps that feels completely fair.  If it doesn't, you may like to offer special credit, payment, or a free [waiver](#waiver) to contributors, to convince them to license their contributions under permissive terms.
 
 
 ### <a id="stacked-licensing">Stacked Licensing</a>
+
+License Zero also supports projects that require multiple private licenses.  If you publish a project under L0&#x2011;R, and another developer forks the project, licensing their own work under L0&#x2011;R, too, they can append `package.json` metadata for a separate License Zero "project" in the same software.  Users who run the [command line interface](#command-line-interface) will see that they need a private license from each of you to use the project.  The same could happen with two contributors using L0&#x2011;NC, or contributors using a mix of License Zero licenses.
+
+Note that as a maintainer, you control pricing only for your own projects, not any other maintainer's projects, even if their work builds on yours.  Developers of work you license under L0&#x2011;NC will need to purchase private licenses from you to use and build on your work for the purpose of making money through License Zero, but otherwise, License Zero doesn't say anything about any relationship between you.
 
 
 ## <a id="traps">Traps</a>
@@ -470,16 +481,3 @@ Charge others for work they would like to do, such as bug fixes, feature adds, a
 ### <a id="proprietary-software">Proprietary Software</a>
 
 Sell proprietary software relating to or enhancing your open project.  For example, many open source database companies license proprietary optimizations, monitoring tools, and replication features.
-
-
-## <a id="words-and-phrases">Words & Phrases</a>
-
-<dfn>Licensee</dfn> receive licenses from licensors.
-
-<dfn>Licensors</dfn> give licenses to licensees.
-
-<dfn>Private Licenses</dfn> give a specific person or company permission for software.
-
-<dfn>Public Licenses</dfn> are licenses that give everyone permission for software.
-
-<dfn>Waivers</dfn> give up, or make an exception to, conditions of a license.
