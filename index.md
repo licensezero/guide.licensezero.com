@@ -2,7 +2,7 @@
 
 # License Zero Maintainer's Guide
 
-License Zero is a game plan for financially sustaining independent, open software.  License Zero lets you make a new deal with users of software you maintain:
+License Zero is a game plan for financially sustaining independent work on open software.  License Zero lets you make a new deal with users of software you maintain:
 
 > Use my software freely for open source or noncommercial work, but otherwise buy a license online to support me.
 
