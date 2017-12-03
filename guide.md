@@ -272,7 +272,7 @@
 The first to offering private licenses for sale through licensezero.com is connecting a Stripe account:
 
 ```bash
-licensezero register-licensor "$EMAIL" "$NAME" "$JURISDICTION"
+licensezero register-licensor $EMAIL $NAME $JURISDICTION
 ```
 
 The first item is a valid e-mail address.  The second is your legal name.  The third is the [ISO 3166-2](https://en.wikipedia.org/wiki/ISO_3166-2) code for your legal jurisdiction, like `US-CA` for California, United States.
@@ -323,7 +323,7 @@ To generate a waiver for a project you've offered with `licensezero offer`:
 ```bash
 licensezero waiver e91fcaa8-1d80-4d3f-97aa-5b58b93e4662 \
   --beneficiary "SomeCo, Inc." \
-  --jurisdiction US-DE \
+  --jurisdiction $CODE \
   --days 30 \
   > waiver.txt
 ```
