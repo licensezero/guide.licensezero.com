@@ -42,9 +42,6 @@ This guide describes what License Zero is, and how it works.  It is _not_ a subs
 - [Contributions](#contributions)
   - [Parallel Licensing](#parallel-licensing)
   - [Stacked Licensing](#stacked-licensing)
-- [Traps](#traps)
-  - [Tax](#tax)
-  - [Ownership](#ownership)
 - [Complimentary Approaches](#complimentary-approaches)
 
 
@@ -403,19 +400,6 @@ In that kind of situation, you can sell private licenses for your contributions 
 License Zero also supports projects that require multiple private licenses.  If you publish a project under L0&#x2011;R, and another developer forks the project, licensing their own work under L0&#x2011;R, too, they can append `package.json` metadata for a separate License Zero "project" in the same software.  Users who run the [command line interface](#command-line-interface) will see that they need a private license from each of you to use the project.  The same could happen with two contributors using L0&#x2011;NC, or contributors using a mix of License Zero licenses.
 
 Note that as a maintainer, you control pricing only for your own projects, not any other maintainer's projects, even if their work builds on yours.  Developers of work you license under L0&#x2011;NC will need to purchase private licenses from you to use and build on your work for the purpose of making money through License Zero, but otherwise, License Zero doesn't say anything about any relationship between you.
-
-
-## <a id="traps">Traps</a>
-
-
-### <a id="tax">Tax</a>
-
-<!-- TODO: Tax -->
-
-
-### <a id="ownership">Ownership</a>
-
-<!-- TODO: Ownership -->
 
 
 ## <a id="complimentary-approaches">Complimentary Approaches</a>
