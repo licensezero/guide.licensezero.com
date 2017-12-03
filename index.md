@@ -406,62 +406,26 @@ Note that as a maintainer, you control pricing only for your own projects, not a
 
 License Zero isn't the only way to financially support your work on open software, and it tries its best to remain compatible with other opportunities.
 
+- Ask people and companies for money, and hope they give it to you.  Set up a payment link in your `README` file.  Set yourself up on [Patreon](https://patreon).  Form a foundation and solicit donations.
 
-### <a id="donations">Donations</a>
+- Sell books, stickers, shirts, and other physical goods with your project's name or logo.
 
-Ask people and companies for money, and hope they give it to you.  Set up a payment link in your `README` file.  Set yourself up on [Patreon](https://patreon).  Form a foundation and solicit donations.
+- Sell or exchange the right to put company advertising, branding, or support acknowledgments in your project's documentation, on your project's website or social media accounts, or even in your software itself.
 
+- Give paying customers early access to your work ahead of its release as open source, some time later.
 
-### <a id="merchandise">Merchandise</a>
+- Require others to support you financially in order to use a trademark to identify themselves as providers of related products or services.  Trademark licensing for service providers is often coupled with advertising, in the form of a listing among service providers on the project's website.
 
-Sell books, stickers, shirts, and other physical goods with your project's name or logo.
+- Charge companies, conferences, or other venues to train others in the use of your project, in person or remotely.
 
+- Charge for access to and use of your time to assist users in using your work.
 
-### <a id="advertising">Advertising</a>
+- Apply to grant-making institutions and government entities for financial support in support your work, if it aligns with their objectives.
 
-Sell or exchange the right to put company advertising, branding, or support acknowledgments in your project's documentation, on your project's website or social media accounts, or even in your software itself.
+- Charge others to install, configure, and run your project on their behalf.
 
+- Charge others to integrate your work into their applications or services.
 
-### <a id="delayed-release">Delayed Release</a>
+- Charge others for work they would like to do, such as bug fixes, feature adds, and other changes.
 
-Give paying customers early access to your work ahead of its release as open source, some time later.
-
-
-### <a id="trademark-licensing">Trademark Licensing</a>
-
-Require others to support you financially in order to use a trademark to identify themselves as providers of related products or services.  Trademark licensing for service providers is often coupled with [advertising](#advertising), in the form of a listing among service providers on the project's website.
-
-
-### <a id="training">Training</a>
-
-Charge companies, conferences, or other venues to train others in the use of your project, in person or remotely.
-
-
-### <a id="support">Support</a>
-
-Charge for access to and use of your time to assist users in using your work.
-
-
-### <a id="grants">Grants</a>
-
-Apply to grant-making institutions and government entities for financial support in support your work, if it aligns with their objectives.
-
-
-### <a id="hosting">Hosting</a>
-
-Charge others to install, configure, and run your project on their behalf.
-
-
-### <a id="integration">Integration</a>
-
-Charge others to integrate your work into their applications or services.
-
-
-### <a id="paid-development">Paid Development</a>
-
-Charge others for work they would like to do, such as bug fixes, feature adds, and other changes.
-
-
-### <a id="proprietary-software">Proprietary Software</a>
-
-Sell proprietary software relating to or enhancing your open project.  For example, many open source database companies license proprietary optimizations, monitoring tools, and replication features.
+- Sell proprietary software relating to or enhancing your open project.  For example, many open source database companies license proprietary optimizations, monitoring tools, and replication features.
