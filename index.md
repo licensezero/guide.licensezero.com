@@ -10,7 +10,7 @@ It's the model of [GitHub](https://github.com/pricing), [Travis CI](https://trav
 
 This is a guide to License Zero, the project's primary documentation for maintainers.  If you're interested in using License Zero for your work, read this guide.  If you find errors or ways to improve it, send a [pull request](https://github.com/licensezero/licensezero-guide).
 
-This guide describes what License Zero is, and how it works.  It is _not_ a substitute for legal advice about whether that system is right for you or your work.  licensezero.com's [terms of service](https://licensezero.com/terms/service) apply to this guide, too.  You should read them.
+This guide describes what License Zero is, and how it works.  It is _not_ a substitute for legal advice about whether that system is right for you or your work.  licensezero.com's [terms of service](https://licensezero.com/terms/service) apply to this guide, too.
 
 
 ## Contents
