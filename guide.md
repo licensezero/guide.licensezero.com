@@ -66,7 +66,7 @@ def licensing(user, project):
         license_zero.buy_private_license(user, project)
 ```
 
-As an independent software developer, you control who can use your software, and under what terms.  License Zero licenses give everyone broad permission to use and build with your software, as long as they limit commercial use or share work they build on yours back as open source, depending on the license terms you choose.  Users who can't meet those conditions need different license terms to use your software.
+As an independent software developer, you control who can use your software, and under what terms.  License Zero licenses give everyone broad permission to use and build with your software, as long as they limit commercial use or share work they build on yours back as open source, depending on the public license terms you choose.  Users who can't meet those conditions need different license terms to use your software.
 
 [licensezero.com](https://licensezero.com) sells those users separate, private licenses, on your behalf.  A [command line interface](https://www.npmjs.com/packages/licensezero) makes it easy for users to buy all the private licenses they need for a Node.js project at once, with a single credit card transaction.  [Stripe](https://stripe.com) processes payments directly to an account in your name.  The same tool makes it easy for you to sign up, start offering new projects, and set pricing.
 
