@@ -13,7 +13,7 @@ This is a guide to License Zero, the project's primary documentation for softwar
 
 ## Contents
 
-- [Overview](#overview)
+- [Read This First](#read-this-first)
 - [Public Licenses](#public-licenses)
 - [Private Licenses](#private-licenses)
 - [Waivers](#waivers)
@@ -37,10 +37,10 @@ This is a guide to License Zero, the project's primary documentation for softwar
 - [Words and Phrases](#words-and-phrases)
 
 
-## <a id="overview">Overview</a>
+## <a id="read-this-first">Read This First</a>
 
 ```python
-def system(user, project):
+def licensing(user, project):
   # See "Public Licenses" below.
   if user.meets_conditions_of(project.public_license):
     project.public_license.permit(user)
