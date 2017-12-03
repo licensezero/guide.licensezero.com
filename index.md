@@ -331,7 +331,7 @@ cd your-npm-package
 licensezero offer --solo 500 --team 10000 --company 20000 --enterprise 75000
 ```
 
-Each flag corresponds to a tier of [private license](#private-licenses), with a price in United States cents.  You must set a price for each of the four standard tiers.
+Each flag corresponds to a tier of [private license](#private-licenses), with a price in United States cents.  You must set a price for each of the four tiers.
 
 If you like, you can also set a [relicensing](#relicensing) price:
 
