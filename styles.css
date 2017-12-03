@@ -39,3 +39,8 @@ a {
 a[html]:hover {
   text-decoration: underline;
 }
+
+blockquote {
+  margin-right: 0;
+  padding-right: 0;
+}
