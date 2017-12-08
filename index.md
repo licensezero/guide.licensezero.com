@@ -137,7 +137,7 @@ Consider a few user scenarios, and how they play out under different License Zer
 
 L0&#x2011;NC allows users to build and use closed and proprietary software with your work, as long they use it for noncommercial purposes.  L0&#x2011;R allows users to build and use only open source software with your work, even for very profit-driven purposes.  Many noncommercial software users are happy to make their work open source, but many make closed software, too.  Many for-profit companies make closed software, but many also make and release open source software, too.
 
-License Zero was inspired by imbalances in the relationship between open source developers and users.  Both License Zero public licenses represent new deals between developers and users, designed to redress that imbalance.  It isn't clear yet which public license approach is best, either overall or for any particular kind of software.  Before you pick a public license, make a few notes about how you think users will use and build on your software.  Then think about how they will play out under L&#x2011;NC, and then again under L&#x2011;R.
+License Zero was inspired by imbalances in the relationship between open source developers and users.  Both License Zero public licenses represent new deals between developers and users, designed to redress that imbalance.  It isn't clear yet which public license approach is best, either overall or for any particular kind of software.  Before you pick a public license, make a few notes about how you think users will use and build on your software.  Then think about how they will play out under L0&#x2011;NC, and then again under L0&#x2011;R.
 
 
 ### <a id="license-politics">License Politics</a>
