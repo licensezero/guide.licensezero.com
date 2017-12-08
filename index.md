@@ -101,7 +101,7 @@ def noncommercial_license:
     if within_trial_period:
       return 'free to use'
     else:
-      return 'need to buy a different license'
+      return 'need to buy a private license'
   else:
     return 'free to use'
 
@@ -110,7 +110,7 @@ def reciprocal_license:
     if release_software_as_open_source:
       return 'free to use'
     else:
-      return 'need to buy a different license'
+      return 'need to buy a private license'
   else:
     return 'free to use'
 ```
