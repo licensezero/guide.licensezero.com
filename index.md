@@ -117,11 +117,11 @@ def reciprocal_license:
 
 Consider a few user scenarios, and how they play out under different License Zero public licenses:
 
-1.  A for-profit company wants to use a License Zero library in their proprietary web app.
+1.  A for-profit company wants to use a License Zero library in their closed-source, proprietary web app.  They will _not_ release their web app as open source.
 
     - If the library is licensed under L0&#x2011;NC, the company can only use the library for seven days under its public license.  Then they need to buy a private license.
 
-    - If the library is licensed under L0&#x2011;R, the company needs to buy a private license to use it in their web app at all.  They can't use the library under its public license, because they won't meet its conditions by releasing their web app as open source.
+    - If the library is licensed under L0&#x2011;R, the company needs to buy a private license to use the library in their web app at all.  They can't use the library under its public license, because they won't meet the condition of releasing their web app as open source.
 
 2.  A for-profit company wants to use a License Zero library in the data synchronization software they ship with voice recorders.  They plan to release the sync software as open source.
 
