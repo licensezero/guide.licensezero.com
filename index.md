@@ -42,7 +42,7 @@ This guide describes what License Zero is, and how it works.  It is _not_ a subs
 - [Contributions](#contributions)
   - [Parallel Licensing](#parallel-licensing)
   - [Stacked Licensing](#stacked-licensing)
-- [Complimentary Approaches](#complimentary-approaches)
+- [Complementary Approaches](#complementary-approaches)
 
 
 ## <a id="read-this-first">Read This First</a>
@@ -402,7 +402,7 @@ License Zero also supports projects that require multiple private licenses.  If 
 Note that as a maintainer, you control pricing only for your own projects, not any other maintainer's projects, even if their work builds on yours.  Developers of work you license under L0&#x2011;NC will need to purchase private licenses from you to use and build on your work for the purpose of making money through License Zero, but otherwise, License Zero doesn't say anything about any relationship between you.
 
 
-## <a id="complimentary-approaches">Complimentary Approaches</a>
+## <a id="complementary-approaches">Complementary Approaches</a>
 
 License Zero isn't the only way to financially support your work on open software, and it tries its best to remain compatible with other opportunities.
 
