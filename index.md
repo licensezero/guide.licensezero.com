@@ -420,7 +420,7 @@ License Zero isn't the only way to financially support your work on open softwar
 
 - Charge for access to and use of your time to assist users in using your work.
 
-- Apply to grant-making institutions and government entities for financial support in support your work, if it aligns with their objectives.
+- Apply to grant-making institutions and government entities for financial support, if it aligns with their objectives.
 
 - Charge others to install, configure, and run your project on their behalf.
 
