@@ -169,9 +169,10 @@ Private licenses last forever, and cover all contributions that the developer ma
 
 ## <a id="waivers">Waivers</a>
 
-Waivers work a bit like freebie private licenses.  As a maintainer, you can use the [command line interface](#command-line-interface) to generate signed [waivers](https://licensezero.com/licenses/waiver) for specific people and companies that you want to let out of your public license's conditions limiting commercial use or require release as open source.  You can generate waivers that last only a set number of days, or that last forever.  The [command line interface](#command-line-interface) treats waivers just like private licenses for purposes of calculating what additional licenses a users needs for their project.
+Waivers work a bit like freebie private licenses.  Developers can use the [command line interface](#command-line-interface) to generate signed [waivers](https://licensezero.com/licenses/waiver) for specific people that let them out of public license conditions limiting commercial use or requiri open source release.  Developers can generate waivers that last only a set number of days, or that last forever.  The [command line interface](#command-line-interface) treats waivers just like private licenses for purposes of quoting licenses a users needs for a project.
 
 You might like to issue waivers to reward contributors to your project who make their work available under a permissive license, for [parallel licensing](#parallel-licensing), extend the free trial period for projects under L&#x2011;NC terms, or to resolve a question about whether a particular use will trigger the commercial-use time limit. 
+
 
 ## <a id="relicensing">Relicensing</a>
 
