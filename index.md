@@ -37,10 +37,8 @@ This guide describes what License Zero is, and how it works.  It is _not_ a subs
   - [Licensing Agent](#licensing-agent)
   - [Toolmaker](#toolmaker)
 - [Command Line Interface](#command-line-interface)
-  - [Registering](#registering)
-  - [Offering Private Licenses](#offering-private-licenses)
-  - [Generating Waivers](#generating-waivers)
-  - [Retracting Projects](#retracting-projects)
+  - [As a Contributor](#as-a-contributor)
+  - [As a User](#as-a-user)
 - [Contributions](#contributions)
   - [Parallel Licensing](#parallel-licensing)
   - [Stacked Licensing](#stacked-licensing)
@@ -300,33 +298,34 @@ l0 identify "Jane Dev" US-CA jane@example.com
 
 Provide your exact legal name, an [ISO 3166-2](https://en.wikipedia.org/wiki/ISO_3166-2) code for your tax jurisdiction, and your e-mail address.
 
-### <a id="registering">Registering</a>
 
-The first step to offering private licenses for sale through licensezero.com is connecting a Stripe account:
+### As a Contributor <a id="as-a-contributor"></a>
 
-```bash
+
+#### <a id="registering">Registering</a>
+
+To offer private licenses for sale via [licensezero.com](https://licensezero.com), you need to register as a licensor and connect a standard [Stripe](https://stripe.com) account:
+
+```shell
 l0 register
 ```
 
-The command will open a page in your browser where you can log into Stripe or create an account, then link that account to licensezero.com.  Once you've successfully linked your account, you'll receive an identifier and an access token that you can save with:
+`l0 register` will open a page in your browser where you can log into Stripe, or create an account and connect it.  Once you've connected a Stripe account, [licensezero.com](https://licensezero.com) will provide you a licensor identifier and an access token that you can use to create a licensor profile:
 
-```bash
-licensezero set-licensor-id $LICENSOR_ID
+```shell
+l0 set-licensor-id $LICENSOR_ID
 ```
 
 The command will then prompt for your access token, and save it for future use.
 
+#### <a id="offering-private-licenses">Offering Private Licenses</a>
 
-### <a id="offering-private-licenses">Offering Private Licenses</a>
+To offer private licenses for a project:
 
-To offer private licenses for an npm package:
-
-```bash
-cd your-npm-package
-licensezero offer 500
+```shell
+cd node-project
+l0 offer --private 300
 ```
-
-Set the price in United States cents.
 
 If you like, you can also set a [relicensing](#relicensing) price:
 
@@ -342,28 +341,30 @@ Once you've registered the project, use the CLI to set licensing metadata and `L
 licensezero license $PROJECT_ID --noncommercial
 # or
 licensezero license $PROJECT_ID --reciprocal
+git add package.json LICENSE
+git commit -m "License Zero"
+git push
 ```
-
-`$UUID` is the UUID for the project.
 
 These commands will write a cryptographically signed `LICENSE` file, and plus `license` and `licensezero` properties in `package.json`.  The additions to `package.json` allow the CLI to identify the package for users quoting and buying private licenses.
 
 
-### <a id="generating-waivers">Generating Waivers</a>
+#### <a id="generating-waivers">Generating Waivers</a>
 
-To generate a waiver for a project you've offered with `licensezero offer`:
+To generate a waiver for a project, provide a legal name, a jurisdiction code, and either a term in calendar days or `forever`:
 
-```bash
-licensezero waive e91fcaa8-1d80-4d3f-97aa-5b58b93e4662 --beneficiary "SomeCo, Inc." --jurisdiction US-NY --days 30 > waiver.txt
+```shell
+l0 waive $PRODUCT_ID --name "Eve Able" --jurisdiction US-NY --term 90 > waiver.json
 ```
 
 You can also issue waivers that don't expire:
 
 ```bash
-licensezero waiver e91fcaa8-1d80-4d3f-97aa-5b58b93e4662 -b "OtherCo, Inc." -j US-DE --days forever > waiver.txt
+l0 waive $PRODUCT_ID --name "Eve Able" --jurisdiction US-NY --days forever > waiver.json
 ```
 
-### <a id="retracting-projects">Retracting Projects</a>
+
+#### <a id="retracting-projects">Retracting Projects</a>
 
 You can stop offering private licenses through licensezero.com at any time:
 
@@ -372,6 +373,52 @@ licensezero retract $PROJECT_ID
 ```
 
 Please note that under the [agency terms](https://licensezero.com/terms/agency), Artless Devices can complete private license and relicensing transactions that began before you retracted the project, but can't start new transactions.
+
+
+### As a User <a id="as-a-user"></a>
+
+### Quoting and Buying
+
+You can generate quotes for License Zero software within the `node_modules` directories of your projects:
+
+```shell
+cd node-project
+l0 quote
+```
+
+To buy missing licenses for dependencies of a project:
+
+```shell
+cd node-project
+l0 buy
+```
+
+`l0 buy` will open a webpage in your browser listing the licenses to buy and taking credit card payment.  On successful purchase, [licensezero.com](https://licensezero.com) will provide the address of a purchase bundle that you can use to import all of the licenses you've just purchased at once:
+
+```shell
+l0 import-bundle https://licensezero.com/purchases/{code}
+```
+
+#### Importing Waivers
+
+To import a waiver:
+
+```shell
+l0 import-waiver waiver.json
+```
+
+The command will open a page in your browser where you can log into Stripe or create an account, then link that account to licensezero.com.  Once you've successfully linked your account, you'll receive an identifier and an access token that you can save with:
+
+#### Sponsoring Projects
+
+To sponsor relicensing of a project onto permissive terms:
+
+
+```shell
+l0 sponsor $PROJECT_ID
+```
+
+The command will open a payment page in your web browser.
 
 
 ## <a id="contributions">Contributions</a>
