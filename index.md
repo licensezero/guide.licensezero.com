@@ -1,6 +1,6 @@
 <img src="https://licensezero.com/logo.svg" class="logo">
 
-# License Zero Maintainer's Guide
+# License Zero Developer's Guide
 
 License Zero is a game plan for financially sustaining independent work on open software.  License Zero lets you make a new deal with users of software you maintain:
 
@@ -8,7 +8,9 @@ License Zero is a game plan for financially sustaining independent work on open 
 
 It's the model of [GitHub](https://github.com/pricing), [Travis CI](https://travis-ci.com/plans), and other leading developer services, adapted for independent library, framework, and tools developers.  Finally.
 
-This is a guide to License Zero, the project's primary documentation for maintainers.  If you're interested in using License Zero for your work, read this guide.  If you find errors or ways to improve it, send a [pull request](https://github.com/licensezero/licensezero-guide).
+This model also makes it easy to support developers creating open software you use and rely on at work.  License Zero is not a donation platform or a backer-rewards market.  If other developers' work helps you do your job better or more efficiently, supporting them through License Zero ought to be a reimbursable expense.
+
+This is a guide to License Zero, the project's primary documentation for developers.  If you're interested in using License Zero, either to support your work or support others, read this guide.  If you find errors or ways to improve it, send a [pull request](https://github.com/licensezero/licensezero-guide).
 
 This guide describes what License Zero is, and how it works.  It is _not_ a substitute for legal advice about whether that system is right for you or your work.  licensezero.com's [terms of service](https://licensezero.com/terms/service) apply to this guide, too.
 
@@ -73,20 +75,20 @@ def licensing(user, project):
         license_zero.buy_private_license(user, project)
 ```
 
-As an independent software developer, you control who can use your software, and under what terms.  License Zero licenses give everyone broad permission to use and build with your software, as long as they limit commercial use or share work they build on yours back as open source, depending on the public license terms you choose.  Users who can't meet those conditions need private licenses to use your software.
+As an independent software developer, you control who can use your software, and under what terms.  License Zero licenses give everyone broad permission to use and build with your software, as long as they limit commercial use or share work they build on yours back as open source, depending on the public license terms you choose.  Users who can't meet those conditions need private licenses.
 
 [licensezero.com](https://licensezero.com) sells those users separate, private licenses, on your behalf.  A [command line interface](https://www.npmjs.com/packages/licensezero) makes it easy for users to buy all the private licenses they need for a Node.js project at once, with a single credit card transaction.  [Stripe](https://stripe.com) processes payments directly to an account in your name.  The same tool makes it easy for you to sign up, start offering new projects, and set pricing.
 
-This "dual licensing" model is not new.  [MySQL](https://www.mysql.com/about/legal/licensing/oem/) pioneered it decades ago, and important projects like [Qt](https://www1.qt.io/licensing/) and [MongoDB](https://www.mongodb.com/community/licensing) continue it, successfully, today.  License Zero evolves the dual licensing model by making it useful for more kinds of software and practical for independent developers who can't or don't want to set up companies to handle the mechanics of private licensing.
+This "dual licensing" model is not new.  [MySQL](https://www.mysql.com/about/legal/licensing/oem/) pioneered it decades ago, and important projects like [Qt](https://www1.qt.io/licensing/) and [MongoDB](https://www.mongodb.com/community/licensing) continue it, successfully, today.  License Zero evolves the dual licensing model by making it useful for more kinds of software, and practical for independent developers who can't or don't want to set up companies to handle the mechanics of private licensing.
 
 
 ## <a id="public-licenses">Public Licenses</a>
 
 License Zero starts where you exercise your power as the owner of intellectual property in your work: in your project's `LICENSE` file.  You might currently use [The MIT License](https://spdx.org/licenses/MIT), [a BSD license](https://spdx.org/licenses/BSD-2-Clause), or a similar open source license there now.  License Zero offers you two alternatives:
 
-1.  [The License Zero Noncommercial Public License (L0&#x2011;NC)](https://licensezero.com/licenses/noncommercial) gives everyone broad permission to use your software, but limits commercial use to a short trial period of seven days.  When a commercial user's trial runs out, they need to buy a private license or stop using your software.  L0&#x2011;NC works a bit like a [Creative Commons NonCommercial license](https://creativecommons.org/licenses/by-nc/4.0/), but for software.
+1.  [The License Zero Noncommercial Public License (L0&#x2011;NC)](https://licensezero.com/licenses/noncommercial) works a bit like a [Creative Commons NonCommercial license](https://creativecommons.org/licenses/by-nc/4.0/), but for software.  L0&#x2011;NC gives everyone broad permission to use your software, but limits commercial use to a short trial period of 32 days.  When a commercial user's trial runs out, they need to buy a private license or stop using your software.
 
-2.  [The License Zero Reciprocal Public License (L0&#x2011;R)](https://licensezero.com/licenses/reciprocal) requires users who change, build on, or use your work to create software to release that software as open source, too.  If users can't or won't release their work, they need to buy a private license that allows use without sharing back.  L0&#x2011;R works a bit like [AGPL](https://www.gnu.org/licenses/agpl-3.0.html), but requires users to release more of their own code, in more situations.
+2.  [The License Zero Reciprocal Public License (L0&#x2011;R)](https://licensezero.com/licenses/reciprocal) works a bit like [AGPL](https://www.gnu.org/licenses/agpl-3.0.html), but requires users to release more of their own code, in more situations.  L0&#x2011;R requires users who change, build on, or use your work to create software to release that software as open source, too.  If users can't or won't release their work, they need to buy a private license that allows use without sharing back.
 
 Both L0 public licenses are short and readable.  You should [read](https://licensezero.com/licenses/noncommercial) [them](https://licensezero.com/licenses/reciprocal).
 
@@ -117,38 +119,39 @@ def reciprocal_license:
 
 Consider a few user scenarios, and how they play out under different License Zero public licenses:
 
-1.  A for-profit company wants to use a License Zero library in their proprietary web app.
+1.  A developer employed at a for-profit company wants to use a License Zero library in their company's proprietary web app.
 
-    - If the library is licensed under L0&#x2011;NC, the company can only use the library for seven days under its public license.  Then they need to buy a private license.
+    - If the library is licensed under L0&#x2011;NC, the developer can only use the library for 32 days under its public license.  Then they need to buy a private license.
 
-    - If the library is licensed under L0&#x2011;R, the company needs to buy a private license to use it in their web app at all.  They can't use the library under its public license, because they won't meet its conditions by releasing their web app as open source.
+    - If the library is licensed under L0&#x2011;R, the developer needs to buy a private license to use it in their web app at all.  They can't use the library under its public license, because they won't meet its conditions by releasing their web app as open source.
 
-2.  A for-profit company wants to use a License Zero library in the data synchronization software they ship with voice recorders.  They plan to release the sync software as open source.
+2.  A developer employed at a for-profit company wants to use a License Zero library in the data synchronization software their company ships with voice recorders.  They plan to release the sync software as open source.
 
-    - If the library is licensed under L0&#x2011;NC, the company can only use the library for seven days under the public license.  Then they need to buy a private license.  Moreover, any company customer can only use the library as part of the sync software for commercial commercial purposes under the public license for seven days.  Then they need to buy a private license, too.
+    - If the library is licensed under L0&#x2011;NC, the developer can only use the library for 32 days under the public license.  Then they need to buy a private license.  The private license allows the developer to "sublicense", or pass down, their permission to use the library for commercial purposes to their company and its customers.
 
-    - If the library is licensed under L0&#x2011;R, the company can use the library in their sync software under the public license, as long as they actually release the sync software as open source.  The company's customers can use the sync software, with the library, for any purpose.
+    - If the library is licensed under L0&#x2011;R, the developer can use the library in their sync software under the public license, as long as they actually release the sync software as open source.  The company's customers can use the sync software, with the library, for any purpose.
 
-3.  A for-profit company wants to use a License Zero video player application to show commercials in their office lobby.
+3.  A developer employed at a for-profit company wants to use a License Zero video player application to show commercials in their office lobby.
 
-    - If the application is licensed under L0&#x2011;NC, the company can only use the application for seven days under the public license.  Then they need to buy a private license.
+    - If the application is licensed under L0&#x2011;NC, the developer can only use the application for 32 days under the public license.  Then they need to buy a private license.
 
-    - If the application is licensed under L0&#x2011;R, the company is free to use the application for as long as they like under the public license.
+    - If the application is licensed under L0&#x2011;R, the developer is free to use the application for as long as they like under the public license.
 
 L0&#x2011;NC allows users to build and use closed and proprietary software with your work, as long they use it for noncommercial purposes.  L0&#x2011;R allows users to build and use only open source software with your work, even for very profit-driven purposes.  Many noncommercial software users are happy to make their work open source, but many make closed software, too.  Many for-profit companies make closed software, but many also make and release open source software, too.
 
 License Zero was inspired by imbalances in the relationship between open source developers and users.  Both License Zero public licenses represent new deals between developers and users, designed to redress that imbalance.  It isn't clear yet which public license approach is best, either overall or for any particular kind of software.  Before you pick a public license, make a few notes about how you think users will use and build on your software.  Then think about how they will play out under L0&#x2011;NC, and then again under L0&#x2011;R.
 
+A key consideration for applications is whether you want to require users to buy private licenses for commercial use.  Say you write an image manipulation program.   L0&#x2011;R would allow anyone to use your program for any purpose, including commercial purposes, so long as they don't modify your program or build on it to make closed source.  That's unlikely for an image manipulation program, as opposed to a software library or a software development tool.  On the other hand, L0&#x2011;NC would require users to buy a private license after 32 days.
 
 ### <a id="license-politics">License Politics</a>
 
-The public licenses also differ in some meaningful political ways you should be aware of.
+The differences between the public licenses, especially on commercial use, reflect some political differences that you should be aware of.
 
 L0&#x2011;NC is not an "open source" or "free software" license as many community members define those terms, because it discriminates against commercial use.  Source for L0&#x2011;NC can still be published and developed online, using many popular services like [GitHub](https://github.com) and [npm](https://www.npmjs.com).  But many in those communities will not accept it as part of their movements, and perhaps criticize you for referring to it as "open source" or "free software".
 
-L0&#x2011;R, on the other hand, was written to conform to the [Open Source Definition](https://opensource.org/osd), and proposed to the [Open Source Initiative's license-review mailing list](https://lists.opensource.org/pipermail/license-review/) for approval in September of 2017.  Approval has been controversial, in part because L0&#x2011;R goes further than existing licenses in when and what code it requires be released as open source.  It's our position that L0&#x2011;R conforms to the Open Source Definition as written, resembles licenses that OSI has approved in the past, and software under L0&#x2011;R is therefore open source software.
+L0&#x2011;R, on the other hand, was written to conform to the [Open Source Definition](https://opensource.org/osd), and proposed to the [Open Source Initiative's license-review mailing list](https://lists.opensource.org/pipermail/license-review/) for approval in September of 2017.  Approval has been controversial, in part because L0&#x2011;R goes further than existing licenses in when and what code it requires be released as open source.  It's our position that L0&#x2011;R conforms to the Open Source Definition as written, resembles licenses that OSI has approved in the past, and that software under L0&#x2011;R is therefore open source software.
 
-L0&#x2011;R is probably not a "free software" license [as defined by the Free Software Foundation](https://www.gnu.org/philosophy/free-sw.html).  FSF's definition of free software requires granting freedoms to run, copy, distribute, study, change and improve software.  But it also recognizes that some conditions on those freedoms can enhance software freedom overall by ensuring that others receive source code and freedom to work with it.  However, FSF's definition of free software admits only conditions on the freedom to share modified versions with others, not other freedoms.  That partially explains why the Open Source Initiative [approved RPL&#x2011;1.5](https://opensource.org/licenses/RPL-1.5), a thematic predecessor of L0&#x2011;, while FSF [considers RPL non-free](https://www.gnu.org/licenses/license-list.en.html#RPL).
+L0&#x2011;R is probably not a "free software" license [as defined by the Free Software Foundation](https://www.gnu.org/philosophy/free-sw.html).  FSF's definition of free software requires granting freedoms to run, copy, distribute, study, change and improve software.  But it also recognizes that some conditions on those freedoms can enhance software freedom overall by ensuring that others receive source code and freedom to work with it.  However, FSF's definition of free software admits only conditions on the freedom to share modified versions with others, not other freedoms.  That partially explains why the Open Source Initiative [approved RPL&#x2011;1.5](https://opensource.org/licenses/RPL-1.5), a thematic predecessor of L0&#x2011;R, while FSF [considers RPL non-free](https://www.gnu.org/licenses/license-list.en.html#RPL).
 
 In the end, your software is yours to license.  These politics may or may not matter to you, and they may or may not matter to your users or potential users.
 
