@@ -158,22 +158,13 @@ In the end, your software is yours to license.  These politics may or may not ma
 
 ## <a id="private-licenses">Private Licenses</a>
 
-Users who can't meet the conditions of the License Zero public license you choose for your project can buy a private license that allows them to use your work without meeting the public license's demanding conditions.
+Users who can't meet the conditions of the License Zero public license for a project can buy a private license that allows them to use the project without meeting those conditions.  License Zero publishes a [form private license](https://licensezero.com/licenses/private), and sells private licenses to uses on developers' behalf.
 
-License Zero publishes a [form private license](https://licensezero.com/licenses/private).  The private license is based on [The Apache License, Version 2.0](https://apache.org/licenses/LICENSE-2.0), a well known, enterprise-friendly open source license, with changes that transform it into a private, proprietary license.
+Each private license grants the buyer broad permission under copyright and patent law to use the software, in language a bit more like what a company legal department would expect.  Otherwise, the legal effect is much like that of a permissive public license, except the private license applies only to the person who bought it, from the date they bought it.
 
-The private license comes in four variants:
+Private licenses give the buyer limited ability to pass their licenses on, or sublicense, others.  Generally speaking, buyers can pass their licensees on to others if they build software with significant additional functionality with the License Zero code.  They can pass on only the right to use the License Zero as part of the new program they've created, and to maintain it.  They _can't_ pass on their license build different programs with the software.  In other words, buyers can sublicense the "user" parts of their private licenses, but not the "developer" part of their private licenses.  Other developers who want to develop new programs, commercially or as closed source, need to buy their own private licenses.
 
-1.  solo tier, for a single person
-2.  team tier, for up to 10 people
-2.  company tier, for up to 100 people
-3.  enterprise tier, for an unlimited number of people
-
-Each private license grants the buyer broad permission under copyright and patent law to use the software.  Team-tier, company-tier, and enterprise-tier private licenses also allow the buyer to extend, or sublicense, that permission to their employees and independent contractors.  Team-tier and company-tier private licenses limit the number of people the buyer can sublicense in any rolling one-year period.  Enterprise-tier private licenses don't impose an limit.
-
-Note that the private license terms do _not_ allow buyers to sublicense their customers, or others who want to use software they build on top of your work.  Those users will need to abide by the terms of your public license, or purchase private licenses for themselves.  [Relicensing](#relicensing), covered below, might be an attractive option for those who want to build on your software as if it were permissively licensed.
-
-Private licenses last forever, and cover all work that you release under the same [project identifier](#identifiers).  But you don't promise to do any new work, or make it available under the same project identifier, by selling private licenses.
+Private licenses last forever, and cover all contributions that the developer makes with the same [project identifier](#identifiers) listed in the private license.  Developers don't promise to do any new work, or make it available under the same project identifier, by selling private licenses.
 
 
 ## <a id="waivers">Waivers</a>
