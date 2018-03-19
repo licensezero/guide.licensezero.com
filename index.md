@@ -326,6 +326,22 @@ git push
 
 These commands will write a cryptographically signed `LICENSE` file, and plus `license` and `licensezero` properties in `package.json`.  The additions to `package.json` allow the CLI to identify the package for users quoting and buying private licenses.
 
+#### <a id="locks">Locks</a>
+
+By default, you can change pricing for private licenses at any time.  You could offer private licenses for $5 today, and $5,000 tomorrow.
+
+In order to provide a publicly verifiable guarantee of license availability and pricing, either to users or others who want to [build on your work](#stacked-licensing), you can lock private-license pricing for your project to no more than the current price for a term of days, months, or even years.
+
+```bash
+licensezero lock $PROJECT_ID $UNLOCK_DATE
+```
+
+The unlock date must be a date at least seven calendar days in the future.
+
+Locking a project prevents you from increasing pricing for your project or withdrawing your offer of private licenses.  For specifics, see [the agency terms](https://licensezero.com/terms/agency).
+
+Please note that _locks are irrevocable_.  Artless Devices will not unlock a project early under any circumstances.
+
 #### <a id="generating-waivers">Generating Waivers</a>
 
 To generate a waiver for a project, provide a legal name, a jurisdiction code, and either a term in calendar days or `forever`:
