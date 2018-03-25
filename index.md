@@ -36,6 +36,7 @@ This guide describes what License Zero is, and how it works.  It is _not_ a subs
   - [Licensing Agent](#licensing-agent)
   - [Toolmaker](#toolmaker)
 - [Command Line Interface](#command-line-interface)
+  - [Identify Yourself](#identify-yourself)
   - [As a Contributor](#as-a-contributor)
   - [As a User](#as-a-user)
 - [Contributions](#contributions)
@@ -269,10 +270,26 @@ Artless Devices owns and licenses the intellectual property in the [command line
 
 ## <a id="command-line-interface">Command Line Interface</a>
 
-The [command line interface](https://www.npmjs.com/packages/licensezero) is the primary way developers interact with licensezero.com.  With [Node.js](https://nodejs.org) and [npm](https://npmjs.com) installed, you can install the CLI and identify yourself with:
+The [command line interface](https://www.npmjs.com/packages/licensezero) is the primary way developers interact with licensezero.com.
+
+With [Node.js](https://nodejs.org) and [npm](https://npmjs.com) installed, you can install the CLI with:
 
 ```bash
 npm install --global licensezero
+licensezero --help
+```
+
+You can also run the latest version of the `licensezero` command using `npx`:
+
+```bash
+npx licensezero --help
+```
+
+### <a id="identify-yourself">Identify Yourself</a>
+
+To use the CLI as a contributor, user, or both, first run `licensezero identify`:
+
+```bash
 l0 identify "Jane Dev" US-CA jane@example.com
 ```
 
@@ -291,7 +308,7 @@ A few example tax jurisdictions:
 
 #### <a id="registering">Registering</a>
 
-To offer private licenses for sale via [licensezero.com](https://licensezero.com), you need to register as a licensor and connect a standard [Stripe](https://stripe.com) account:
+To offer private licenses for sale via [licensezero.com](https://licensezero.com), you need to [identify yourself](#identify-yourself) with `licensezero identify`, then register as a licensor and connect a standard [Stripe](https://stripe.com) account:
 
 ```shell
 l0 register
