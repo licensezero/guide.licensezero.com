@@ -278,6 +278,15 @@ l0 identify "Jane Dev" US-CA jane@example.com
 
 Provide your exact legal name, an [ISO 3166-2](https://en.wikipedia.org/wiki/ISO_3166-2) code for your tax jurisdiction, and your e-mail address.
 
+A few example tax jurisdictions:
+
+- `BR-SP` for São Paulo, Brazil
+- `DE-HH` for Hamburg, Germany
+- `GB-LND` for the City of London
+- `JP-13` for Tokyo, Japan
+- `NG-LA` for Lagos, Nigeria
+- `US-TX` for Texas, United States
+
 ### As a Contributor <a id="as-a-contributor"></a>
 
 #### <a id="registering">Registering</a>
