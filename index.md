@@ -311,7 +311,7 @@ If you like, you can also set a [relicensing](#relicensing) price:
 licensezero offer 50  --relicense 200000
 ```
 
-You can run the `offer` subcommand at any time to update pricing.
+You can run the `reprice` subcommand to update pricing.
 
 Once you've registered the project, use the CLI to set licensing metadata and `LICENSE`:
 
