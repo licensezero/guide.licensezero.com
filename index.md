@@ -230,7 +230,7 @@ licensezero.com serves SVG graphics with private-license pricing information tha
 The URL pattern is:
 
 ```text
-https://licensezero.com/projects/{UUID}.svg
+https://licensezero.com/projects/{UUID}/badge.svg
 ```
 
 Where `{UUID}` is the UUIDv4 for your project.
@@ -238,7 +238,7 @@ Where `{UUID}` is the UUIDv4 for your project.
 The Markdown syntax is:
 
 ```markdown
-![L0](https://licensezero.com/projects/{UUID}.svg)
+![L0](https://licensezero.com/projects/{UUID}/badge.svg)
 ```
 
 ## <a id="artless-devices">Artless Devices</a>
