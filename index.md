@@ -74,7 +74,7 @@ def licensing(user, project):
 
 As an independent software developer, you control who can use your software, and under what terms.  License Zero licenses give everyone broad permission to use and build with your software, as long as they limit commercial use or share work they build on yours back as open source, depending on the public license terms you choose.  Users who can't meet those conditions need private licenses.
 
-[licensezero.com](https://licensezero.com) sells those users separate, private licenses, on your behalf.  A [command line interface](https://www.npmjs.com/packages/licensezero) makes it easy for users to buy all the private licenses they need for a Node.js project at once, with a single credit card transaction.  [Stripe](https://stripe.com) processes payments directly to an account in your name.  The same tool makes it easy for you to sign up, start offering new projects, and set pricing.
+[licensezero.com](https://licensezero.com) sells those users separate, private licenses, on your behalf.  A [command line interface](https://www.npmjs.com/package/licensezero) makes it easy for users to buy all the private licenses they need for a Node.js project at once, with a single credit card transaction.  [Stripe](https://stripe.com) processes payments directly to an account in your name.  The same tool makes it easy for you to sign up, start offering new projects, and set pricing.
 
 This "dual licensing" model is not new.  [MySQL](https://www.mysql.com/about/legal/licensing/oem/) pioneered it decades ago, and important projects like [Qt](https://www1.qt.io/licensing/) and [MongoDB](https://www.mongodb.com/community/licensing) continue it, successfully, today.  License Zero evolves the dual licensing model by making it useful for more kinds of software, and practical for independent developers who can't or don't want to set up companies to handle the mechanics of private licensing.
 
@@ -270,7 +270,7 @@ Artless Devices owns and licenses the intellectual property in the [command line
 
 ## <a id="command-line-interface">Command Line Interface</a>
 
-The [command line interface](https://www.npmjs.com/packages/licensezero) is the primary way developers interact with licensezero.com.
+The [command line interface](https://www.npmjs.com/package/licensezero) is the primary way developers interact with licensezero.com.
 
 With [Node.js](https://nodejs.org) and [npm](https://npmjs.com) installed, you can install the CLI with:
 
