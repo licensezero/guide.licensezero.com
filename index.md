@@ -202,7 +202,7 @@ licensezero.com generates unique identifiers for each developer and each project
 
 ### <a id="cryptography">Cryptography</a>
 
-When you connect a Stripe account to licensezero.com, the site creates a unique UUID for you, as well as a [NaCl](https://nacl.cr.yp.to/)/[libsodium](https://download.libsodium.org/doc/) style [Ed25519](https://ed25519.cr.yp.to/software.html) cryptographic signing keypair.  licensezero.com signs most kind of licensing information, from package metadata to `LICENSE` files, private licenses, waivers, and relicensing agreements, with the keypair created for your account, as well as its own keypair.
+When you connect a Stripe account to licensezero.com, the site creates a unique UUID for you, as well as a [NaCl](https://nacl.cr.yp.to/)-style [Ed25519](https://ed25519.cr.yp.to/software.html) cryptographic signing keypair.  licensezero.com signs most kind of licensing information, from package metadata to `LICENSE` files, private licenses, waivers, and relicensing agreements, with the keypair created for your account, as well as its own keypair.
 
 licensezero.com publishes the public signing key generated for you on your project pages, and via the API.  Users can leverage the [command line interface](#command-line-interface) to verify signatures on private licenses and other documents against the public key.
 
@@ -460,7 +460,7 @@ Note that as a contributor, you control pricing only for your own contributions,
 
 License Zero isn't the only way to financially support your work on open software, and it tries its best to remain compatible with other opportunities.
 
-- Ask people and companies for money, and hope they give it to you.  Set up a payment link in your `README` file.  Set yourself up on [Patreon](https://patreon).  Form a foundation and solicit donations.
+- Ask people and companies for money, and hope they give it to you.  Set up a payment link in your `README` file.  Set yourself up on [Patreon](https://www.patreon.com).  Form a foundation and solicit donations.
 
 - Sell books, stickers, shirts, and other physical goods with your project's name or logo.
 
