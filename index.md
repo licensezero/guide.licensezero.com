@@ -39,6 +39,7 @@ This guide describes what License Zero is, and how it works.  It is _not_ a subs
   - [Identify Yourself](#identify-yourself)
   - [As a Contributor](#as-a-contributor)
   - [As a User](#as-a-user)
+- [Ecosystem Support](#ecosystems)
 - [Contributions](#contributions)
   - [Parallel Licensing](#parallel-licensing)
   - [Stacked Licensing](#stacked-licensing)
@@ -435,6 +436,14 @@ l0 sponsor $PROJECT_ID
 ```
 
 The command will open a payment page in your web browser.
+
+## <a id="ecosystems">Ecosystem Support</a>
+
+Any open developer can choose one of the [public license options](#public-licenses), add its text to `LICENSE`, [offer private licenses through the API](#offering-private-liceness), and link to their [project page](#project-pages) in `README` or on a website.  Users can buy private licenses directly from the project page, and download their signed license file.  But the process becomes much simpler---much closer to zero friction, for both buyers and sellers---when the [command line interface](#command-line-interface) can find, read, and write package metadata showing which packages correspond to which licensezero.com project IDs.
+
+Currently, the [command line interface](#command-line-interface) can comprehends metadata for [npm packages](https://www.npmjs.com).  But support for other ecosystems is planned.  If you're interested in expanding first-class tooling support to your ecosystem of choice, [reach out in the GitHub repository for the Go port of the CLI](https://github.com/licensezero/cli).  Even if you can't contribute code, pointers to documentation, examples of conventions, and answers to questions will be very helpful.
+
+As of June of 2018, first-class support for Maven packages is next on the roadmap.
 
 ## <a id="contributions">Contributions</a>
 
