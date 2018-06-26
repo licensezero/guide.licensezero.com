@@ -329,7 +329,7 @@ To offer private licenses for a project:
 
 ```shell
 cd node-project
-l0 offer --private 300
+l0 offer 300
 ```
 
 If you like, you can also set a [relicensing](#relicensing) price:
