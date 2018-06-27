@@ -283,7 +283,10 @@ Install the CLI by [downloading a prebuilt binary for your platform](https://git
 To use the CLI as a contributor, user, or both, first run `licensezero identify`:
 
 ```bash
-licensezero identify --name "Jane Dev" --jurisdiction "US-CA" --email "jane@example.com"
+licensezero identify \
+  --name "Jane Dev" \
+  --jurisdiction "US-CA" \
+  --email "jane@example.com"
 ```
 
 Provide your exact legal name, an [ISO 3166-2](https://en.wikipedia.org/wiki/ISO_3166-2) code for your tax jurisdiction, and your e-mail address.
