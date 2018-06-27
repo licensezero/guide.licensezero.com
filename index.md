@@ -18,7 +18,7 @@ This guide describes what License Zero is, and how it works.  It is _not_ a subs
 
 - [Read This First](#read-this-first)
 - [Public Licenses](#public-licenses)
-  - [Noncommercial Public License](#parity)
+  - [Prosperity Public License](#prosperity)
   - [Parity Public License](#parity)
   - [Comparing Public Licenses](#comparing-public-licenses)
   - [License Politics](#license-politics)
@@ -86,18 +86,18 @@ This "dual licensing" model is not new.  [MySQL](https://www.mysql.com/about/leg
 
 License Zero starts where you exercise your power as the owner of intellectual property in your work: in your project's `LICENSE` file.  You might currently use [The MIT License](https://spdx.org/licenses/MIT), [a BSD license](https://spdx.org/licenses/BSD-2-Clause), or a similar open source license there now.  License Zero offers you two alternatives:
 
-1.  <a id="noncommercial"></a>[The License Zero Noncommercial Public License (Noncommercial)](https://licensezero.com/licenses/noncommercial) works a bit like a [Creative Commons NonCommercial license](https://creativecommons.org/licenses/by-nc/4.0/), but for software.  [Noncommercial terms](#noncommercial) give everyone broad permission to use your software, but limits commercial use to a short trial period of 32 days.  When a commercial user's trial runs out, they need to buy a private license or stop using your software.
+1.  <a id="prosperity"></a>[The Prosperity Public License](https://licensezero.com/licenses/prosperity) (<dfn>Prosperity</dfn>) works a bit like a [Creative Commons NonCommercial license](https://creativecommons.org/licenses/by-nc/4.0/), but for software.  Prosperity gives everyone broad permission to use your software, but limits commercial use to a short trial period of 32 days.  When a commercial user's trial runs out, they need to buy a private license or stop using your software.
 
-2.  <a id="parity"></a>[The Parity Public License (Parity)](https://licensezero.com/licenses/parity) works a bit like [AGPL](https://www.gnu.org/licenses/agpl-3.0.html), but requires users to release more of their own code, in more situations.  [Parity terms](#parity) require users who change, build on, or use your work to create software to release that software as open source, too.  If users can't or won't release their work, they need to buy a private license that allows use without sharing back.
+2.  <a id="parity"></a>[The Parity Public License](https://licensezero.com/licenses/parity) (<dfn>Parity</dfn>) works a bit like [AGPL](https://www.gnu.org/licenses/agpl-3.0.html), but requires users to release more of their own code, in more situations.  [Parity terms](#parity) require users who change, build on, or use your work to create software to release that software as open source, too.  If users can't or won't release their work, they need to buy a private license that allows use without sharing back.
 
-Both `LICENSE` options are short and readable.  You should [read](https://licensezero.com/licenses/noncommercial) [them](https://licensezero.com/licenses/parity).
+Both `LICENSE` options are short and readable.  You should [read](https://licensezero.com/licenses/prosperity) [them](https://licensezero.com/licenses/parity).
 
 ### <a id="comparing-public-licenses">Comparing Public Licenses</a>
 
 The two `LICENSE` options aren't just worded differently.  They achieve different results.  Abstracting them a bit:
 
 ```python
-def noncommercial_license:
+def prosperity_license:
   if commercial_user:
     if within_trial_period:
       return 'free to use'
@@ -120,37 +120,37 @@ Consider a few user scenarios, and how they play out under different `LICENSE` c
 
 1.  A developer employed at a for-profit company wants to use your library in their company's proprietary web app.
 
-    - If you license the library under [Noncommercial terms](#noncommercial), the developer can only use the library for 32 days.  Then they need to buy a private license.
+    - If you license the library under [The Prosperity Public License](#prosperity), the developer can only use the library for 32 days.  Then they need to buy a private license.
 
-    - If you license the library under [Parity terms](#parity), the developer needs to buy a private license to use it in their web app at all.  They can't use the library under its public license, because they won't meet its conditions by releasing their web app as open source.
+    - If you license the library under [The Parity Public License](#parity), the developer needs to buy a private license to use it in their web app at all.  They can't use the library under its public license, because they won't meet its conditions by releasing their web app as open source.
 
 2.  A developer employed at a for-profit company wants to use your library in the data synchronization software their company ships with voice recorders.  They plan to release the sync software as open source.
 
-    - If you license the library under [Noncommercial terms](#noncommercial), the developer can only use the library for 32 days.  Then they need to buy a private license.  The private license allows the developer to "sublicense", or pass down, their permission to use the library for commercial purposes to their company and its customers.
+    - If you license the library under [The Prosperity Public License](#prosperity), the developer can only use the library for 32 days.  Then they need to buy a private license.  The private license allows the developer to "sublicense", or pass down, their permission to use the library for commercial purposes to their company and its customers.
 
-    - If you license the library under [Parity terms](#parity), the developer can use the library in their sync software under the public license, as long as they actually release the sync software as open source.  The company's customers can use the sync software, with the library, for any purpose.
+    - If you license the library under [The Parity Public License](#parity), the developer can use the library in their sync software under the public license, as long as they actually release the sync software as open source.  The company's customers can use the sync software, with the library, for any purpose.
 
 3.  A developer employed at a for-profit company wants to use your video player application to show commercials in their office lobby.
 
-    - If your license the application under [Noncommercial terms](#noncommercial), the developer can only use the application for 32 days.  Then they need to buy a private license.
+    - If your license the application under [The Prosperity Public License](#prosperity), the developer can only use the application for 32 days.  Then they need to buy a private license.
 
-    - If you license the application under [Parity terms](#parity), the developer is free to use the application for as long as they like under the public license.
+    - If you license the application under [The Parity Public License](#parity), the developer is free to use the application for as long as they like under the public license.
 
-[Noncommercial terms](#noncommercial) allow users to build and use closed and proprietary software with your work, as long they use it for noncommercial purposes.  [Parity terms](#parity) allow users to build and use only open source software with your work, even for very profit-driven purposes.  Many noncommercial software users are happy to make their work open source, but many make closed software, too.  Many for-profit companies make closed software, but many also make and release open source software, too.
+[The Prosperity Public License](#prosperity) allows users to build and use closed and proprietary software with your work, as long they use it for noncommercial purposes.  [The Parity Public License](#parity) allows users to build and use only open source software with your work, even for very profit-driven purposes.  Many noncommercial software users are happy to make their work open source, but many make closed software, too.  Many for-profit companies make closed software, but many also make and release open source software, too.
 
-License Zero was inspired by imbalances in the relationship between open source developers and users.  Both `LICENSE` options represent new deals between developers and users, designed to redress that imbalance.  Whether [Noncommercial terms](#noncommercial) or [Parity terms](#parity) work best depends on how others will use your project, and your goals.  Before you pick terms for `LICENSE`, make a few notes about how you think users will use and build on your software.  Treat those use scenarios as your licensing test suite.  Run your test suite examples through [Noncommercial terms](#noncommercial) and [Parity terms](#parity), to see how they will play out, and compare the results.  Which results do you prefer?
+License Zero was inspired by imbalances in the relationship between open source developers and users.  Both `LICENSE` options represent new deals between developers and users, designed to redress that imbalance.  Whether [Prosperity](#prosperity) or [Parity](#parity) works best depends on how others will use your project, and your goals.  Before you pick terms for `LICENSE`, make a few notes about how you think users will use and build on your software.  Treat those use scenarios as your licensing test suite.  Run your test suite examples through the rules in [Prosperity](#prosperity) and [Parity](#parity), to see how they will play out, and compare the results.  Which results do you prefer?
 
-A key consideration for applications is whether you want to require users to buy private licenses for commercial use.  Say you write an image manipulation program.   [Parity terms](#parity) would allow anyone to use your program for any purpose, including commercial purposes, so long as they don't modify your program or build on it to make closed source.  That's unlikely for an image manipulation program, as compared to a software library or a software development tool.  On the other hand, [Noncommercial terms](#noncommercial) would require users to buy a private license after 32 days.
+A key consideration for applications is whether you want to require users to buy private licenses for commercial use.  Say you write an image manipulation program.   [Parity](#parity) would allow anyone to use your program for any purpose, including commercial purposes, so long as they don't modify your program or build on it to make closed source.  That's unlikely for an image manipulation program, as compared to a software library or a software development tool.  On the other hand, [Prosperity](#prosperity) would require users to buy a private license after 32 days.
 
 ### <a id="license-politics">License Politics</a>
 
 The differences between the public licenses, especially on commercial use, reflect some political differences that you should be aware of.
 
-[Noncommercial](#noncommercial) is not an "open source" or "free software" license as nearly any savvy community members define those terms, because it discriminates against commercial use.  Source for [Noncommercial](#noncommercial) software can still be published and developed online, using many popular services like [GitHub](https://github.com) and [npm](https://www.npmjs.com).  But many in those communities will not accept it as part of their movements, and perhaps criticize you for referring to it as "open source" or "free software".
+[Prosperity](#prosperity) is not an "open source" or "free software" license as nearly any savvy community members define those terms, because it discriminates against commercial use.  Source for [Prosperity](#prosperity) software can still be published and developed online, using many popular services like [GitHub](https://github.com) and [npm](https://www.npmjs.com).  But many in those communities will not accept it as part of their movements, and perhaps criticize you for referring to it as "open source" or "free software".
 
-[Parity terms](#parity), on the other hand, was written to conform to the [Open Source Definition](https://opensource.org/osd), as was its predecessor, a license called The License Zero Reciprocal Public License.  The predecessor license was proposed to the [Open Source Initiative's license-review mailing list](http://lists.opensource.org/pipermail/license-review_lists.opensource.org/) for approval in September of 2017.  Extensive debate finally focused on the fact that L0&#x2011;R goes further than existing licenses in when and what code it requires users to release.  When it became clear that debate would not resolve successfully, if at all, [Parity](#parity) was born, as a fork of L0&#x2011;R, eschewing the constraints of the OSI process.  It's our position that [Parity](#parity) conforms to the Open Source Definition as written, resembles licenses that OSI has approved in the past, and that software under [Parity](#parity) is therefore open source software.  Others will disagree.
+[Parity](#parity), on the other hand, was written to conform to the [Open Source Definition](https://opensource.org/osd), as was its predecessor, a license called The License Zero Reciprocal Public License.  The predecessor license was proposed to the [Open Source Initiative's license-review mailing list](http://lists.opensource.org/pipermail/license-review_lists.opensource.org/) for approval in September of 2017.  Extensive debate eventually focused on the fact that L0&#x2011;R goes further than existing licenses in when and what code it requires users to release.  When it became clear that debate would not resolve favorably, if at all, [Parity](#parity) was born, as a fork of L0&#x2011;R, eschewing the constraints of the OSI process.  It's the author's position that [Parity](#parity) conforms to the Open Source Definition as written, resembles licenses that OSI has approved in the past, and that software under [Parity](#parity) is therefore open source software.  Others will disagree.
 
-[Parity](#parity) is probably not a "free software" license [as defined by the Free Software Foundation](https://www.gnu.org/philosophy/free-sw.html).  FSF's definition of free software requires granting freedoms to run, copy, distribute, study, change and improve software.  It also recognizes that some conditions on those freedoms can enhance software freedom overall by ensuring that others receive source code and freedom to work with it, which is exactly the approach [Parity](#parity) takes.  However, FSF's definition of free software admits only conditions on the freedom to share modified versions with others, as in the GPL licenses that it has published, and not conditions on other freedoms.  That partially explains why the Open Source Initiative [approved RPL&#x2011;1.5](https://opensource.org/licenses/RPL-1.5), a thematic predecessor of [Parity](#parity), while FSF [considers RPL non-free](https://www.gnu.org/licenses/license-list.en.html#RPL).
+[Parity](#parity) is probably not a "free software" license [as defined by the Free Software Foundation](https://www.gnu.org/philosophy/free-sw.html).  FSF's definition of free software requires granting freedoms to run, copy, distribute, study, change and improve software.  It also recognizes that some conditions on those freedoms can enhance software freedom overall by ensuring that others receive source code and freedom to work with it, which is exactly the approach [Parity](#parity) takes.  However, FSF's definition of free software admits only conditions on the freedom to share modified versions with others, along the lines of the GPL licenses that FSF has published, and not conditions on other freedoms.  That partially explains why the Open Source Initiative [approved RPL&#x2011;1.5](https://opensource.org/licenses/RPL-1.5), a thematic predecessor of [Parity](#parity), while FSF [considers RPL non-free](https://www.gnu.org/licenses/license-list.en.html#RPL).
 
 In the end, your software is yours to license.  These politics may or may not matter to you, and they may or may not matter to your users or potential users.
 
@@ -168,7 +168,7 @@ Private licenses last forever, and cover all contributions the developer makes w
 
 Waivers work a bit like freebie private licenses.  Developers can use the [command line interface](#command-line-interface) to generate signed [waivers](https://licensezero.com/licenses/waiver), for specific people, that let them out of `LICENSE` conditions limiting commercial use or require open source release.  Developers can generate waivers that last only a set number of days, or that last forever.  The [command line interface](#command-line-interface) treats waivers just like private licenses for purposes of figuring out which private licenses a user is missing for a project.
 
-You might like to issue waivers to reward contributors to your project who make their work available under a permissive license, for [parallel licensing](#parallel-licensing), extend the free trial period for projects under [Noncommercial terms](#noncommercial), or to resolve a question about whether a particular use will trigger the commercial-use time limit.  It's entirely up to you.
+You might like to issue waivers to reward contributors to your project who make their work available under a permissive license, for [parallel licensing](#parallel-licensing), extend the free trial period for projects under [Prosperity](#prosperity), or to resolve a question about whether a particular use will trigger the commercial-use time limit.  It's entirely up to you.
 
 ## <a id="relicensing">Relicensing</a>
 
@@ -478,9 +478,9 @@ In that kind of situation, you can sell private licenses for your contributions 
 
 ### <a id="stacked-licensing">Stacked Licensing</a>
 
-License Zero also supports projects that require multiple private licenses, for contributions from different developers.  If you publish a project under [Parity terms](#parity), and another developer forks the project, licensing their own work under [Parity terms](#parity), too, they can append `package.json` metadata for a separate License Zero "project" in the same software.  Users who run the [command line interface](#command-line-interface) will see that they need a private license from each of you to use the project.  The same could happen with two contributors using [Noncommercial terms](#noncommercial), or contributors using a mix of `LICENSE` terms.
+License Zero also supports projects that require multiple private licenses, for contributions from different developers.  If you publish a project under [The Parity Public License](#parity), and another developer forks the project, licensing their own work under [The Parity Public License](#parity), too, they can append `package.json` metadata for a separate License Zero "project" in the same software.  Users who run the [command line interface](#command-line-interface) will see that they need a private license from each of you to use the project.  The same could happen with two contributors using [The Prosperity Public License](#prosperity), or contributors using a mix of `LICENSE` terms.
 
-Note that as a contributor, you control pricing only for your own contributions, not anyone else's contributions, even if their work builds on yours.  Contributors building on top of work you license under [Noncommercial terms](#noncommercial) will need to purchase private licenses from you to use and build on your work for the purpose of making money through licensezero.com, but otherwise, licensezero.com doesn't say anything about any relationship between you.
+Note that as a contributor, you control pricing only for your own contributions, not anyone else's contributions, even if their work builds on yours.  Contributors building on top of work you license under [The Prosperity Public License](#prosperity) will need to purchase private licenses from you to use and build on your work for the purpose of making money through licensezero.com, but otherwise, licensezero.com doesn't say anything about any relationship between you.
 
 ## <a id="complementary-approaches">Complementary Approaches</a>
 
