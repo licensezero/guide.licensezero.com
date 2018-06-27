@@ -41,6 +41,7 @@ This guide describes what License Zero is, and how it works.  It is _not_ a subs
   - [Identify Yourself](#identify-yourself)
   - [As a Contributor](#as-a-contributor)
   - [As a User](#as-a-user)
+  - [Back Up Your Data](#back-up-your-data)
 - [Ecosystem Support](#ecosystems)
 - [Contributions](#contributions)
   - [Parallel Licensing](#parallel-licensing)
@@ -273,27 +274,16 @@ Artless Devices owns and licenses the intellectual property in the [command line
 
 ## <a id="command-line-interface">Command Line Interface</a>
 
-The [command line interface](https://www.npmjs.com/package/licensezero) is the primary way developers interact with licensezero.com.
+The [command line interface](https://github.com/licensezero/cli) is the primary way developers interact with licensezero.com.
 
-With [Node.js](https://nodejs.org) and [npm](https://npmjs.com) installed, you can install the CLI with:
-
-```bash
-npm install --global licensezero
-licensezero --help
-```
-
-You can also run the latest version of the `licensezero` command using `npx`:
-
-```bash
-npx licensezero --help
-```
+Install the CLI by [downloading a prebuilt binary for your platform](https://github.com/licensezero/cli/releases/latest) and installing in your `$PATH`.
 
 ### <a id="identify-yourself">Identify Yourself</a>
 
 To use the CLI as a contributor, user, or both, first run `licensezero identify`:
 
 ```bash
-l0 identify "Jane Dev" US-CA jane@example.com
+licensezero identify --name "Jane Dev" --jurisdiction "US-CA" --email "jane@example.com"
 ```
 
 Provide your exact legal name, an [ISO 3166-2](https://en.wikipedia.org/wiki/ISO_3166-2) code for your tax jurisdiction, and your e-mail address.
@@ -313,14 +303,14 @@ A few example tax jurisdictions:
 
 To offer private licenses for sale via [licensezero.com](https://licensezero.com), you need to [identify yourself](#identify-yourself) with `licensezero identify`, then register as a licensor and connect a standard [Stripe](https://stripe.com) account:
 
-```shell
-l0 register
+```bash
+licensezero register
 ```
 
-`l0 register` will open a page in your browser where you can log into Stripe, or create an account and connect it.  Once you've connected a Stripe account, [licensezero.com](https://licensezero.com) will provide you a licensor identifier and an access token that you can use to create a licensor profile:
+`licensezero register` will open a page in your browser where you can log into Stripe, or create an account and connect it.  Once you've connected a Stripe account, [licensezero.com](https://licensezero.com) will provide you a licensor identifier and an access token that you can use to create a licensor profile:
 
-```shell
-l0 set-licensor-id $LICENSOR_ID
+```bash
+licensezero token --licensor $YOU_NEW_ID
 ```
 
 The command will then prompt for your access token, and save it for future use.
@@ -329,15 +319,21 @@ The command will then prompt for your access token, and save it for future use.
 
 To offer private licenses for a project:
 
-```shell
-cd node-project
-l0 offer 300
+```bash
+licensezero offer \
+  --price 300 \
+  --homepage "http://example.com" \
+  --description "an example project"
 ```
 
 If you like, you can also set a [relicensing](#relicensing) price:
 
 ```bash
-licensezero offer 50  --relicense 200000
+licensezero offer \
+  --price 300 \
+  --relicense 200000 \
+  --homepage "http://example.com" \
+  --description "an example project"
 ```
 
 You can run the `reprice` subcommand to update pricing.
@@ -345,9 +341,10 @@ You can run the `reprice` subcommand to update pricing.
 Once you've registered the project, use the CLI to set licensing metadata and `LICENSE`:
 
 ```bash
-licensezero license $PROJECT_ID --noncommercial
+cd your-npm-package
+licensezero license --project $YOU_PROJECT_ID --prosperity
 # or
-licensezero license $PROJECT_ID --parity
+licensezero license --project $PROJECT_ID --parity
 git add package.json LICENSE
 git commit -m "License Zero"
 git push
@@ -362,27 +359,37 @@ By default, you can change pricing for private licenses at any time.  You could 
 In order to provide a publicly verifiable guarantee of license availability and pricing, either to users or others who want to [build on your work](#stacked-licensing), you can lock private-license pricing for your project to no more than the current price for a term of days, months, or even years.
 
 ```bash
-licensezero lock $PROJECT_ID $UNLOCK_DATE
+licensezero lock --project $YOU_PROJECT_ID --unlock $YOUR_UNLOCK_DATE
 ```
 
 The unlock date must be a date at least seven calendar days in the future.
 
 Locking a project prevents you from increasing pricing for your project or withdrawing your offer of private licenses.  For specifics, see [the agency terms](https://licensezero.com/terms/agency).
 
-Please note that _locks are irrevocable_.  Artless Devices will not unlock a project early under any circumstances.
+Please note that _locks are irrevocable_.  Artless Devices will not unlock a valid project early under any circumstances.
 
 #### <a id="generating-waivers">Generating Waivers</a>
 
 To generate a waiver for a project, provide a legal name, a jurisdiction code, and either a term in calendar days or `forever`:
 
-```shell
-l0 waive $PRODUCT_ID --name "Eve Able" --jurisdiction US-NY --term 90 > waiver.json
+```bash
+licensezero waive \
+  --project $YOUR_PROJECT_ID \
+  --beneficiary "Eve Able" \
+  --jurisdiction "US-NY" \
+  --days 90 \
+  > waiver.json
 ```
 
 You can also issue waivers that don't expire:
 
 ```bash
-l0 waive $PRODUCT_ID --name "Eve Able" --jurisdiction US-NY --days forever > waiver.json
+licensezero waive \
+  --project $YOUR_PROJECT_ID \
+  --beneficiary "Eve Able" \
+  --jurisdiction "US-NY" \
+  --forever \
+  > waiver.json
 ```
 
 #### <a id="retracting-projects">Retracting Projects</a>
@@ -390,7 +397,7 @@ l0 waive $PRODUCT_ID --name "Eve Able" --jurisdiction US-NY --days forever > wai
 You can stop offering private licenses through licensezero.com at any time:
 
 ```bash
-licensezero retract $PROJECT_ID
+licensezero retract --project $YOUR_PROJECT_ID
 ```
 
 Please note that under the [agency terms](https://licensezero.com/terms/agency), Artless Devices can complete private license and relicensing transactions that began before you retracted the project, but can't start new transactions.
@@ -401,43 +408,51 @@ Please note that under the [agency terms](https://licensezero.com/terms/agency),
 
 You can generate quotes for License Zero software within the `node_modules` directories of your projects:
 
-```shell
-cd node-project
-l0 quote
+```bash
+cd your-npm-project
+licensezero quote
 ```
 
 To buy missing licenses for dependencies of a project:
 
-```shell
-cd node-project
-l0 buy
+```bash
+cd you-npm-project
+licensezero buy
 ```
 
-`l0 buy` will open a webpage in your browser listing the licenses to buy and taking credit card payment.  On successful purchase, [licensezero.com](https://licensezero.com) will provide the address of a purchase bundle that you can use to import all of the licenses you've just purchased at once:
+`licensezero buy` will open a webpage in your browser listing the licenses to buy and taking credit card payment.  On successful purchase, [licensezero.com](https://licensezero.com) will provide the address of a purchase bundle that you can use to import all of the licenses you've just purchased at once:
 
-```shell
-l0 import-bundle https://licensezero.com/purchases/{code}
+```bash
+licensezero purchased $YOUR_BUNDLE_URL
 ```
 
-#### Importing Waivers
+#### Importing License and Waiver Files
 
-To import a waiver:
+To import a license you bought on licensezero.com, or a waiver you received from a contributor:
 
-```shell
-l0 import-waiver waiver.json
+```bash
+licensezero import waiver.json
 ```
-
-The command will open a page in your browser where you can log into Stripe or create an account, then link that account to licensezero.com.  Once you've successfully linked your account, you'll receive an identifier and an access token that you can save with:
 
 #### Sponsoring Projects
 
 To sponsor relicensing of a project onto permissive terms:
 
-```shell
-l0 sponsor $PROJECT_ID
+```bash
+licensezero sponsor --project $PROJECT_ID
 ```
 
 The command will open a payment page in your web browser.
+
+### <a id="back-up-your-data">Back Up Your Data</a>
+
+To back up all your License Zero data, including your identity, access token, waivers, and licenses:
+
+```bash
+licensezero backup
+```
+
+The command will create a tar archive in your current directory.
 
 ## <a id="ecosystems">Ecosystem Support</a>
 
