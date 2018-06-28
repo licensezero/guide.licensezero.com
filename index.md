@@ -426,7 +426,7 @@ licensezero buy
 `licensezero buy` will open a webpage in your browser listing the licenses to buy and taking credit card payment.  On successful purchase, [licensezero.com](https://licensezero.com) will provide the address of a purchase bundle that you can use to import all of the licenses you've just purchased at once:
 
 ```bash
-licensezero purchased $YOUR_BUNDLE_URL
+licensezero import --bundle $YOUR_BUNDLE_URL
 ```
 
 #### Importing License and Waiver Files
