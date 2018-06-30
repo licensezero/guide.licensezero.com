@@ -344,16 +344,16 @@ You can run the `reprice` subcommand to update pricing.
 Once you've registered the project, use the CLI to set licensing metadata and `LICENSE`:
 
 ```bash
-cd your-npm-package
+cd your-package
 licensezero license --project $YOU_PROJECT_ID --prosperity
 # or
 licensezero license --project $PROJECT_ID --parity
-git add package.json LICENSE
+git add licensezero.json LICENSE
 git commit -m "License Zero"
 git push
 ```
 
-These commands will write a cryptographically signed `LICENSE` file, and plus `license` and `licensezero` properties in `package.json`.  The additions to `package.json` allow the CLI to identify the package for users quoting and buying private licenses.
+These commands will write cryptographically signed `LICENSE` and `licensezero.json` files.  The data in `licensezero.json` allow the CLI to identify the package for users quoting and buying private licenses.
 
 #### <a id="locks">Locks</a>
 
@@ -461,9 +461,16 @@ The command will create a tar archive in your current directory.
 
 Any open developer can choose one of the [public license options](#public-licenses), add its text to `LICENSE`, [offer private licenses through the API](#offering-private-liceness), and link to their [project page](#project-pages) in `README` or on a website.  Users can buy private licenses directly from the project page, and download their signed license file.  But the process becomes much simpler---much closer to zero friction, for both buyers and sellers---when the [command line interface](#command-line-interface) can find, read, and write package metadata showing which packages correspond to which licensezero.com project IDs.
 
-Currently, the [command line interface](#command-line-interface) can comprehends metadata for [npm packages](https://www.npmjs.com).  But support for other ecosystems is planned.  If you're interested in expanding first-class tooling support to your ecosystem of choice, [reach out in the GitHub repository for the Go port of the CLI](https://github.com/licensezero/cli).  Even if you can't contribute code, pointers to documentation, examples of conventions, and answers to questions will be very helpful.
+The [command line interface](#command-line-interface) finds package metadata by recursing the current working directory, as well as paths provided by queries to dependency-management tools, like `bundler show` for RubyGems.  When the command line interface finds a `licensezero.json` file, it inventories the packages listed within it.  It then looks for package-manager metadata files, like `setup.py`, `package.json`, or `pom.xml`, and tries to query them for package scope, name, and version information.
 
-As of June of 2018, first-class support for Maven packages is next on the roadmap.
+If you're interested in expanding first-class tooling support to your language or package format of choice, [reach out in the GitHub repository for the Go port of the CLI](https://github.com/licensezero/cli/issues).  Even if you can't contribute code, pointers to documentation, examples of conventions, and answers to questions will be very helpful.
+
+As of early July of 2018, the command line interface supports:
+
+- npm packages within the current directory
+- Maven packages within the current directory
+- Python packages within the current directory
+- RubyGems listed by `bundle show --paths`
 
 ## <a id="contributions">Contributions</a>
 
@@ -481,7 +488,7 @@ In that kind of situation, you can sell private licenses for your contributions 
 
 ### <a id="stacked-licensing">Stacked Licensing</a>
 
-License Zero also supports projects that require multiple private licenses, for contributions from different developers.  If you publish a project under [The Parity Public License](#parity), and another developer forks the project, licensing their own work under [The Parity Public License](#parity), too, they can append `package.json` metadata for a separate License Zero "project" in the same software.  Users who run the [command line interface](#command-line-interface) will see that they need a private license from each of you to use the project.  The same could happen with two contributors using [The Prosperity Public License](#prosperity), or contributors using a mix of `LICENSE` terms.
+License Zero also supports projects that require multiple private licenses, for contributions from different developers.  If you publish a project under [The Parity Public License](#parity), and another developer forks the project, licensing their own work under [The Parity Public License](#parity), too, they can append `licensezero.json` metadata for a separate License Zero "project" in the same software.  Users who run the [command line interface](#command-line-interface) will see that they need a private license from each of you to use the project.  The same could happen with two contributors using [The Prosperity Public License](#prosperity), or contributors using a mix of `LICENSE` terms.
 
 Note that as a contributor, you control pricing only for your own contributions, not anyone else's contributions, even if their work builds on yours.  Contributors building on top of work you license under [The Prosperity Public License](#prosperity) will need to purchase private licenses from you to use and build on your work for the purpose of making money through licensezero.com, but otherwise, licensezero.com doesn't say anything about any relationship between you.
 
