@@ -88,7 +88,7 @@ License Zero starts where you exercise your power as the owner of intellectual p
 
 1.  <a id="prosperity"></a>[The Prosperity Public License](https://licensezero.com/licenses/prosperity) (<dfn>Prosperity</dfn>) works a bit like a [Creative Commons NonCommercial license](https://creativecommons.org/licenses/by-nc/4.0/), but for software.  Prosperity gives everyone broad permission to use your software, but limits commercial use to a short trial period of 32 days.  When a commercial user's trial runs out, they need to buy a private license or stop using your software.
 
-2.  <a id="parity"></a>[The Parity Public License](https://licensezero.com/licenses/parity) (<dfn>Parity</dfn>) works a bit like [AGPL](https://www.gnu.org/licenses/agpl-3.0.html), but requires users to release more of their own code, in more situations.  [Parity terms](#parity) require users who change, build on, or use your work to create software to release that software as open source, too.  If users can't or won't release their work, they need to buy a private license that allows use without sharing back.
+2.  <a id="parity"></a>[The Parity Public License](https://licensezero.com/licenses/parity) (<dfn>Parity</dfn>) works a bit like [AGPL](https://www.gnu.org/licenses/agpl-3.0.html), but requires users to release more of their own code, in more situations.  Parity requires users who change, build on, or use your work to create software to release that software as open source, too.  If users can't or won't release their work, they need to buy a private license that allows use without sharing back.
 
 Both `LICENSE` options are short and readable.  You should [read](https://licensezero.com/licenses/prosperity) [them](https://licensezero.com/licenses/parity).
 
