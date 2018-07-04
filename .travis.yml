@@ -1,4 +1,8 @@
 ---
+addons:
+  apt:
+    packages:
+      - graphviz
 language: node_js
 node_js: current
 sudo: false
