@@ -1,0 +1,9 @@
+digraph {
+  node [shape=circle];
+  A[label="A\nParity"];
+  B[label="B\nParity"];
+  C[label="C\nParity"];
+  D[label="D\nParity"];
+  A -> B, C;
+  C -> D;
+}

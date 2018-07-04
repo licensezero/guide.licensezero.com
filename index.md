@@ -49,6 +49,7 @@ This guide describes what License Zero is, and how it works.  It is _not_ a subs
 - [Contributions](#contributions)
   - [Parallel Licensing](#parallel-licensing)
   - [Stacked Licensing](#stacked-licensing)
+  - [License Graphs](#license-graphs)
 - [Complementary Approaches](#complementary-approaches)
 
 ## <a id="read-this-first">Read This First</a>
@@ -510,6 +511,54 @@ In that kind of situation, you can sell private licenses for your contributions 
 License Zero also supports projects that require multiple private licenses, for contributions from different developers.  If you publish contributions under [The Parity Public License](#parity), and another developer forks, licensing their own work under [The Parity Public License](#parity), too, they can append `licensezero.json` metadata for a separate License Zero identifier.  Users who run the [command line interface](#command-line-interface) will see that they need a private license from each of you to use the project as a whole.  The same could happen with two contributors using [The Prosperity Public License](#prosperity), or contributors using a mix of `LICENSE` terms.
 
 Note that as a contributor, you control pricing only for your own contributions, not anyone else's contributions, even if their work builds on yours.  Contributors building on top of work you license under [The Prosperity Public License](#prosperity) will need to purchase private licenses from you to use and build on your work for the purpose of making money through licensezero.com, but otherwise, licensezero.com doesn't say anything about any relationship between you.
+
+### <a id="license-graphs">License Graphs</a>
+
+Packages, tools, and projects depend on other packages, tools, and projects in turn.  These relationships create webs of dependencies, or dependency graphs, within software projects.
+
+Users need licenses for all intellectual property within their software projects, including its dependencies.  And they must follow the rules of each of those licenses.  That means each project tree has not just a dependency graph, but a _license graph_, as well.  The License Zero command line interface [traverses the license graph automatically](#as-a-user), seeking out License Zero packages.
+
+Consider this dependency graph:
+
+<figure id="figure-1">
+  <img src=./figure-1.svg alt="Figure 1">
+  <figcaption>Figure 1: A Dependency Graph</figcaption>
+</figure>
+
+Package A depends on Package B and Package C.  Package C depends on Package D in turn.
+
+When all contributions to each package in the graph are licensed under the same terms, users must follow the rules of that license for all code in the graph:
+
+<figure id="figure-2">
+  <img src=./figure-2.svg alt="Figure 2">
+  <figcaption>Figure 2: A Dependency Graph Under One License</figcaption>
+</figure>
+
+In this case, all the packages in the dependency graph are licensed under [Parity](#parity) terms.  Parity allows this, as long as source code for all the packages gets released, and each package preserves the license terms and notices of its dependencies.
+
+However, the licenses for packages in a dependency graph need not be the same:
+
+<figure id="figure-3">
+  <img src=./figure-3.svg alt="Figure 3">
+  <figcaption>Figure 3: A Dependency Graph Under Different Licenses</figcaption>
+</figure>
+
+A user of package A needs to follow the rules of _both_ [Charity](#charity) and [Prosperity](#prosperity), in order to use package A.  That means _both_ limiting commercial use to 32 days _and_ releasing source code for software built with package D, including for software built with package C or Package A.
+
+Note that the authors of package A and package C are free to license work on their own packages under MIT and Charity terms, respectively.  The Parity license of package D requires release of source code and licensing on terms at least as permissive as Parity.  Both MIT and Charity are _more_ permissive than Parity, with _fewer_ rules about releasing source code.
+
+The author of package A must mind the license rules for the Prosperity license for package B, too.  If the author of package A wrote that package primarily as a hobby, or as academic research, they're free to continue using package B indefinitely.  If the author of package A instead wrote package A primarily to make money, they need a private license for contributions to package B, so as not to exceed the 32-day trial period.
+
+The bad news is that license graphs can be even more complex, where packages also used [stacked licensing](#stacked-licensing):
+
+<figure id="figure-4">
+  <img src=./figure-4.svg alt="Figure 4">
+  <figcaption>Figure 4: A Dependency Graph with Packages Stacking Licenses</figcaption>
+</figure>
+
+This kind of complexity shows up even in existing open software projects that don't use any License Zero licenses, with mixes of GPL, BSD, MIT, LGPL, and other licenses.
+
+The good news is that tools like the [license zero command line interface](#command-line-interface) can traverse even complex license graphs automatically, compile a list of every [identifier](#identifiers) mentioned in metadata, and compare those results against the licenses and waivers that the user already has.  The License Zero command line interface merely evolves, and specializes, [existing tools for analyzing open source license graphs](https://www.npmjs.com/package/licensee).
 
 ## <a id="complementary-approaches">Complementary Approaches</a>
 

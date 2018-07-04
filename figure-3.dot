@@ -1,0 +1,9 @@
+digraph {
+  node [shape=circle,width=1.1];
+  A[label="A\nMIT"];
+  B[label="B\nProsperity"];
+  C[label="C\nCharity"];
+  D[label="D\nParity"];
+  A -> B, C;
+  C -> D;
+}
