@@ -412,14 +412,14 @@ Please note that under the [agency terms](https://licensezero.com/terms/agency),
 You can generate quotes for License Zero software within the `node_modules` directories of your projects:
 
 ```bash
-cd your-npm-project
+cd your-project
 licensezero quote
 ```
 
 To buy missing licenses for dependencies of a project:
 
 ```bash
-cd you-npm-project
+cd you-project
 licensezero buy
 ```
 
