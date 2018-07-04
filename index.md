@@ -489,14 +489,7 @@ Any open developer can choose one of the [public license options](#public-licens
 
 The [command line interface](#command-line-interface) finds package metadata by recursing the current working directory, as well as paths provided by queries to dependency-management tools, like `bundler show` for RubyGems.  When the command line interface finds a `licensezero.json` file, it inventories the packages listed within it.  It then looks for package-manager metadata files, like `setup.py`, `package.json`, or `pom.xml`, and tries to query them for package scope, name, and version information.
 
-If you're interested in expanding first-class tooling support to your language or package format of choice, [reach out in the GitHub repository for the Go port of the CLI](https://github.com/licensezero/cli/issues).  Even if you can't contribute code, pointers to documentation, examples of conventions, and answers to questions will be very helpful.
-
-As of early July of 2018, the command line interface supports:
-
-- npm packages within the current directory
-- Maven packages within the current directory
-- Python packages within the current directory
-- RubyGems listed by `bundle show --paths`
+The [`LANGUAGES` file in the CLI repository](https://github.com/licensezero/cli/blob/master/LANGUAGES.md) describes current language and packaging support.  If you're interested in expanding first-class tooling support to your language or package format of choice, [reach out in the GitHub repository for the Go port of the CLI](https://github.com/licensezero/cli/issues).  Even if you can't contribute code, pointers to documentation, examples of conventions, and answers to questions will be very helpful.
 
 ## <a id="contributions">Contributions</a>
 
