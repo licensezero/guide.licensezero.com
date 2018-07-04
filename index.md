@@ -31,7 +31,7 @@ This guide describes what License Zero is, and how it works.  It is _not_ a subs
   - [Stripe Connect](#stripe-connect)
   - [Identifiers](#identifiers)
   - [Cryptography](#cryptography)
-  - [Project Pages](#project-pages)
+  - [Web Store Pages](#web-store-pages)
   - [Pricing Graphics](#pricing-graphics)
 - [Artless Devices](#artless-devices)
   - [Service Provider](#service-provider)
@@ -51,13 +51,13 @@ This guide describes what License Zero is, and how it works.  It is _not_ a subs
 ## <a id="read-this-first">Read This First</a>
 
 ```python
-def licensing(user, project):
+def licensing(user, contribution):
   # See "Public Licenses" below.
-  if user.meets_conditions_of(project.public_license):
-    project.public_license.permit(user)
+  if user.meets_conditions_of(contribution.public_license):
+    contribution.public_license.permit(user)
   else:
     # See "Private Licenses" below.
-    private_license = user.private_license_for(project)
+    private_license = user.private_license_for(contribution)
     if (
       private_license is not None and
       user.meets_conditions_of(private_license)
@@ -65,7 +65,7 @@ def licensing(user, project):
       private_license.permit(user)
     # See "Waivers" below.
     else:
-      waiver = user.waiver_for(project)
+      waiver = user.waiver_for(contribution)
       if (
         waiver is not None and
         not waiver.expired
@@ -156,19 +156,45 @@ In the end, your software is yours to license.  These politics may or may not ma
 
 ## <a id="private-licenses">Private Licenses</a>
 
-Users who can't meet the conditions of the public `LICENSE` terms for a License Zero project can buy a private license that allows them to use the project without meeting those conditions.  License Zero publishes a [form private license](https://licensezero.com/licenses/private), and sells private licenses to users on developers' behalf.
+Users who can't meet the conditions of the public `LICENSE` terms can buy a private license that allows them to use the work without meeting those conditions.  License Zero publishes a [form private license](https://licensezero.com/licenses/private), and sells private licenses to users on developers' behalf.
 
-Each private license grants the buyer broad permission under copyright and patent law to use the software, in language a bit more like what a company legal department would expect.  Otherwise, the legal effect is much like that of a permissive public license, like MIT or BSD, except the private license applies only to the person who bought it, from the date they bought it.
+Each private license grants the buyer broad permission under copyright and patent law to use contributions to an open software project, in language a bit more like what a company legal department would expect.  Otherwise, the legal effect is much like that of a permissive public license, like MIT or BSD, except the private license applies only to the person who bought it, from the date they bought it.
+
+### <a id="private-sublicensing">Private Sublicensing</a>
 
 Private licenses give the buyer limited ability to pass their licenses on, or sublicense, others.  Generally speaking, buyers can pass their licenses on to others if they build software with significant additional functionality over and above that of the License Zero code they use.  They can pass on only the right to use the License Zero as part of the new program they've created, and to maintain it.  They _can't_ pass on their license to make changes or build other programs with the software.  In other words, buyers can sublicense the "user" parts of their private licenses, but not the "developer" parts of their private licenses.  Other developers who want to develop new programs, commercially or as closed source, need to buy their own private licenses.
 
-Private licenses last forever, and cover all contributions the developer makes with the same [project identifier](#identifiers) listed in the private license.  Developers don't promise to do any new work, or make it available under the same project identifier, by selling private licenses.  That leaves developers in charge of what code gets covered by private licenses for specific project identifiers.  If a developer embarks on a rewrite, or adds significant new functionality in a major release, they can define a new project identifier for that new work, and charge for private licenses to use it.
+### <a id="private-license-scope">Private License Scope</a>
+
+Private licenses last forever, and cover the set of contributions to an open software project that a developer tags with the same [identifier](#identifiers) listed in the private license.  To use an open software project without following the rules of its public licenses, users need other licenses, like private licenses from licensezero.com, that cover every contribution to the project.
+
+Once a developer publishes contributions to a project tagged with a particular identifier, those contributions become forever linked to that identifier.  Developers can't take those contributions back, so that private licenses sold for for that identifier no longer cover them.  That means users can buy the private licenses required for a particular version of a project, and rest assured that they will always have the rights they need for that version.
+
+Apart from this rule against taking contributions back, developers retain total control over what work is covered by a particular identifier.  If a developer embarks on a rewrite, or adds significant new functionality in a major release, they can create a new identifier for that new work, and charge for it separately.  If the new work builds on the old work, users will need private licenses for both identifiers to use the combined project.
+
+In general, there is only one situation where License Zero ever signs any agreement that requires a developer to do work in the future: When a customer sponsors [relicensing](#relicensing) of a set of contributions, the developer must implement the change, according to instructions in the [relicense agreement](#relicense-agreement). Otherwise, License Zero terms only cover work that has already been done. Developers can _choose_ to make additional contributions tagged with old identifiers.  But they can always choose to use a new identifier instead.
+
+### <a id="business-model-implications">Business Model Implications</a>
+
+Many companies sell proprietary software on subscription. Customers pay a license fee, usually monthly or annually, as long as they use the software.  Subscriptions create recurring revenue for sellers.  Customers continue to pay, month after month, year after year, even if the seller doesn't release any changes to the software.
+
+License Zero does not support subscriptions. Customers pay for private licenses just once, and those licenses last forever.  That design decisions reflects the complexity of subscription licensing, on the one hand, and License Zero's overarching goal of zero friction, on the other.
+
+Subscription license sellers have to charge their customers repeatedly.  Each payment can go wrong.  Payment methods expire.  Delays and errors abound.  Customers go out of business, or decide not to renew.  To cope, sellers pay payment processing and invoice companies, hire billing managers, and even sell debts to collection agencies.
+
+From the customer point of view, sellers go out of business, retire products and services, or let contracts expire to renegotiate price.  To avoid getting stranded, customers demand [source code escrow](https://en.wikipedia.org/wiki/Source_code_escrow), transition services, and other protections against getting stuck without critical software. They push for long price commitments, or rules limiting how much prices can go up each year.
+
+All of that complicates subscription license agreements.  But even the best subscription license agreement eventually ends.  When a subscription ends, for whatever reason, the customer's license for the software ends with it.  Looking at an old proprietary software license, it's rarely clear if the license is still good.   Did one side or the other stop it from renewing?  Did the payment for this year's renewal actually go through?
+
+That uncertainty makes anything like a single form for private license, or [a single command to find what licenses are missing](#as-a-user), impossible.  One-time payments and forever licenses are simpler, both at the time of sale and over the long term.
+
+That doesn't mean developers can't use License Zero to get paid for work over time.  As [mentioned above](#private-license-scope), developers have complete control over whether to make new contributions under an existing licensing identifier, or create a new one.  Developers can create new identifiers for each new major release of a project, or even for each new month.  It's up to developers to communicate those choices to users, if they like, so users know what to expect.  As a baseline, License Zero's licenses and terms only grant licenses for the software developers have already made, in the past.  But licenses for past work don't expire in the future. 
 
 ## <a id="waivers">Waivers</a>
 
 Waivers work a bit like freebie private licenses.  Developers can use the [command line interface](#command-line-interface) to generate signed [waivers](https://licensezero.com/licenses/waiver), for specific people, that let them out of `LICENSE` conditions limiting commercial use or require open source release.  Developers can generate waivers that last only a set number of days, or that last forever.  The [command line interface](#command-line-interface) treats waivers just like private licenses for purposes of figuring out which private licenses a user is missing for a project.
 
-You might like to issue waivers to reward contributors to your project who make their work available under a permissive license, for [parallel licensing](#parallel-licensing), extend the free trial period for projects under [Prosperity](#prosperity), or to resolve a question about whether a particular use will trigger the commercial-use time limit.  It's entirely up to you.
+You might like to issue waivers to reward other contributors to your project who make their work available under a permissive license, for [parallel licensing](#parallel-licensing), extend the free trial period for projects under [Prosperity](#prosperity), or to resolve a question about whether a particular use will trigger the commercial-use time limit.  It's entirely up to you.
 
 ## <a id="relicensing">Relicensing</a>
 
@@ -178,7 +204,7 @@ License Zero allows developers to set a price for changing the `LICENSE` terms f
 
 [Charity](https://licensezero.com/licenses/charity) is a highly permissive open source software license, much like [The MIT License](https://spdx.org/licenses/MIT) and [the two-clause BSD license](https://spdx.org/licenses/BSD-2-Clause), but easier to read and more legally complete.  It gives everyone who receives a copy of your software permission under copyright and patent law to use it and built with it in any way they like, as long as they preserve your license information in copies they give to others and refrain from suing users of your project for violating patents on it.
 
-Relicensing contributions to a project under Charity removes any reason for users to purchase private licenses for those contributions through License Zero.  Under the [agency terms](https://licensezero.com/terms/agency) that you must agree to in order to offer private licenses through License Zero, you must retract a project for sale through the API if you relicense it.
+Relicensing contributions to a project under Charity removes any reason for users to buy private licenses for those contributions through licensezero.com.  Under the [agency terms](https://licensezero.com/terms/agency) that you must agree to in order to offer private licenses through License Zero, you must retract an identifier from sale through the API if you relicense it.
 
 ### <a id="relicense-agreement">Relicense Agreement</a>
 
@@ -200,7 +226,7 @@ You can create an account to sell private licenses through License Zero by linki
 
 ### <a id="identifiers">Identifiers</a>
 
-licensezero.com generates unique identifiers for each developer and each project.  The identifiers are version 4 [UUIDs](https://en.wikipedia.org/wiki/Universally_unique_identifier) like:
+licensezero.com generates unique identifiers for each developer and each set of contributions.  The identifiers are version 4 [UUIDs](https://en.wikipedia.org/wiki/Universally_unique_identifier) like:
 
     daf5a8b1-23e0-4a9f-a6c1-69c40c71816b
 
@@ -208,42 +234,38 @@ licensezero.com generates unique identifiers for each developer and each project
 
 When you connect a Stripe account to licensezero.com, the site creates a unique UUID for you, as well as a [NaCl](https://nacl.cr.yp.to/)-style [Ed25519](https://ed25519.cr.yp.to/software.html) cryptographic signing keypair.  licensezero.com signs most kind of licensing information, from package metadata to `LICENSE` files, private licenses, waivers, and relicensing agreements, with the keypair created for your account, as well as its own keypair.
 
-licensezero.com publishes the public signing key generated for you on your project pages, and via the API.  Users can leverage the [command line interface](#command-line-interface) to verify signatures on private licenses and other documents against the public key.
+licensezero.com publishes the public signing key generated for you on your web store pages, and via the API.  Users can leverage the [command line interface](#command-line-interface) to verify signatures on private licenses and other documents against the public key.
 
 licensezero.com will not share the secret signing key generated for you with you or anyone else.  But using the API, through the command line interface, you can have licensezero.com sign [waivers](#waivers) and package metadata using the key, on your behalf.
 
-### <a id="project-pages">Project Pages</a>
+### <a id="project-pages"></a><a id="web-store-pages">Web Store Pages</a>
 
-licensezero.com serves a page with project information and purchase forms for each project.  For example:
+licensezero.com serves a page with information and purchase forms for each identifier.  For example:
 
-<https://licensezero.com/projects/daf5a8b1-23e0-4a9f-a6c1-69c40c71816b>
+<https://licensezero.com/identifiers/daf5a8b1-23e0-4a9f-a6c1-69c40c71816b>
 
 The URL pattern is:
 
 ```text
-https://licensezero.com/projects/{UUID}
+https://licensezero.com/identifiers/{UUID}
 ```
-
-Where `{UUID}` is the UUIDv4 for your project.
 
 ### <a id="pricing-graphics">Pricing Graphics</a>
 
 licensezero.com serves SVG graphics with private-license pricing information that you can include in your project's `README` file or other documentation.  For example:
 
-<figure><img alt="a pricing graphic" src="https://licensezero.com/projects/daf5a8b1-23e0-4a9f-a6c1-69c40c71816b/badge.svg"></figure>
+<figure><img alt="a pricing graphic" src="https://licensezero.com/identifiers/daf5a8b1-23e0-4a9f-a6c1-69c40c71816b/badge.svg"></figure>
 
 The URL pattern is:
 
 ```text
-https://licensezero.com/projects/{UUID}/badge.svg
+https://licensezero.com/identifiers/{UUID}/badge.svg
 ```
-
-Where `{UUID}` is the UUIDv4 for your project.
 
 The Markdown syntax is:
 
 ```markdown
-![L0](https://licensezero.com/projects/{UUID}/badge.svg)
+![L0](https://licensezero.com/identifiers/{UUID}/badge.svg)
 ```
 
 ## <a id="artless-devices">Artless Devices</a>
@@ -252,7 +274,7 @@ Artless Devices LLC is a California limited liability company.  It serves as the
 
 ### <a id="service-provider">Service Provider</a>
 
-To use licensezero.com and its API, you must agree to [terms of service](https://licensezero.com/terms/service) with Artless Devices.  The terms were written to be read, and you should read them.  They set important rules about responsibility and liability, and make very explicit that Artless Devices isn't going to provide, or be responsible for, any legal advice about whether License Zero is right for you or your project.
+To use licensezero.com and its API, you must agree to [terms of service](https://licensezero.com/terms/service) with Artless Devices.  The terms were written to be read, and you should read them.  They set important rules about responsibility and liability, and make very explicit that Artless Devices isn't going to provide, or be responsible for, any legal advice about whether License Zero is right for you or your work.
 
 ### <a id="licensing-agent">Licensing Agent</a>
 
@@ -260,13 +282,13 @@ To offer private licenses for sale through licensezero.com, you agree to the [ag
 
 First and foremost, you appoint Artless Devices as your agent to sign license agreements, waivers, and relicense agreements on your behalf.  That means that Artless Devices can do the deals you authorize through the API, via licensezero.com, with the same effect as if you'd signed them yourself.
 
-Second, Artless Devices earns commission on private license sales.  The amount is set out in the agency terms when you offer the project for private licensing.
+Second, Artless Devices earns commission on private license sales.  The amount is set out in the agency terms when you offer your work for private licensing.
 
 Third, you guarantee that you have the rights to offer the software you offer to license through License Zero, and to keep your projects' metadata in line with what the [command line interface](#command-line-interface) generates.  The guarantee helps protect Artless Devices from those trying to take license fees for others' work.  Your promise about metadata helps ensure that the [command line interface](#command-line-interface) works as intended for users buying licenses.
 
-Fourth, the relationship isn't exclusive, and with the exception of projects [for which you lock availability](#locks), either side can end it at any time.  You can sell private licenses through other services, or on your own.
+Fourth, the relationship isn't exclusive, and with the exception of work [for which you lock availability](#locks), either side can end it at any time.  You can sell private licenses through other services, or on your own.
 
-Finally, neither the terms of service nor the agency terms change ownership of any intellectual property in your projects.  You own your rights, and you keep them.  Artless Devices doesn't receive a license from you.  Rather, you license users and agree to relicense projects directly.  Artless Devices merely acts as your agent, signing on your behalf, as you've directed via the API.
+Finally, neither the terms of service nor the agency terms change ownership of any intellectual property in your work.  You own your rights, and you keep them.  Artless Devices doesn't receive a license from you.  Rather, you license users and agree to relicense your work directly.  Artless Devices merely acts as your agent, signing on your behalf, as you've directed via the API.
 
 ### <a id="toolmaker">Toolmaker</a>
 
@@ -320,7 +342,7 @@ The command will then prompt for your access token, and save it for future use.
 
 #### <a id="offering-private-licenses">Offering Private Licenses</a>
 
-To offer private licenses for a project:
+To offer private licenses:
 
 ```bash
 licensezero offer \
@@ -341,13 +363,13 @@ licensezero offer \
 
 You can run the `reprice` subcommand to update pricing.
 
-Once you've registered the project, use the CLI to set licensing metadata and `LICENSE`:
+Once you've offered your work, use the CLI to set licensing metadata and `LICENSE`:
 
 ```bash
 cd your-package
-licensezero license --project $YOU_PROJECT_ID --prosperity
+licensezero license --id $ID --prosperity
 # or
-licensezero license --project $PROJECT_ID --parity
+licensezero license --id $ID --parity
 git add licensezero.json LICENSE
 git commit -m "License Zero"
 git push
@@ -359,25 +381,25 @@ These commands will write cryptographically signed `LICENSE` and `licensezero.js
 
 By default, you can change pricing for private licenses at any time.  You could offer private licenses for $5 today, and $5,000 tomorrow.
 
-In order to provide a publicly verifiable guarantee of license availability and pricing, either to users or others who want to [build on your work](#stacked-licensing), you can lock private-license pricing for your project to no more than the current price for a term of days, months, or even years.
+In order to provide a publicly verifiable guarantee of license availability and pricing, either to users or others who want to [build on your work](#stacked-licensing), you can lock private-license pricing for your work to no more than the current price for a term of days, months, or even years.
 
 ```bash
-licensezero lock --project $YOU_PROJECT_ID --unlock $YOUR_UNLOCK_DATE
+licensezero lock --id $ID --unlock $YOUR_UNLOCK_DATE
 ```
 
 The unlock date must be a date at least seven calendar days in the future.
 
-Locking a project prevents you from increasing pricing for your project or withdrawing your offer of private licenses.  For specifics, see [the agency terms](https://licensezero.com/terms/agency).
+Locking pricing prevents you from increasing pricing or withdrawing your offer of private licenses.  For specifics, see [the agency terms](https://licensezero.com/terms/agency).
 
-Please note that _locks are irrevocable_.  Artless Devices will not unlock a valid project early under any circumstances.
+Please note that _locks are irrevocable_.  Artless Devices will not unlock early under any circumstances.
 
 #### <a id="generating-waivers">Generating Waivers</a>
 
-To generate a waiver for a project, provide a legal name, a jurisdiction code, and either a term in calendar days or `forever`:
+To generate a waiver, provide a legal name, a jurisdiction code, and either a term in calendar days or `forever`:
 
 ```bash
 licensezero waive \
-  --project $YOUR_PROJECT_ID \
+  --id $ID \
   --beneficiary "Eve Able" \
   --jurisdiction "US-NY" \
   --days 90 \
@@ -388,19 +410,19 @@ You can also issue waivers that don't expire:
 
 ```bash
 licensezero waive \
-  --project $YOUR_PROJECT_ID \
+  --id $ID \
   --beneficiary "Eve Able" \
   --jurisdiction "US-NY" \
   --forever \
   > waiver.json
 ```
 
-#### <a id="retracting-projects">Retracting Projects</a>
+#### <a id="retracting-projects"></a><a id="retracting">Retracting from Sale</a>
 
-You can stop offering private licenses through licensezero.com at any time:
+Unless you've [locked pricing](#locks), you can stop offering private licenses through licensezero.com at any time:
 
 ```bash
-licensezero retract --project $YOUR_PROJECT_ID
+licensezero retract --id $ID
 ```
 
 Please note that under the [agency terms](https://licensezero.com/terms/agency), Artless Devices can complete private license and relicensing transactions that began before you retracted the project, but can't start new transactions.
@@ -426,7 +448,7 @@ licensezero buy
 `licensezero buy` will open a webpage in your browser listing the licenses to buy and taking credit card payment.  On successful purchase, [licensezero.com](https://licensezero.com) will provide the address of a purchase bundle that you can use to import all of the licenses you've just purchased at once:
 
 ```bash
-licensezero import --bundle $YOUR_BUNDLE_URL
+licensezero import --bundle $URL
 ```
 
 #### Importing License and Waiver Files
@@ -434,6 +456,7 @@ licensezero import --bundle $YOUR_BUNDLE_URL
 To import a license you bought on licensezero.com, or a waiver you received from a contributor:
 
 ```bash
+licensezero import license.json
 licensezero import waiver.json
 ```
 
@@ -442,7 +465,7 @@ licensezero import waiver.json
 To sponsor relicensing of a project onto permissive terms:
 
 ```bash
-licensezero sponsor --project $PROJECT_ID
+licensezero sponsor --id $ID
 ```
 
 The command will open a payment page in your web browser.
@@ -459,7 +482,7 @@ The command will create a tar archive in your current directory.
 
 ## <a id="ecosystems">Ecosystem Support</a>
 
-Any open developer can choose one of the [public license options](#public-licenses), add its text to `LICENSE`, [offer private licenses through the API](#offering-private-liceness), and link to their [project page](#project-pages) in `README` or on a website.  Users can buy private licenses directly from the project page, and download their signed license file.  But the process becomes much simpler---much closer to zero friction, for both buyers and sellers---when the [command line interface](#command-line-interface) can find, read, and write package metadata showing which packages correspond to which licensezero.com project IDs.
+Any open developer can choose one of the [public license options](#public-licenses), add its text to `LICENSE`, [offer private licenses through the API](#offering-private-liceness), and link to their [web store page](#web-store-pages) in `README` or on a website.  Users can buy private licenses directly from the web store page, and download their signed license file.  But the process becomes much simpler---much closer to zero friction, for both buyers and sellers---when the [command line interface](#command-line-interface) can find, read, and write package metadata showing which packages correspond to which licensezero.com IDs.
 
 The [command line interface](#command-line-interface) finds package metadata by recursing the current working directory, as well as paths provided by queries to dependency-management tools, like `bundler show` for RubyGems.  When the command line interface finds a `licensezero.json` file, it inventories the packages listed within it.  It then looks for package-manager metadata files, like `setup.py`, `package.json`, or `pom.xml`, and tries to query them for package scope, name, and version information.
 
@@ -480,7 +503,7 @@ When others contribute to your work, they will own the intellectual property in 
 
 ### <a id="parallel-licensing">Parallel Licensing</a>
 
-You can choose to take contributions to your project only from those who license their contributions under permissive open source terms.  For example, you might license your work on a project under [Parity terms](#parity), but ask contributors to license their work under [Charity](#permissive-license), and append the text of that license to your project's `LICENSE` file with a note that others' contributions come under that license.
+You can choose to take contributions to your project only from those who license their contributions under permissive open source terms.  For example, you might license your contributions to a project under [Parity terms](#parity), but ask contributors to license their work under [Charity](#permissive-license), and append the text of that license to your project's `LICENSE` file with a note that others' contributions come under that license.
 
 Users of the combined project would then receive a license from you on [Parity terms](#parity), for your contributions, and licenses from other contributors on the terms of [Charity](#permissive-license), for their contributions.  Would-be users who won't abide by the open source release conditions of your license can still buy a private license from you, for your contributions.  The private license for your work, plus the permissive license for others' contributions, cover all contributions.
 
@@ -488,7 +511,7 @@ In that kind of situation, you can sell private licenses for your contributions 
 
 ### <a id="stacked-licensing">Stacked Licensing</a>
 
-License Zero also supports projects that require multiple private licenses, for contributions from different developers.  If you publish a project under [The Parity Public License](#parity), and another developer forks the project, licensing their own work under [The Parity Public License](#parity), too, they can append `licensezero.json` metadata for a separate License Zero "project" in the same software.  Users who run the [command line interface](#command-line-interface) will see that they need a private license from each of you to use the project.  The same could happen with two contributors using [The Prosperity Public License](#prosperity), or contributors using a mix of `LICENSE` terms.
+License Zero also supports projects that require multiple private licenses, for contributions from different developers.  If you publish contributions under [The Parity Public License](#parity), and another developer forks, licensing their own work under [The Parity Public License](#parity), too, they can append `licensezero.json` metadata for a separate License Zero identifier.  Users who run the [command line interface](#command-line-interface) will see that they need a private license from each of you to use the project as a whole.  The same could happen with two contributors using [The Prosperity Public License](#prosperity), or contributors using a mix of `LICENSE` terms.
 
 Note that as a contributor, you control pricing only for your own contributions, not anyone else's contributions, even if their work builds on yours.  Contributors building on top of work you license under [The Prosperity Public License](#prosperity) will need to purchase private licenses from you to use and build on your work for the purpose of making money through licensezero.com, but otherwise, licensezero.com doesn't say anything about any relationship between you.
 
