@@ -2,3 +2,4 @@
 make
 scp index.html kyle@licensezero.com:/var/www/guide.licensezero.com
 scp styles.css kyle@licensezero.com:/var/www/guide.licensezero.com
+scp *.svg kyle@licensezero.com:/var/www/guide.licensezero.com
