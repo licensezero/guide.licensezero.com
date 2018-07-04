@@ -23,6 +23,9 @@ This guide describes what License Zero is, and how it works.  It is _not_ a subs
   - [Comparing Public Licenses](#comparing-public-licenses)
   - [License Politics](#license-politics)
 - [Private Licenses](#private-licenses)
+  - [Private Sublicensing](#private-sublicensing)
+  - [Private License Scope](#private-license-scope)
+  - [Not Subscriptions](#not-subscriptions)
 - [Waivers](#waivers)
 - [Relicensing](#relicensing) 
   - [Permissive License](#permissive-license)
@@ -174,7 +177,7 @@ Apart from this rule against taking contributions back, developers retain total 
 
 In general, there is only one situation where License Zero ever signs any agreement that requires a developer to do work in the future: When a customer sponsors [relicensing](#relicensing) of a set of contributions, the developer must implement the change, according to instructions in the [relicense agreement](#relicense-agreement). Otherwise, License Zero terms only cover work that has already been done. Developers can _choose_ to make additional contributions tagged with old identifiers.  But they can always choose to use a new identifier instead.
 
-### <a id="business-model-implications">Business Model Implications</a>
+### <a id="not-subscriptions">Not Subscriptions</a>
 
 Many companies sell proprietary software on subscription. Customers pay a license fee, usually monthly or annually, as long as they use the software.  Subscriptions create recurring revenue for sellers.  Customers continue to pay, month after month, year after year, even if the seller doesn't release any changes to the software.
 
