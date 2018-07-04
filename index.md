@@ -156,7 +156,7 @@ In the end, your software is yours to license.  These politics may or may not ma
 
 ## <a id="private-licenses">Private Licenses</a>
 
-Users who can't meet the conditions of the public `LICENSE` terms for a License Zero project  can buy a private license that allows them to use the project without meeting those conditions.  License Zero publishes a [form private license](https://licensezero.com/licenses/private), and sells private licenses to users on developers' behalf.
+Users who can't meet the conditions of the public `LICENSE` terms for a License Zero project can buy a private license that allows them to use the project without meeting those conditions.  License Zero publishes a [form private license](https://licensezero.com/licenses/private), and sells private licenses to users on developers' behalf.
 
 Each private license grants the buyer broad permission under copyright and patent law to use the software, in language a bit more like what a company legal department would expect.  Otherwise, the legal effect is much like that of a permissive public license, like MIT or BSD, except the private license applies only to the person who bought it, from the date they bought it.
 
