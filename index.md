@@ -351,6 +351,7 @@ To offer private licenses:
 ```bash
 licensezero offer \
   --price 300 \
+  --no-relicense \
   --homepage "http://example.com" \
   --description "an example project"
 ```
