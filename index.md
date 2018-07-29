@@ -22,6 +22,7 @@ This guide describes what License Zero is, and how it works.  It is _not_ a subs
   - [Parity Public License](#parity)
   - [Comparing Public Licenses](#comparing-public-licenses)
   - [License Politics](#license-politics)
+  - [Using the Public Licenses](#using-public-licenses)
 - [Private Licenses](#private-licenses)
   - [Private Sublicensing](#private-sublicensing)
   - [Private License Scope](#private-license-scope)
@@ -157,6 +158,50 @@ The differences between the public licenses, especially on commercial use, refle
 [Parity](#parity) is probably not a "free software" license [as defined by the Free Software Foundation](https://www.gnu.org/philosophy/free-sw.html).  FSF's definition of free software requires granting freedoms to run, copy, distribute, study, change and improve software.  It also recognizes that some conditions on those freedoms can enhance software freedom overall by ensuring that others receive source code and freedom to work with it, which is exactly the approach [Parity](#parity) takes.  However, FSF's definition of free software admits only conditions on the freedom to share modified versions with others, along the lines of the GPL licenses that FSF has published, and not conditions on other freedoms.  That partially explains why the Open Source Initiative [approved RPL&#x2011;1.5](https://opensource.org/licenses/RPL-1.5), a thematic predecessor of [Parity](#parity), while FSF [considers RPL non-free](https://www.gnu.org/licenses/license-list.en.html#RPL).
 
 In the end, your software is yours to license.  These politics may or may not matter to you, and they may or may not matter to your users or potential users.
+
+### <a id="using-public-licenses">Using the Public Licenses</a>
+
+Using Parity or Prosperity is much like using the MIT License or a BSD-style license.  The most important step is copying the terms of the license into your project repository, filling in the copyright and source lines at the top, and configuring any packager you use to include your terms in packaged forms of your project.  The overall idea is to make sure that people who get copies of your software also get copies of your license terms, so they know what rights they have for your software.
+
+You can copy your public license terms into a `LICENSE` or a similar file, into header comments in your source files, into documentation like `README.md`, or into any combination of these.  Your language community or package distribution system probably has a convention or a written standard.  As long as that approach achieves the overall goal, there's nothing wrong with it.
+
+Both Parity and Prosperity have two blanks to fill out: a copyright notice and a source notice.
+
+The copyright notice lines work the same as in MIT or BSD licenses.  If you're licensing your own work, in which you own the rights, you should list your personal name.  If rights in your work belong to a company, and the company gives you the go-ahead to release under Parity or Prosperity, you should list the name of the company instead.
+
+A quick note on phrasing.  Since most of the folks who would benefit from a system like License Zero develop independently, as individuals, the public licenses use the first person "I" to refer to the one giving the public license.  That choice makes the licenses even easier to read, in the most common use case.
+
+At the same time, it's perfectly possible to open a License Zero account and sell licenses on behalf of a company.  Reading a license that uses "I" from a company is a little awkward, but works fine.  To help clarify, you might like to add a bit more detail to the copyright notice line:
+
+```markdown
+Copyright Notice: John Doe for SomeCo, Inc.
+```
+
+That can help communicate that while John Doe wrote the software, the rights in it belong to SomeCo, and SomeCo is giving the license.
+
+What about multiple contributors?  In Java, C++, and other kinds of projects that use header comments to show license terms, it's common for each contributor to put their license terms, with their copyright notice, in the files they contribute to.  In JavaScript and Ruby projects that tend to use a single `LICENSE` file for all license information, there's no common convention.  Some projects use copyright lines like:
+
+```markdown
+MIT License
+
+Copyright (c) 2018 Project Contributors
+
+Permission is hereby granted...
+```
+
+These projects frequently list their contributors elsewhere, such as in package metadata or a `THANKS` file.
+
+Other projects list copyright notices for each author:
+
+```markdown
+MIT License
+
+Copyright (c) 2016 Joe Author
+Copyright (c) 2017 Jane Contributor
+Copyright (c) 2018 Jake Maintainer
+
+Permission is hereby granted...
+```
 
 ## <a id="private-licenses">Private Licenses</a>
 
