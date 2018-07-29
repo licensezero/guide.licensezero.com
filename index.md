@@ -122,11 +122,11 @@ def parity_license:
 
 Consider a few user scenarios, and how they play out under different `LICENSE` choices:
 
-1.  A developer employed at a for-profit company wants to use your library in their company's proprietary web app.
+1.  A developer employed at a for-profit company wants to use your library in their company's closed-source, proprietary web app.  They will _not_ release their web app as open source.
 
     - If you license the library under [The Prosperity Public License](#prosperity), the developer can only use the library for 32 days.  Then they need to buy a private license.
 
-    - If you license the library under [The Parity Public License](#parity), the developer needs to buy a private license to use it in their web app at all.  They can't use the library under its public license, because they won't meet its conditions by releasing their web app as open source.
+    - If you license the library under [The Parity Public License](#parity), the developer needs to buy a private license to use your library in their web app at all.  They can't use the library under its public license, because they won't meet the condition of releasing their web app as open source.
 
 2.  A developer employed at a for-profit company wants to use your library in the data synchronization software their company ships with voice recorders.  They plan to release the sync software as open source.
 
