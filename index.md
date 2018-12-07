@@ -10,7 +10,7 @@ It's the model of [GitHub](https://github.com/pricing), [Travis CI](https://trav
 
 This model also makes it easy to support developers creating open software you use and rely on at work.  License Zero is not a donation platform or a backer-rewards market.  If other developers' work helps you do your job better or more efficiently, supporting them through License Zero ought to be a reimbursable expense.
 
-This is a guide to License Zero, and the project's primary documentation for developers.  If you're interested in using License Zero, either to support your work or to support others, read this guide.  If you find errors or ways to improve it, send a [pull request](https://github.com/licensezero/licensezero-guide).
+This is a guide to License Zero, and the project's primary documentation for developers.  If you're interested in using License Zero, either to support your work or to support others, read this guide.  If you find errors or ways to improve it, send a [pull request](https://github.com/licensezero/guide.licensezero.com).
 
 This guide describes what License Zero is, and how it works.  It is _not_ a substitute for legal advice about whether a particular license fits your needs or work.  The License Zero [terms of service](https://licensezero.com/terms/service) apply to this guide, too.
 
