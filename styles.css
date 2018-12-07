@@ -17,12 +17,16 @@ pre {
 
 body {
   margin: 0 auto;
-  max-width: 600px;
+  max-width: 35rem;
   padding: 1rem 2rem;
 }
 
 .logo {
   width: 100px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-align: left;
 }
 
 h2 {
