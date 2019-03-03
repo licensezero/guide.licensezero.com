@@ -84,7 +84,7 @@ As an independent software developer, you control who can use your software, and
 
 [licensezero.com](https://licensezero.com) can sell private licenses on your behalf.  A [command line interface](https://github.com/licensezero/cli) makes it easy for users to buy all the private licenses they need for a project at once, with a single credit card transaction.  [Stripe](https://stripe.com) processes payments directly to an account in your name.  The same command line interface makes it easy for you to sign up, start offering private licenses for sale, and set pricing.
 
-This "dual licensing" model is not new.  [MySQL](https://www.mysql.com/about/legal/licensing/oem/) pioneered it decades ago, and important projects like [Qt](https://www1.qt.io/licensing/) and [MongoDB](https://www.mongodb.com/community/licensing) continue it, successfully, today.  License Zero evolves the dual licensing model by making it useful for more kinds of software, and by making it practical for independent developers who can't or don't want to set up companies.
+This [public-private licensing model](https://indieopensource.com/public-private), also know as "dual licensing", is not new.  [MySQL](https://www.mysql.com/about/legal/licensing/oem/) pioneered it decades ago, and important projects like [Qt](https://www1.qt.io/licensing/) and [MongoDB](https://www.mongodb.com/community/licensing) continue it, successfully, today.  License Zero evolves the public-private licensing model by making it work for more kinds of software, and by making it practical for independent developers who can't or don't want to set up companies.
 
 ## <a id="public-licenses">Public Licenses</a>
 
@@ -222,7 +222,7 @@ licensezero.com is a website and API for selling [private licenses](#private-lic
 
 You can think of licensezero.com as a kind of Internet vending machine.  As a contributor, you can make a deal with the operator of the vending machine to stock it with private licenses and relicense deals for sale.  The vending machine then handles taking payment and spitting out licenses on your behalf.
 
-You could also think of licensezero.com as a kind of e-commerce platform service-izing the back-office operations of a dual licensing business: negotiation, communication, payment processing, records management.  Rather than start a company and hire people to handle those tasks, or take time away from development to do them yourself, you can use licensezero.com to run your licensing business 24/7.  It works just a well for expensive licenses priced in the thousands of dollars and relatively cheap licenses costing just a few bucks.
+You could also think of licensezero.com as a kind of e-commerce platform service-izing the back-office operations of a [public-private licensing business](https://indieopensource.com/public-private): negotiation, communication, payment processing, records management.  Rather than start a company and hire people to handle those tasks, or take time away from development to do them yourself, you can use licensezero.com to run your licensing business 24/7.  It works just a well for expensive licenses priced in the thousands of dollars and relatively cheap licenses costing just a few bucks.
 
 ### <a id="stripe-connect">Stripe Connect</a>
 
@@ -495,7 +495,7 @@ The [`LANGUAGES` file in the CLI repository](https://github.com/licensezero/cli/
 
 ## <a id="contributions">Contributions</a>
 
-As a independent software maintainer, you can license your work under both a [public `LICENSE` terms](#public-license) and [private licenses](#private-licenses) at the same time because you own the intellectual property in your work that others needs licenses for.  In other words, you can dual license your work because you own it.
+As a independent software maintainer, you can license your work under both a [public `LICENSE` terms](#public-license) and [private licenses](#private-licenses) at the same time because you own the intellectual property in your work that others needs licenses for.  In other words, you can license your work in two ways at once because you own it.
 
 When others contribute to your work, they will own the intellectual property in their contributions, not you.  As a result, users of your combined work will need licenses from you and from other contributors.  There are two straightforward ways to achieve that.
 
