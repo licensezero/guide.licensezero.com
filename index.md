@@ -202,13 +202,13 @@ You might like to issue waivers to reward other contributors to your project who
 
 ## <a id="relicensing">Relicensing</a>
 
-License Zero allows developers to set a price for changing the `LICENSE` terms for their contributions to a project to those of [The Charity Public License (Charity)](https://licensezero.com/licenses/charity).  This is called "relicensing".
+License Zero allows developers to set a price for changing the `LICENSE` terms for their contributions to a project to those of [The Blue Oak Model License](https://blueoakcouncil.org/license/1.0.0).  This is called "relicensing".
 
 ### <a id="permissive-license">Permissive License</a>
 
-[Charity](https://licensezero.com/licenses/charity) is a highly permissive open source software license, much like [The MIT License](https://spdx.org/licenses/MIT) and [the two-clause BSD license](https://spdx.org/licenses/BSD-2-Clause), but easier to read and more legally complete.  It gives everyone who receives a copy of your software permission under copyright and patent law to use it and built with it in any way they like, as long as they preserve your license information in copies they give to others and refrain from suing users of your project for violating patents on it.
+[The Blue Oak Model License](https://blueoakcouncil.org/license/1.0.0) is a highly permissive open source software license, much like [The MIT License](https://spdx.org/licenses/MIT) and [the two-clause BSD license](https://spdx.org/licenses/BSD-2-Clause), but easier to read, more legally complete, and even more permissive.  It gives everyone who receives a copy of your software permission under copyright and patent law to use it and built with it in any way they like, as long as they preserve your license information in copies they give to others.
 
-Relicensing contributions to a project under Charity removes any reason for users to buy private licenses for those contributions through licensezero.com.  Under the [agency terms](https://licensezero.com/terms/agency) that you must agree to in order to offer private licenses through License Zero, you must retract an identifier from sale through the API if you relicense it.
+Relicensing contributions to a project under Blue Oak removes any reason for users to buy private licenses for those contributions through licensezero.com.  Under the [agency terms](https://licensezero.com/terms/agency) that you must agree to in order to offer private licenses through License Zero, you must retract an identifier from sale through the API if you relicense it.
 
 ### <a id="relicense-agreement">Relicense Agreement</a>
 
@@ -501,9 +501,9 @@ When others contribute to your work, they will own the intellectual property in 
 
 ### <a id="parallel-licensing">Parallel Licensing</a>
 
-You can choose to take contributions to your project only from those who license their contributions under permissive open source terms.  For example, you might license your contributions to a project under [Parity terms](#parity), but ask contributors to license their work under [Charity](#permissive-license), and append the text of that license to your project's `LICENSE` file with a note that others' contributions come under that license.
+You can choose to take contributions to your project only from those who license their contributions under permissive open source terms.  For example, you might license your contributions to a project under [Parity terms](#parity), but ask contributors to license their work under [Blue Oak](#permissive-license), and append the text of that license to your project's `LICENSE` file with a note that others' contributions come under that license.
 
-Users of the combined project would then receive a license from you on [Parity terms](#parity), for your contributions, and licenses from other contributors on the terms of [Charity](#permissive-license), for their contributions.  Would-be users who won't abide by the open source release conditions of your license can still buy a private license from you, for your contributions.  The private license for your work, plus the permissive license for others' contributions, cover all contributions.
+Users of the combined project would then receive a license from you on [Parity terms](#parity), for your contributions, and licenses from other contributors on [permissive terms](#permissive-license), for their contributions.  Would-be users who won't abide by the open source release conditions of your license can still buy a private license from you, for your contributions.  The private license for your work, plus the permissive license for others' contributions, cover all contributions.
 
 In that kind of situation, you can sell private licenses for your contributions to the project, but others cannot.  Perhaps that feels completely fair.  If it doesn't, you may like to offer special credit, payment, or a free [waiver](#waiver) to contributors, to convince them to license their contributions under permissive terms.
 
@@ -544,9 +544,9 @@ However, the licenses for packages in a dependency graph need not be the same:
   <figcaption>Figure 3: A Dependency Graph Under Different Licenses</figcaption>
 </figure>
 
-A user of package A needs to follow the rules of _both_ [Charity](#charity) and [Prosperity](#prosperity), in order to use package A.  That means _both_ limiting commercial use to 32 days _and_ releasing source code for software built with package D, including for software built with package C or Package A.
+A user of package A needs to follow the rules of _both_ [Parity](#parity) and [Prosperity](#prosperity), in order to use package A.  That means _both_ limiting commercial use to 32 days _and_ releasing source code for software built with package D, including for software built with package C or Package A.
 
-Note that the authors of package A and package C are free to license work on their own packages under MIT and Charity terms, respectively.  The Parity license of package D requires release of source code and licensing on terms at least as permissive as Parity.  Both MIT and Charity are _more_ permissive than Parity, with _fewer_ rules about releasing source code.
+Note that the authors of package A and package C are free to license work on their own packages under MIT and Blue Oak terms, respectively.  The Parity license of package D requires release of source code and licensing on terms at least as permissive as Parity.  Both MIT and Blue Oak are _more_ permissive than Parity, with _fewer_ rules about releasing source code.
 
 The author of package A must mind the license rules for the Prosperity license for package B, too.  If the author of package A wrote that package primarily as a hobby, or as academic research, they're free to continue using package B indefinitely.  If the author of package A instead wrote package A primarily to make money, they need a private license for contributions to package B, so as not to exceed the 32-day trial period.
 

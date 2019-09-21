@@ -30,7 +30,7 @@
 <g id="node3" class="node"><title>C</title>
 <ellipse fill="none" stroke="black" cx="153" cy="-171" rx="45" ry="45"/>
 <text text-anchor="middle" x="153" y="-182.3" font-family="Times,serif" font-size="14.00">C</text>
-<text text-anchor="middle" x="153" y="-167.3" font-family="Times,serif" font-size="14.00">Charity</text>
+<text text-anchor="middle" x="153" y="-167.3" font-family="Times,serif" font-size="14.00">Blue Oak</text>
 <text text-anchor="middle" x="153" y="-152.3" font-family="Times,serif" font-size="14.00">Prosperity</text>
 </g>
 <!-- A&#45;&gt;C -->
@@ -43,7 +43,7 @@
 <ellipse fill="none" stroke="black" cx="153" cy="-45" rx="45" ry="45"/>
 <text text-anchor="middle" x="153" y="-56.3" font-family="Times,serif" font-size="14.00">D</text>
 <text text-anchor="middle" x="153" y="-41.3" font-family="Times,serif" font-size="14.00">Parity</text>
-<text text-anchor="middle" x="153" y="-26.3" font-family="Times,serif" font-size="14.00">Charity</text>
+<text text-anchor="middle" x="153" y="-26.3" font-family="Times,serif" font-size="14.00">Blue Oak</text>
 </g>
 <!-- C&#45;&gt;D -->
 <g id="edge3" class="edge"><title>C&#45;&gt;D</title>

@@ -2,7 +2,7 @@ digraph {
   node [shape=circle,width=1.25];
   A[label="A\nMIT"];
   B[label="B\nProsperity"];
-  C[label="C\nCharity"];
+  C[label="C\nBlue Oak"];
   D[label="D\nParity"];
   A -> B, C;
   C -> D;
