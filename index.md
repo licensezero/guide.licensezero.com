@@ -352,7 +352,7 @@ To offer private licenses:
 licensezero offer \
   --price 300 \
   --no-relicense \
-  --homepage "http://example.com" \
+  --repository "http://github.com/example/example" \
   --description "an example project"
 ```
 
@@ -362,7 +362,7 @@ If you like, you can also set a [relicensing](#relicensing) price:
 licensezero offer \
   --price 300 \
   --relicense 200000 \
-  --homepage "http://example.com" \
+  --repository "http://github.com/example/example" \
   --description "an example project"
 ```
 
