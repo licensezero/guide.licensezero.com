@@ -246,30 +246,30 @@ licensezero.com will not share the secret signing key generated for you with you
 
 licensezero.com serves a page with information and purchase forms for each identifier.  For example:
 
-<https://licensezero.com/ids/daf5a8b1-23e0-4a9f-a6c1-69c40c71816b>
+<https://licensezero.com/offers/daf5a8b1-23e0-4a9f-a6c1-69c40c71816b>
 
 The URL pattern is:
 
 ```text
-https://licensezero.com/ids/{UUID}
+https://licensezero.com/offers/{UUID}
 ```
 
 ### <a id="pricing-graphics">Pricing Graphics</a>
 
 licensezero.com serves SVG graphics with private-license pricing information that you can include in your project's `README` file or other documentation.  For example:
 
-<figure><img alt="a pricing graphic" src="https://licensezero.com/ids/daf5a8b1-23e0-4a9f-a6c1-69c40c71816b/badge.svg"></figure>
+<figure><img alt="a pricing graphic" src="https://licensezero.com/offers/daf5a8b1-23e0-4a9f-a6c1-69c40c71816b/badge.svg"></figure>
 
 The URL pattern is:
 
 ```text
-https://licensezero.com/ids/{UUID}/badge.svg
+https://licensezero.com/offers/{UUID}/badge.svg
 ```
 
 The Markdown syntax is:
 
 ```markdown
-![L0](https://licensezero.com/ids/{UUID}/badge.svg)
+![L0](https://licensezero.com/offers/{UUID}/badge.svg)
 ```
 
 ## <a id="artless-devices">Artless Devices</a>

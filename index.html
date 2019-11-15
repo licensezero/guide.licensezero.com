@@ -240,18 +240,18 @@ def parity_license:
 <p>licensezero.com will not share the secret signing key generated for you with you or anyone else.  But using the API, through the command line interface, you can have licensezero.com sign <a href="#waivers">waivers</a> and package metadata using the key, on your behalf.</p>
 <h3><a id="project-pages"></a><a id="web-store-pages">Web Store Pages</a></h3>
 <p>licensezero.com serves a page with information and purchase forms for each identifier.  For example:</p>
-<p><a href="https://licensezero.com/ids/daf5a8b1-23e0-4a9f-a6c1-69c40c71816b">https://licensezero.com/ids/daf5a8b1-23e0-4a9f-a6c1-69c40c71816b</a></p>
+<p><a href="https://licensezero.com/offers/daf5a8b1-23e0-4a9f-a6c1-69c40c71816b">https://licensezero.com/offers/daf5a8b1-23e0-4a9f-a6c1-69c40c71816b</a></p>
 <p>The URL pattern is:</p>
-<pre><code class="language-text">https://licensezero.com/ids/{UUID}
+<pre><code class="language-text">https://licensezero.com/offers/{UUID}
 </code></pre>
 <h3><a id="pricing-graphics">Pricing Graphics</a></h3>
 <p>licensezero.com serves SVG graphics with private-license pricing information that you can include in your project’s <code>README</code> file or other documentation.  For example:</p>
-<figure><img alt="a pricing graphic" src="https://licensezero.com/ids/daf5a8b1-23e0-4a9f-a6c1-69c40c71816b/badge.svg"></figure>
+<figure><img alt="a pricing graphic" src="https://licensezero.com/offers/daf5a8b1-23e0-4a9f-a6c1-69c40c71816b/badge.svg"></figure>
 <p>The URL pattern is:</p>
-<pre><code class="language-text">https://licensezero.com/ids/{UUID}/badge.svg
+<pre><code class="language-text">https://licensezero.com/offers/{UUID}/badge.svg
 </code></pre>
 <p>The Markdown syntax is:</p>
-<pre><code class="language-markdown">![L0](https://licensezero.com/ids/{UUID}/badge.svg)
+<pre><code class="language-markdown">![L0](https://licensezero.com/offers/{UUID}/badge.svg)
 </code></pre>
 <h2><a id="artless-devices">Artless Devices</a></h2>
 <p>Artless Devices LLC is a California limited liability company.  It serves as the legal counterpart to licensezero.com.  As a developer offering private licenses for sale through licensezero.com, you will have three legal relationships with Artless Devices:</p>
