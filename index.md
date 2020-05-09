@@ -2,17 +2,19 @@
 
 # License Zero Developer's Guide
 
-License Zero is a game plan for financially sustaining independent work on open software.  License Zero lets you make a new deal with users of your software:
+License Zero is a toolkit and a plan for funding open software developers.  Using that toolkit, developers can make new kinds of deals with users.
 
-> Use my software freely for open source or noncommercial work.  Otherwise, buy a license online to support me.
+**Share-Alike**:  You can use my software to make other open software for free.  If you want to make closed software instead, buy a license online to support me.
 
-It's the model of [GitHub](https://github.com/pricing), [Travis CI](https://travis-ci.com/plans), and other leading developer services, adapted for independent library, framework, and tools developers.  Finally.
+**Noncommercial**:  You can my software for noncommercial purposes for free.  If you want to use my software for profit, buy a license online to support me.
 
-This model also makes it easy to support developers creating open software you use and rely on at work.  License Zero is not a donation platform or a backer-rewards market.  If other developers' work helps you do your job better or more efficiently, supporting them through License Zero ought to be a reimbursable expense.
+It's the model of leading developer services like [GitHub](https://github.com).  It's the model that made a prior generation of stalwarts like [MySQL](https://mysql.com), [Qt](https://qt.io), and [Artifex](https://artifex.com).  It's the model of countless independent  stock photographers, B-roll videographers, production music producers, and beat makers.  And now it's a model for library, framework, developer tool, and app makers.  Finally.
 
-This is a guide to License Zero, and the project's primary documentation for developers.  If you're interested in using License Zero, either to support your work or to support others, read this guide.  If you find errors or ways to improve it, send a [pull request](https://github.com/licensezero/guide.licensezero.com).
+License Zero is _not_ a donation platform.  People and companies can pay for licenses through License Zero just like they pay for Amazon Web Services, Microsoft Office, or the toner in the printer: from the budget, with credit cards.  If the software helps do a job, the cost of a license bought through License Zero ought to be reimbursable.  When tax time comes, it might be deductible.  It's not a gift or charity or a favor.  It's just business.
 
-This guide describes what License Zero is, and how it works.  It is _not_ a substitute for legal advice about whether a particular license fits your needs or work.  The License Zero [terms of service](https://licensezero.com/terms/service) apply to this guide, too.
+This is a guide to License Zero, its primary documentation for developers.  If you're interested in using License Zero, either to support your work or to support others, read this guide.  If you find errors or ways to improve it, send a [pull request](https://github.com/licensezero/guide.licensezero.com).
+
+This guide describes what License Zero is, and how it works.  It is [_not_ a guide or a guarantee about whether a particular license fits your needs or work](https://notlegaladvice.law).  The License Zero [terms of service](https://licensezero.com/terms/service) say so, and they apply to this guide, too.
 
 ## Contents
 
