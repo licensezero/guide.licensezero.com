@@ -8,7 +8,7 @@ License Zero is a toolkit and a plan for funding open software developers.  Usin
 
 **Noncommercial**:  You can my software for noncommercial purposes for free.  If you want to use my software for profit, buy a license online to support me.
 
-It's the model of leading developer services like [GitHub](https://github.com).  It's the model that made a prior generation of stalwarts like [MySQL](https://mysql.com), [Qt](https://qt.io), and [Artifex](https://artifex.com).  It's the model of countless independent  stock photographers, B-roll videographers, production music producers, and beat makers.  And now it's a model for software library, framework, developer tool, and app makers.  Finally.
+It's the model of leading developer services like [GitHub](https://github.com).  It's the model that made a prior generation of stalwarts like [MySQL](https://mysql.com), [Qt](https://qt.io), and [Artifex](https://artifex.com).  It's the model of countless independent  stock photographers, B-roll videographers, production music producers, and beat makers.  And now it's a model for independent software library, framework, developer tool, and app makers.  Finally.
 
 License Zero is _not_ a donation platform.  People and companies can pay for licenses through License Zero just like they pay for Amazon Web Services, Microsoft Office, or the toner in the printer: from the budget, with credit cards.  If the software helps do a job, the cost of a license bought through License Zero ought to be reimbursable.  When tax time comes, it might be deductible.  It's not a gift or charity or a favor.  It's just business.
 
