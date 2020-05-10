@@ -4,9 +4,11 @@
 
 License Zero is a toolkit and a plan for funding open software developers.  Using that toolkit, developers can make new kinds of deals with users.
 
-**Share-Alike**:  You can use my software to make other open software for free.  If you want to make closed software instead, buy a license online to support me.
+The two forms of open software which License Zero currently focuses on are:
 
-**Noncommercial**:  You can my software for noncommercial purposes for free.  If you want to use my software for profit, buy a license online to support me.
+1. **Share-Alike**:  You can use my software to make other open software for free.  If you want to make closed software instead, buy a license online to support me.
+
+1. **Noncommercial**:  You can use my software for noncommercial purposes for free.  If you want to use my software for profit, buy a license online to support me.
 
 It's the model of leading developer services like [GitHub](https://github.com).  It's the model that made a prior generation of stalwarts like [MySQL](https://mysql.com), [Qt](https://qt.io), and [Artifex](https://artifex.com).  It's the model of countless independent  stock photographers, B-roll videographers, production music producers, and beat makers.  And now it's a model for independent software library, framework, developer tool, and app makers.  Finally.
 
@@ -92,9 +94,9 @@ This [public-private licensing model](https://indieopensource.com/public-private
 
 License Zero starts where you exercise your power as the owner of intellectual property in your work: in your project's `LICENSE` file.  You might currently use [The MIT License](https://spdx.org/licenses/MIT), [a BSD license](https://spdx.org/licenses/BSD-2-Clause), or a similar open source license there now.  License Zero offers you two alternatives:
 
-1.  <a id="prosperity"></a>[The Prosperity Public License](https://licensezero.com/licenses/prosperity) (<dfn>Prosperity</dfn>) works a bit like a [Creative Commons NonCommercial license](https://creativecommons.org/licenses/by-nc/4.0/), but for software.  Prosperity gives everyone broad permission to use your software, but limits commercial use to a short trial period of 32 days.  When a commercial user's trial runs out, they need to buy a private license or stop using your software.
+1.  <a id="parity"></a>[The Parity Public License](https://licensezero.com/licenses/parity) (<dfn>Parity</dfn>) works a bit like the Creative Commons Share Alike(https://creativecommons.org/licenses/by-sa/4.0/) or the [AGPL](https://www.gnu.org/licenses/agpl-3.0.html), but requires users to release more of their own code, in more situations.  Parity requires users who change, build on, or use your work to create software to release that software as open source, too.  If users can't or won't release their work, they need to buy a private license that allows use without sharing back.
 
-2.  <a id="parity"></a>[The Parity Public License](https://licensezero.com/licenses/parity) (<dfn>Parity</dfn>) works a bit like [AGPL](https://www.gnu.org/licenses/agpl-3.0.html), but requires users to release more of their own code, in more situations.  Parity requires users who change, build on, or use your work to create software to release that software as open source, too.  If users can't or won't release their work, they need to buy a private license that allows use without sharing back.
+2.  <a id="prosperity"></a>[The Prosperity Public License](https://licensezero.com/licenses/prosperity) (<dfn>Prosperity</dfn>) works a bit like a [Creative Commons NonCommercial license](https://creativecommons.org/licenses/by-nc/4.0/), but for software.  Prosperity gives everyone broad permission to use your software, but limits commercial use to a short trial period of 32 days.  When a commercial user's trial runs out, they need to buy a private license or stop using your software.
 
 Both `LICENSE` options are short and readable.  You should [read](https://licensezero.com/licenses/prosperity) [them](https://licensezero.com/licenses/parity).
 
