@@ -88,7 +88,7 @@ Start selling through licensezero.com in ten easy steps:
 
    Enter your secret access token at the prompt.
 
-6. Change the license for your project to Parity 7.0.0, the free for open source license, or Prosperity 3.0.0, the noncommercial license.  You can download a plain-text `LICENSE.md` copy of <a href="https://paritylicense.com/Parity-7.0.0.md" download="LICENSE.md">Parity 7.0.0</a> or <a href="https://prosperitylicense.com/Prosperity-3.0.0.md" download="LICENSE.md">Prosperity 3.0.0</a> and replace the variables at the top. The [SPDX identifiers](https://spdx.org/licenses) for `package.json` or other package metadata files are `Parity-7.0.0` and `Prosperity-3.0.0`. 
+6. Change the license for your project to Parity 7.0.0, the free for open source license, or Prosperity 3.0.0, the noncommercial license.  You can download a plain-text `LICENSE.md` copy of <a href="https://paritylicense.com/7.0.0.md" download="LICENSE.md">Parity 7.0.0</a> or <a href="https://prosperitylicense.com/3.0.0.md" download="LICENSE.md">Prosperity 3.0.0</a> and replace the variables at the top. The [SPDX identifiers](https://spdx.org/licenses) for `package.json` or other package metadata files are `Parity-7.0.0` and `Prosperity-3.0.0`.
 
 7. Offer licenses for your contributions to the project for sale:
 
