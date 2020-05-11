@@ -45,7 +45,6 @@ This guide will describe a few software licenses, free and paid.  But it is [_no
   - [Service Provider](#service-provider)
   - [Licensing Agent](#licensing-agent)
   - [Toolmaker](#toolmaker)
-- [Ecosystem Support](#ecosystems)
 - [Contributions](#contributions)
   - [Parallel Licensing](#parallel-licensing)
   - [Stacked Licensing](#stacked-licensing)
@@ -352,14 +351,6 @@ Finally, neither the terms of service nor the agency terms change ownership of a
 ### <a id="toolmaker">Toolmaker</a>
 
 Artless Devices owns and licenses the intellectual property in the [command line interface](#command-line-interface) that you will use to register and offer licenses for sale, as well as [forms and other software tools published online](https://github.com/licensezero).
-
-## <a id="ecosystems">Ecosystem Support</a>
-
-Any open developer can choose one of the [public license options](#public-licenses), add its text to `LICENSE`, [offer private licenses through the API](#offering-private-liceness), and link to their [web store page](#web-store-pages) in `README` or on a website.  Users can buy private licenses directly from the web store page, and download their signed license file.  But the process becomes much simpler---much closer to zero friction, for both contributors and users---when the [command line interface](#command-line-interface) can find, read, and write package metadata showing which packages correspond to which licensezero.com IDs.
-
-The [command line interface](#command-line-interface) finds package metadata by recursing the current working directory, as well as paths provided by queries to dependency-management tools, like `bundler show` for RubyGems.  When the command line interface finds a `licensezero.json` file, it inventories the packages listed within it.  It then looks for package-manager metadata files, like `setup.py`, `package.json`, or `pom.xml`, and tries to query them for package scope, name, and version information.
-
-The [`LANGUAGES` file in the CLI repository](https://github.com/licensezero/cli/blob/master/LANGUAGES.md) describes current language and packaging support.  If you're interested in expanding first-class tooling support to your language or package format of choice, [reach out in the GitHub repository for the Go port of the CLI](https://github.com/licensezero/cli/issues).  Even if you can't contribute code, pointers to documentation, examples of conventions, and answers to questions will be very helpful.
 
 ## <a id="contributions">Contributions</a>
 
