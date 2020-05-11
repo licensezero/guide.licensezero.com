@@ -1,1 +1,1 @@
-rsync -a --delete $(git ls-files | fgrep -v publish) guide.licensezero.com:/var/www/guide.licensezero.com/
+rsync -a --delete $(git ls-files | fgrep -v deploy) guide.licensezero.com:/var/www/guide.licensezero.com/
