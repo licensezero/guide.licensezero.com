@@ -53,7 +53,7 @@ This guide will describe a few software licenses, free and paid.  But it is [_no
 
 ## <a id="step-by-step">Step by Step</a>
 
-To get started selling through licensezero.com in ten easy steps:
+Start selling through licensezero.com in ten easy steps:
 
 1. Download the command-line interface by running this script in a terminal:
 
