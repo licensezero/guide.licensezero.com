@@ -2,25 +2,26 @@
 
 # License Zero Developer's Guide
 
-License Zero is a toolkit and a plan for funding open software developers.  Using that toolkit, developers can make new kinds of deals with users.
+License Zero is a toolkit, a platform, and a plan for funding open software developers.  Using License Zero, developers can make new kinds of deals with users:
 
-The two forms of open software which License Zero currently focuses on are:
+> You're free to use my software to build other open software.  If you want to make closed software, buy a license online to support me.
 
-1. **Share-Alike**:  You can use my software to make other open software for free.  If you want to make closed software instead, buy a license online to support me.
+or:
 
-1. **Noncommercial**:  You can use my software for noncommercial purposes for free.  If you want to use my software for profit, buy a license online to support me.
+> You're free to use my software for noncommercial purposes.  If you want to use my software for business, buy a license online to support me.
 
-It's the model of leading developer services like [GitHub](https://github.com).  It's the model that made a prior generation of stalwarts like [MySQL](https://mysql.com), [Qt](https://qt.io), and [Artifex](https://artifex.com).  It's the model of countless independent  stock photographers, B-roll videographers, production music producers, and beat makers.  And now it's a model for independent software library, framework, developer tool, and app makers.  Finally.
+Sound familiar?  It's the model of leading developer services like [GitHub](https://github.com).  It's the model that made a prior generation of stalwarts like [MySQL](https://mysql.com), [Qt](https://qt.io), and [Artifex](https://artifex.com).  It's the model of countless independent  stock photographers, B-roll videographers, production music producers, and beat makers.  And now it's a model for independent software library, framework, developer tool, and app makers.  Finally.
 
-License Zero is _not_ a donation platform.  People and companies can pay for licenses through License Zero just like they pay for Amazon Web Services, Microsoft Office, or the toner in the printer: from the budget, with credit cards.  If the software helps do a job, the cost of a license bought through License Zero ought to be reimbursable.  When tax time comes, it might be deductible.  It's not a gift or charity or a favor.  It's just business.
+License Zero is _not_ a donation platform.  Users pay for licenses through License Zero just like they pay for Amazon Web Services, Microsoft Office, or the toner in the printer: from the budget, with credit cards.  If the software helps do a job, the cost of a license through License Zero ought to be a reimbursable expense.  When tax time comes, it might be deductible.  After all, it's not a gift, a favor, an act of charity, or a pat on the head.  It's just business.
 
-This is a guide to License Zero, its primary documentation for developers.  If you're interested in using License Zero, either to support your work or to support others, read this guide.  If you find errors or ways to improve it, send a [pull request](https://github.com/licensezero/guide.licensezero.com).
+This is a guide to License Zero, its primary documentation.  If you're interested in using License Zero, either to fund your work or to fund the work of others, read this guide.  If you find errors or ways to improve it, send a [pull request](https://github.com/licensezero/guide.licensezero.com) or an [e-mail](mailto:kyle@artlessdevices.com?subject=Guide%20Feedback).
 
-This guide describes what License Zero is, and how it works.  It is [_not_ a guide or a guarantee about whether a particular license fits your needs or work](https://notlegaladvice.law).  The License Zero [terms of service](https://licensezero.com/terms/service) say so, and they apply to this guide, too.
+This guide will describe a few software licenses, free and paid.  But it is [_not_ a guide or a guarantee about whether a particular license fits your needs or work](https://notlegaladvice.law).  The License Zero [terms of service](https://licensezero.com/terms/service) say so, and they apply to this guide, too.
 
 ## Contents
 
-- [Read This First](#read-this-first)
+- [Step by Step](#step-by-step)
+- [Overview](#overview)
 - [Public Licenses](#public-licenses)
   - [Prosperity Public License](#prosperity)
   - [Parity Public License](#parity)
@@ -44,19 +45,69 @@ This guide describes what License Zero is, and how it works.  It is [_not_ a gui
   - [Service Provider](#service-provider)
   - [Licensing Agent](#licensing-agent)
   - [Toolmaker](#toolmaker)
-- [Command Line Interface](#command-line-interface)
-  - [Identify Yourself](#identify-yourself)
-  - [As a Contributor](#as-a-contributor)
-  - [As a User](#as-a-user)
-  - [Back Up Your Data](#back-up-your-data)
 - [Ecosystem Support](#ecosystems)
 - [Contributions](#contributions)
   - [Parallel Licensing](#parallel-licensing)
   - [Stacked Licensing](#stacked-licensing)
   - [License Graphs](#license-graphs)
-- [Complementary Approaches](#complementary-approaches)
 
-## <a id="read-this-first">Read This First</a>
+## <a id="step-by-step">Step by Step</a>
+
+To get started selling through licensezero.com in ten easy steps:
+
+1. Download the command-line interface by running this script in a terminal:
+
+   ```bash
+   curl -sL https://licensezero.com/install.sh | sh
+   ```
+
+   The script will install a single `licensezero` executable on your search path.
+
+2. Give the command-line interface some information about yourself:
+
+   ```bash
+   licensezero identify --name "Jane Developer" --jurisdiction "US-CA" --email "jane@example.com"
+   ```
+
+   The jurisdiction argument is an [ISO 3166-2](https://en.wikipedia.org/wiki/ISO_3166-2) standard code for where you live.  See [jurisdictions.licensezero.com](https://jurisdictions.licensezero.com) for a list of all supported countries and subdivisions.
+
+3. Use the command-line interface to register with License Zero:
+
+   ```bash
+   licensezero register
+   ```
+
+4. Follow the link sent by e-mail to connect your [Stripe](https://stripe.com) account to License Zero. If you don't have a Stripe account yet, follow the instructions to create one.
+
+5. Save the licensor ID and access token licensezero.com gives you:
+
+   ```bash
+   licensezero token --licensor bdf5dbb7-5823-41bb-a7a8-07cb5c9739ea
+   Token: *************
+   ```
+
+   Enter your secret access token at the prompt.
+
+6. Change the license for your project to Parity 7.0.0, the free for open source license, or Prosperity 3.0.0, the noncommercial license.  You can download a plain-text `LICENSE.md` copy of <a href="https://paritylicense.com/Parity-7.0.0.md" download="LICENSE.md">Parity 7.0.0</a> or <a href="https://prosperitylicense.com/Prosperity-3.0.0.md" download="LICENSE.md">Prosperity 3.0.0</a> and replace the variables at the top. The [SPDX identifiers](https://spdx.org/licenses) for `package.json` or other package metadata files are `Parity-7.0.0` and `Prosperity-3.0.0`. 
+
+7. Offer licenses for your contributions to the project for sale:
+
+   ```bash
+   licensezero offer \
+   --price 1000 \
+   --repository "https://github.com/licensezero/example" \
+   --description "demo project for License Zero"
+   ```
+
+   Specify your price in United States cents.  `100` is $1.00.  `1000` is $10.00.
+
+8. Add the project link that licensezero.com provides for you to your project's documentation.
+
+9. Tell the world about your project!  Nobody buys licenses for projects they've never heard of.
+
+10. Connect with the License Zero user group.  We will help you tell the world.
+
+## <a id="overview">Overview</a>
 
 ```python
 def licensing(user, contribution):
@@ -84,11 +135,11 @@ def licensing(user, contribution):
         license_zero.buy_private_license(user, contribution)
 ```
 
-As an independent software developer, you control who can use your software, and under what terms.  License Zero `LICENSE` terms give everyone broad permission to use and build with your software, as long as they either limit commercial use or share work they build on yours back as open source, depending on your choice of two `LICENSE` options.  Users who can't meet those conditions need private licenses.
+As an independent software developer, you control who can use your software and under what terms.  License Zero's `LICENSE` terms, [Parity](https://paritylicense.com/) and [Prosperity](https://prosperitylicense.com/), give everyone broad permission to use and build with your software.  However, each license comes with a catch.  Parity requires users to share work they build with your software back as open source.  Prosperity requires users to limit commercial use of your software to a limited free-trial period.
 
-[licensezero.com](https://licensezero.com) can sell private licenses on your behalf.  A [command line interface](https://github.com/licensezero/cli) makes it easy for users to buy all the private licenses they need for a project at once, with a single credit card transaction.  [Stripe](https://stripe.com) processes payments directly to an account in your name.  The same command line interface makes it easy for you to sign up, start offering private licenses for sale, and set pricing.
+[licensezero.com](https://licensezero.com) can help you sell licenses that allow what Parity and Prosperity don't: use in closed projects and unlimited commercial use.  [Stripe](https://stripe.com) processes the payments directly to an account in your name, and licensezero.com handles sending licenses and receipts.
 
-This [public-private licensing model](https://indieopensource.com/public-private), also know as "dual licensing", is not new.  [MySQL](https://www.mysql.com/about/legal/licensing/oem/) pioneered it decades ago, and important projects like [Qt](https://www1.qt.io/licensing/) and [MongoDB](https://www.mongodb.com/community/licensing) continue it, successfully, today.  License Zero evolves the public-private licensing model by making it work for more kinds of software, and by making it practical for independent developers who can't or don't want to set up companies.
+This [public-private licensing model](https://indieopensource.com/public-private), also know as "dual licensing" or "selling exceptions", is not new.  In fact, it's one of the oldest business models for open source software.  [L. Peter Deutsch](https://en.wikipedia.org/wiki/L._Peter_Deutsch) [MySQL](https://www.mysql.com/about/legal/licensing/oem/) pioneered it decades ago, and important projects like [Qt](https://www1.qt.io/licensing/) and [MongoDB](https://www.mongodb.com/community/licensing) continue it today.  License Zero evolves the public-private licensing model by making it work for more kinds of software and by making it practical for independent developers who can't or don't want to set up companies.
 
 ## <a id="public-licenses">Public Licenses</a>
 
@@ -302,193 +353,6 @@ Finally, neither the terms of service nor the agency terms change ownership of a
 
 Artless Devices owns and licenses the intellectual property in the [command line interface](#command-line-interface) that you will use to register and offer licenses for sale, as well as [forms and other software tools published online](https://github.com/licensezero).
 
-## <a id="command-line-interface">Command Line Interface</a>
-
-The [command line interface](https://github.com/licensezero/cli) is the primary way developers interact with licensezero.com.
-
-Install the CLI by [downloading a prebuilt binary for your platform](https://github.com/licensezero/cli/releases/latest) and installing in your `$PATH`.
-
-### <a id="identify-yourself">Identify Yourself</a>
-
-To use the CLI as a contributor, user, or both, first run `licensezero identify`:
-
-```bash
-licensezero identify \
-  --name "Jane Dev" \
-  --jurisdiction "US-CA" \
-  --email "jane@example.com"
-```
-
-Provide your exact legal name, an [ISO 3166-2](https://en.wikipedia.org/wiki/ISO_3166-2) code for your tax jurisdiction, and your e-mail address.
-
-A few example tax jurisdictions:
-
-- `BR-SP` for São Paulo, Brazil
-- `DE-HH` for Hamburg, Germany
-- `GB-LND` for the City of London
-- `JP-13` for Tokyo, Japan
-- `NG-LA` for Lagos, Nigeria
-- `US-TX` for Texas, United States
-
-### As a Contributor <a id="as-a-contributor"></a>
-
-#### <a id="registering">Registering</a>
-
-To offer private licenses for sale via [licensezero.com](https://licensezero.com), you need to [identify yourself](#identify-yourself) with `licensezero identify`, then register as a licensor and connect a standard [Stripe](https://stripe.com) account:
-
-```bash
-licensezero register
-```
-
-`licensezero register` will open a page in your browser where you can log into Stripe, or create an account and connect it.  Once you've connected a Stripe account, [licensezero.com](https://licensezero.com) will provide you a licensor identifier and an access token that you can use to create a licensor profile:
-
-```bash
-licensezero token --licensor $YOU_NEW_ID
-```
-
-The command will then prompt for your access token, and save it for future use.
-
-#### <a id="offering-private-licenses">Offering Private Licenses</a>
-
-To offer private licenses:
-
-```bash
-licensezero offer \
-  --price 300 \
-  --no-relicense \
-  --repository "http://github.com/example/example" \
-  --description "an example project"
-```
-
-If you like, you can also set a [relicensing](#relicensing) price:
-
-```bash
-licensezero offer \
-  --price 300 \
-  --relicense 200000 \
-  --repository "http://github.com/example/example" \
-  --description "an example project"
-```
-
-You can run the `reprice` subcommand to update pricing.
-
-Once you've offered your work, use the CLI to set licensing metadata and `LICENSE`:
-
-```bash
-cd your-package
-licensezero license --id $ID --prosperity
-# or
-licensezero license --id $ID --parity
-git add licensezero.json LICENSE
-git commit -m "License Zero"
-git push
-```
-
-These commands will write cryptographically signed `LICENSE` and `licensezero.json` files.  The data in `licensezero.json` allow the CLI to identify the package for users quoting and buying private licenses.
-
-#### <a id="locks">Locks</a>
-
-By default, you can change pricing for private licenses at any time.  You could offer private licenses for $5 today, and $5,000 tomorrow.
-
-In order to provide a publicly verifiable guarantee of license availability and pricing, either to users or others who want to [build on your work](#stacked-licensing), you can lock private-license pricing for your work to no more than the current price for a term of days, months, or even years.
-
-```bash
-licensezero lock --id $ID --unlock $YOUR_UNLOCK_DATE
-```
-
-The unlock date must be a date at least seven calendar days in the future.
-
-Locking pricing prevents you from increasing pricing or withdrawing your offer of private licenses.  For specifics, see [the agency terms](https://licensezero.com/terms/agency).
-
-Please note that _locks are irrevocable_.  Artless Devices will not unlock early under any circumstances.
-
-#### <a id="generating-waivers">Generating Waivers</a>
-
-To generate a waiver, provide a legal name, a jurisdiction code, and either a term in calendar days or `forever`:
-
-```bash
-licensezero waive \
-  --id $ID \
-  --beneficiary "Eve Able" \
-  --jurisdiction "US-NY" \
-  --days 90 \
-  > waiver.json
-```
-
-You can also issue waivers that don't expire:
-
-```bash
-licensezero waive \
-  --id $ID \
-  --beneficiary "Eve Able" \
-  --jurisdiction "US-NY" \
-  --forever \
-  > waiver.json
-```
-
-#### <a id="retracting-projects"></a><a id="retracting">Retracting from Sale</a>
-
-Unless you've [locked pricing](#locks), you can stop offering private licenses through licensezero.com at any time:
-
-```bash
-licensezero retract --id $ID
-```
-
-Please note that under the [agency terms](https://licensezero.com/terms/agency), Artless Devices can complete private license and relicensing transactions that began before you retracted the project, but can't start new transactions.
-
-### As a User <a id="as-a-user"></a>
-
-### Quoting and Buying
-
-You can generate quotes for License Zero software within the `node_modules` directories of your projects:
-
-```bash
-cd your-project
-licensezero quote
-```
-
-To buy missing licenses for dependencies of a project:
-
-```bash
-cd you-project
-licensezero buy
-```
-
-`licensezero buy` will open a webpage in your browser listing the licenses to buy and taking credit card payment.  On successful purchase, [licensezero.com](https://licensezero.com) will provide the address of a purchase bundle that you can use to import all of the licenses you've just purchased at once:
-
-```bash
-licensezero import --bundle $URL
-```
-
-#### Importing License and Waiver Files
-
-To import a license you bought on licensezero.com, or a waiver you received from a contributor:
-
-```bash
-licensezero import license.json
-licensezero import waiver.json
-```
-
-#### Sponsoring Projects
-
-To sponsor relicensing of a project onto permissive terms:
-
-```bash
-licensezero sponsor --id $ID
-```
-
-The command will open a payment page in your web browser.
-
-### <a id="back-up-your-data">Back Up Your Data</a>
-
-To back up all your License Zero data, including your identity, access token, waivers, and licenses:
-
-```bash
-licensezero backup
-```
-
-The command will create a tar archive in your current directory.
-
 ## <a id="ecosystems">Ecosystem Support</a>
 
 Any open developer can choose one of the [public license options](#public-licenses), add its text to `LICENSE`, [offer private licenses through the API](#offering-private-liceness), and link to their [web store page](#web-store-pages) in `README` or on a website.  Users can buy private licenses directly from the web store page, and download their signed license file.  But the process becomes much simpler---much closer to zero friction, for both contributors and users---when the [command line interface](#command-line-interface) can find, read, and write package metadata showing which packages correspond to which licensezero.com IDs.
@@ -564,31 +428,3 @@ The bad news is that license graphs can be even more complex, where packages als
 This kind of complexity shows up even in existing open software projects that don't use any License Zero licenses, with mixes of GPL, BSD, MIT, LGPL, and other licenses.
 
 The good news is that tools like the [license zero command line interface](#command-line-interface) can traverse even complex license graphs automatically, compile a list of every [identifier](#identifiers) mentioned in metadata, and compare those results against the licenses and waivers that the user already has.  The License Zero command line interface merely evolves, and specializes, [existing tools for analyzing open source license graphs](https://www.npmjs.com/package/licensee).
-
-## <a id="complementary-approaches">Complementary Approaches</a>
-
-License Zero isn't the only way to financially support your work on open software, and it strives for maximum compatibility with other methods.
-
-- Ask people and companies for money, and hope they give it to you.  Set up a payment link in your `README` file.  Set yourself up on [Patreon](https://www.patreon.com).  Form a foundation and solicit donations.
-
-- Sell books, stickers, shirts, and other physical goods with your project's name or logo.
-
-- Sell or exchange the right to put company advertising, branding, or support acknowledgments in your project's documentation, on your project's website or social media accounts, or even in your software itself.
-
-- Give paying customers early access to your work ahead of its release as open source, some time later.
-
-- Require others to support you financially in order to use a trademark to identify themselves as providers of related products or services.  Trademark licensing for service providers is often coupled with advertising, in the form of a listing among service providers on the project's website.
-
-- Charge companies, conferences, or other venues to train others in the use of your project, in person or remotely.
-
-- Charge for access to and use of your time to assist users in using your work.
-
-- Apply to grant-making institutions and government entities for financial support, if it aligns with their objectives.
-
-- Charge others to install, configure, and run your project on their behalf.
-
-- Charge others to integrate your work into their applications or services.
-
-- Charge others for work they would like to do, such as bug fixes, feature adds, and other changes.
-
-- Sell proprietary software relating to or enhancing your open project.  For example, many open source database companies license proprietary optimizations, monitoring tools, and replication features.
