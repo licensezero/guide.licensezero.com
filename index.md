@@ -107,7 +107,7 @@ Start selling through licensezero.com in ten easy steps:
 
 9. Tell the world about your project!  Nobody buys licenses for projects they've never heard of.
 
-10. Connect with the License Zero user group.  We will help you tell the world.
+10. [E-mail Kyle](mailto:kyle@artlessdevices.com), who'll get you plugged into the License Zero user group.  We will help you tell the world.
 
 ## <a id="overview">Overview</a>
 
