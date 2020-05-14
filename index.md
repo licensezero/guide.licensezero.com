@@ -103,7 +103,7 @@ Start selling through licensezero.com in ten easy steps:
 
    Specify your price in United States cents.  `100` is $1.00.  `1000` is $10.00.
 
-8. Add the project link that licensezero.com provides for you to your project's documentation.
+8. Add the offer link that licensezero.com provides for you to your project's documentation.
 
 9. Tell the world about your project!  Nobody buys licenses for projects they've never heard of.
 
