@@ -28,7 +28,7 @@ License Zero is _not_ a donation platform.  Users pay for licenses through Licen
 
 This guide begins with a [step-by-step guide to offering licenses through licensezero.com](#step-by-step).
 
-From there, it [takes a deeper dive into the business model](#public-private).  The implementation details take the form of three kinds of forms: [License Zero's free license choices, Parity and Prosperity](#public-licenses), the [private licenses](#private-licnsees) that customers buy, and [waivers](#waivers), which work like free private licenses.
+From there, it [takes a deeper dive into the business model](#public-private).  The implementation details take the form of three kinds of forms: [License Zero's free license choices, Parity and Prosperity](#public-licenses), the [private licenses](#private-licnsees) that customers buy, and [freebies](#freebies), or free private licenses.
 
 The next section gives [an overview of licensezero.com](#licensezero.com), followed by [an introduction to Artless Devices, the company that runs License Zero](#artless-devices).
 
@@ -110,17 +110,9 @@ def licensing(user, contribution):
       user.meets_conditions_of(private_license)
     ):
       private_license.permit(user)
-    # See "Waivers" below.
+    # See "licensezero.com" below.
     else:
-      waiver = user.waiver_for(contribution)
-      if (
-        waiver is not None and
-        not waiver.expired
-      ):
-        waiver.permit(user)
-      # See "licensezero.com" below.
-      else:
-        license_zero.buy_private_license(user, contribution)
+      license_zero.buy_private_license(user, contribution)
 ```
 
 As an independent software developer, you control who can use your software and under what terms.  License Zero's licenses, [Parity](https://paritylicense.com/) and [Prosperity](https://prosperitylicense.com/), give everyone broad permission to use and build with your software.  However, each license comes with a catch.  Parity requires users to share work they build with your software back as open source.  Prosperity requires users to limit commercial use of your software to a limited free-trial period.
@@ -219,15 +211,15 @@ That uncertainty makes anything like a single form for private license, or [a si
 
 That doesn't mean developers can't use License Zero to get paid for work over time.  As [mentioned above](#private-license-scope), developers have complete control over whether to make new contributions under an existing licensing identifier, or create a new one.  Developers can create new identifiers for each new major release of a project, or even for each new month.  It's up to developers to communicate those choices to users, if they like, so users know what to expect.  As a baseline, License Zero's licenses and terms only grant licenses for the software developers have already made, in the past.  But licenses for past work don't expire in the future. 
 
-<h2 id="waivers">Waivers</h2>
+<h2 id="freebies">Freebies</h2>
 
-Waivers work a bit like freebie private licenses.  Developers can use the [command line interface](#command-line-interface) to generate signed [waivers](https://licensezero.com/licenses/waiver), for specific people, that let them out of `LICENSE` conditions limiting commercial use or require open source release.  Developers can generate waivers that last only a set number of days, or that last forever.  The [command line interface](#command-line-interface) treats waivers just like private licenses for purposes of figuring out which private licenses a user is missing for a project.
+Freebies are free private licenses with optional time limits.  Developers can use the [command line interface](#command-line-interface) to generate signed freebies for specific people that last for a set number of days or forever.
 
-You might like to issue waivers to reward other contributors to your project who make their work available under a permissive license, for [parallel licensing](#parallel-licensing), extend the free trial period for projects under [Prosperity](#prosperity), or to resolve a question about whether a particular use will trigger the commercial-use time limit.  It's entirely up to you.
+You might like to gives freebies to reward other contributors to your project who make their work available under a permissive license, for [parallel licensing](#parallel-licensing), extend the free trial period for projects under [Prosperity](#prosperity), or to resolve a question about whether a particular use will trigger the commercial-use time limit.  It's entirely up to you.
 
 <h2 id="licensezero.com">licensezero.com</h2>
 
-licensezero.com is a website and API for selling [private licenses](#private-licenses), closing [relicense deals](#relicensing), and generating [waivers](#waivers).
+licensezero.com is a website and API for selling [private licenses](#private-licenses), closing [relicense deals](#relicensing), and generating [freebies](#freebies).
 
 You can think of licensezero.com as a kind of Internet vending machine.  As a contributor, you can make a deal with the operator of the vending machine to stock it with private licenses and relicense deals for sale.  The vending machine then handles taking payment and spitting out licenses on your behalf.
 
@@ -249,7 +241,7 @@ Each time you offer licenses through licensezero.com, the site will generate an 
 
 <h3 id="cryptography">Cryptography</h3>
 
-License Zero signs important records like licenses and waivers with a [NaCl](https://nacl.cr.yp.to/)-style [Ed25519](https://ed25519.cr.yp.to/software.html) cryptographic signing keypair.  Customers can check these signatures against licensezero.com's public key. licensezero.com also records the date and cryptographic hash of every record that it signs, along with the signature.
+License Zero signs important records like private licenses with a [NaCl](https://nacl.cr.yp.to/)-style [Ed25519](https://ed25519.cr.yp.to/software.html) cryptographic signing keypair.  Customers can check these signatures against licensezero.com's public key. licensezero.com also records the date and cryptographic hash of every record that it signs, along with the signature.
 
 <h3 id="offer-pages">Offer Pages</h3>
 
@@ -293,7 +285,7 @@ To use licensezero.com and its API, you must agree to [terms of service](https:/
 
 To offer private licenses for sale through licensezero.com, you agree to the [agency terms](https://licensezero.com/terms/agency) with Artless Devices.  You should definitely read that agreement, and again, it was written to be read, not to glaze your eyes over.  But there are a few especially important aspects, from Artless Devices' point of view.
 
-First and foremost, you appoint Artless Devices as your agent to sign license agreements, waivers, and relicense agreements on your behalf.  That means that Artless Devices can do the deals you authorize through the API, via licensezero.com, with the same effect as if you'd signed them yourself.
+First and foremost, you appoint Artless Devices as your agent to sign private licenses on your behalf.  That means that Artless Devices can do the deals you authorize through the API, via licensezero.com, with the same effect as if you'd signed them yourself.
 
 Second, Artless Devices earns commission on private license sales.  The amount is set out in the agency terms when you offer your work for private licensing.
 
@@ -319,7 +311,7 @@ You can choose to take contributions to your project only from those who license
 
 Users of the combined project would then receive a license from you on [Parity terms](#parity), for your contributions, and licenses from other contributors on [permissive terms](#permissive-license), for their contributions.  Would-be users who won't abide by the open source release conditions of your license can still buy a private license from you, for your contributions.  The private license for your work, plus the permissive license for others' contributions, cover all contributions.
 
-In that kind of situation, you can sell private licenses for your contributions to the project, but others cannot.  Perhaps that feels completely fair.  If it doesn't, you may like to offer special credit, payment, or a free [waiver](#waiver) to contributors, to convince them to license their contributions under permissive terms.
+In that kind of situation, you can sell private licenses for your contributions to the project, but others cannot.  Perhaps that feels completely fair.  If it doesn't, you may like to offer special credit, payment, or a [freebie](#freebies) to contributors, to convince them to license their contributions under permissive terms.
 
 <h3 id="stacked-licensing">Stacked Licensing</h3>
 
@@ -372,5 +364,3 @@ The bad news is that license graphs can be even more complex, where packages als
 </figure>
 
 This kind of complexity shows up even in existing open software projects that don't use any License Zero licenses, with mixes of GPL, BSD, MIT, LGPL, and other licenses.
-
-The good news is that tools like the [license zero command line interface](#command-line-interface) can traverse even complex license graphs automatically, compile a list of every [identifier](#identifiers) mentioned in metadata, and compare those results against the licenses and waivers that the user already has.  The License Zero command line interface merely evolves, and specializes, [existing tools for analyzing open source license graphs](https://www.npmjs.com/package/licensee).
