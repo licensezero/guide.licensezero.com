@@ -139,7 +139,7 @@ Most developers will ask themselves two simple questions:
 
 First: Will people use your software to build other software?  If your software is a library, framework, developer tool, or deployment tool, they likely will.  Continue to the next question.  If your software is a complete application or plugin, and not a software development or deployment tool, they likely won't.  Choose [Prosperity](#prosperity).
 
-Second: Do you want to let people user your software in business for free, so long as they release software they build with as open source?  If you do, choose [Prosperity](#prosperity).  If you don't, choose [Parity](#parity).
+Second: Do you want to let people use your software in business for free, so long as they release software they build with as open source?  If you do, choose [Prosperity](#prosperity).  If you don't, choose [Parity](#parity).
 
 The logic behind these questions is simple:  If you give away all the permission people need for the primary use case of your software, you won't have anything left to sell.  Very few people will need any additional license, and fewer still will buy one.
 
