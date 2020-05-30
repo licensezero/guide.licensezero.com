@@ -16,7 +16,7 @@ or:
 
 > You can use my software _for personal, educational, and other noncommercial purposes_ for free.  But if you want to use my software for business, buy a license online to support me.
 
-Sound familiar?  It's the model of leading developer services like [GitHub](https://github.com).  It's the crux of more recent "open core" companies, like [MongoDB](https://mongodb.com) and [Elastic](https://www.esaltic.co), that charge for features businesses want.  It's the model of a much older generation of companies like [MySQL](https://mysql.com), [Qt](https://qt.io), and [Artifex](https://artifex.com).  Outside of software, it's the model of countless independent stock photographers, B-roll videographers, production music producers, and beat makers.
+Sound familiar?  It's the model of leading developer services like [GitHub](https://github.com).  It's the crux of more recent "open core" companies, like [MongoDB](https://mongodb.com) and [Elastic](hhttps://www.elastic.co/), that charge for features businesses want.  It's the model of a much older generation of companies like [MySQL](https://mysql.com), [Qt](https://qt.io), and [Artifex](https://artifex.com).  Outside of software, it's the model of countless independent stock photographers, B-roll videographers, production music producers, and beat makers.
 
 Now it's a model for independent library, framework, developer tool, and app makers, too.  Finally.
 
