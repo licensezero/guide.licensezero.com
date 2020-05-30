@@ -16,7 +16,7 @@ or:
 
 > You can use my software _for personal, educational, and other noncommercial purposes_ for free.  But if you want to use my software for business, buy a license online to support me.
 
-Sound familiar?  It's the model of leading developer services like [GitHub](https://github.com).  It's the crux of more recent "open core" companies, like [MongoDB](https://mongodb.com) and [Elastic](https://www.esaltic.co), that charge for features businesses want.  It's the model of a much older generation of companies like [MySQL](https://mysql.com), [Qt](https://qt.io), and [Artifex](https://artifex.com).  Outside of software, it's the model of countless independent stock photographers, B-roll videographers, production music producers, and beat makers.
+Sound familiar?  It's the model of leading developer services like [GitHub](https://github.com).  It's the crux of more recent "open core" companies, like [MongoDB](https://mongodb.com) and [Elastic](https://www.elastic.co/), that charge for features businesses want.  It's the model of a much older generation of companies like [MySQL](https://mysql.com), [Qt](https://qt.io), and [Artifex](https://artifex.com).  Outside of software, it's the model of countless independent stock photographers, B-roll videographers, production music producers, and beat makers.
 
 Now it's a model for independent library, framework, developer tool, and app makers, too.  Finally.
 
@@ -139,7 +139,7 @@ Most developers will ask themselves two simple questions:
 
 First: Will people use your software to build other software?  If your software is a library, framework, developer tool, or deployment tool, they likely will.  Continue to the next question.  If your software is a complete application or plugin, and not a software development or deployment tool, they likely won't.  Choose [Prosperity](#prosperity).
 
-Second: Do you want to let people user your software in business for free, so long as they release software they build with as open source?  If you do, choose [Prosperity](#prosperity).  If you don't, choose [Parity](#parity).
+Second: Do you want to let people use your software in business for free, so long as they release software they build with as open source?  If you do, choose [Prosperity](#prosperity).  If you don't, choose [Parity](#parity).
 
 The logic behind these questions is simple:  If you give away all the permission people need for the primary use case of your software, you won't have anything left to sell.  Very few people will need any additional license, and fewer still will buy one.
 
