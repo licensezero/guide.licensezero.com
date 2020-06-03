@@ -199,7 +199,7 @@ In general, there is only one situation where License Zero ever signs any agreem
 
 Many companies sell proprietary software on subscription. Customers pay a license fee, usually monthly or annually, as long as they use the software.  Subscriptions create recurring revenue for sellers.  Customers continue to pay, month after month, year after year, even if the seller doesn't release any changes to the software.
 
-License Zero does not support subscriptions. Customers pay for private licenses just once, and those licenses last forever.  That design decisions reflects the complexity of subscription licensing, on the one hand, and License Zero's overarching goal of zero friction, on the other.
+License Zero does not support subscriptions. Customers pay for private licenses just once, and those licenses last forever.  That design decision reflects the complexity of subscription licensing, on the one hand, and License Zero's overarching goal of zero friction, on the other.
 
 Subscription license sellers have to charge their customers repeatedly.  Each payment can go wrong.  Payment methods expire.  Delays and errors abound.  Customers go out of business, or decide not to renew.  To cope, sellers pay payment processing and invoice companies, hire billing managers, and even sell debts to collection agencies.
 
